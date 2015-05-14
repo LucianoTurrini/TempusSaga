@@ -14,6 +14,6 @@ class Personagem: NSManagedObject {
     @NSManaged var nome: String
     @NSManaged var era: String
     @NSManaged var texto: String
-    @NSManaged var estado: NSNumber
+    @NSManaged var estado: Bool
 
 }

@@ -13,6 +13,7 @@
 		21E23B731B04DA820050F93B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E23B711B04DA820050F93B /* LaunchScreen.xib */; };
 		21E23B7F1B04DA820050F93B /* Tempus_SagaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B7E1B04DA820050F93B /* Tempus_SagaTests.swift */; };
 		21E23B891B04E6010050F93B /* Personagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B881B04E6010050F93B /* Personagem.swift */; };
+		21E23B8E1B04EC7D0050F93B /* PersonagemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B8D1B04EC7D0050F93B /* PersonagemManager.swift */; };
 		841448511B04E81800BBC829 /* StageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841448501B04E81800BBC829 /* StageViewController.swift */; };
 		841448531B04E82D00BBC829 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841448521B04E82D00BBC829 /* SceneViewController.swift */; };
 		841448591B04E8FD00BBC829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841448581B04E8FD00BBC829 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		21E23B7D1B04DA820050F93B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21E23B7E1B04DA820050F93B /* Tempus_SagaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tempus_SagaTests.swift; sourceTree = "<group>"; };
 		21E23B881B04E6010050F93B /* Personagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Personagem.swift; path = "Tempus Saga/Model/Personagem.swift"; sourceTree = "<group>"; };
+		21E23B8D1B04EC7D0050F93B /* PersonagemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonagemManager.swift; path = "CoreData Manager/PersonagemManager.swift"; sourceTree = "<group>"; };
 		841448501B04E81800BBC829 /* StageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StageViewController.swift; path = ViewController/StageViewController.swift; sourceTree = "<group>"; };
 		841448521B04E82D00BBC829 /* SceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		841448581B04E8FD00BBC829 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				21E23B671B04DA820050F93B /* Tempus_Saga.xcdatamodeld */,
 				21E23B631B04DA820050F93B /* Supporting Files */,
 				841448581B04E8FD00BBC829 /* Main.storyboard */,
+				21E23B8D1B04EC7D0050F93B /* PersonagemManager.swift */,
 			);
 			path = "Tempus Saga";
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			files = (
 				841448531B04E82D00BBC829 /* SceneViewController.swift in Sources */,
 				21E23B891B04E6010050F93B /* Personagem.swift in Sources */,
+				21E23B8E1B04EC7D0050F93B /* PersonagemManager.swift in Sources */,
 				841448511B04E81800BBC829 /* StageViewController.swift in Sources */,
 				21E23B661B04DA820050F93B /* AppDelegate.swift in Sources */,
 				21E23B691B04DA820050F93B /* Tempus_Saga.xcdatamodeld in Sources */,
