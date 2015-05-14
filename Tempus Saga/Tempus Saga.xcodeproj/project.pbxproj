@@ -14,6 +14,7 @@
 		21E23B701B04DA820050F93B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21E23B6F1B04DA820050F93B /* Images.xcassets */; };
 		21E23B731B04DA820050F93B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E23B711B04DA820050F93B /* LaunchScreen.xib */; };
 		21E23B7F1B04DA820050F93B /* Tempus_SagaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B7E1B04DA820050F93B /* Tempus_SagaTests.swift */; };
+		21E23B891B04E6010050F93B /* Personagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B881B04E6010050F93B /* Personagem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		21E23B781B04DA820050F93B /* Tempus SagaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tempus SagaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E23B7D1B04DA820050F93B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21E23B7E1B04DA820050F93B /* Tempus_SagaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tempus_SagaTests.swift; sourceTree = "<group>"; };
+		21E23B881B04E6010050F93B /* Personagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Personagem.swift; path = "Tempus Saga/Model/Personagem.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +81,9 @@
 		21E23B621B04DA820050F93B /* Tempus Saga */ = {
 			isa = PBXGroup;
 			children = (
-				21E23B651B04DA820050F93B /* AppDelegate.swift */,
-				21E23B6A1B04DA820050F93B /* ViewController.swift */,
+				21E23B8C1B04E62D0050F93B /* AppDelegate */,
+				21E23B8B1B04E61E0050F93B /* ViewController */,
+				21E23B8A1B04E60B0050F93B /* Model */,
 				21E23B6C1B04DA820050F93B /* Main.storyboard */,
 				21E23B6F1B04DA820050F93B /* Images.xcassets */,
 				21E23B711B04DA820050F93B /* LaunchScreen.xib */,
@@ -113,6 +116,31 @@
 				21E23B7D1B04DA820050F93B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21E23B8A1B04E60B0050F93B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21E23B881B04E6010050F93B /* Personagem.swift */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		21E23B8B1B04E61E0050F93B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				21E23B6A1B04DA820050F93B /* ViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		21E23B8C1B04E62D0050F93B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				21E23B651B04DA820050F93B /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21E23B891B04E6010050F93B /* Personagem.swift in Sources */,
 				21E23B6B1B04DA820050F93B /* ViewController.swift in Sources */,
 				21E23B661B04DA820050F93B /* AppDelegate.swift in Sources */,
 				21E23B691B04DA820050F93B /* Tempus_Saga.xcdatamodeld in Sources */,
