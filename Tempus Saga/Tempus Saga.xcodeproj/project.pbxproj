@@ -85,15 +85,15 @@
 		21E23B621B04DA820050F93B /* Tempus Saga */ = {
 			isa = PBXGroup;
 			children = (
+				21E23B8F1B04ED6C0050F93B /* CoreData Manager */,
 				21E23B8C1B04E62D0050F93B /* AppDelegate */,
 				21E23B8B1B04E61E0050F93B /* ViewController */,
 				21E23B8A1B04E60B0050F93B /* Model */,
 				21E23B6F1B04DA820050F93B /* Images.xcassets */,
 				21E23B711B04DA820050F93B /* LaunchScreen.xib */,
-				21E23B671B04DA820050F93B /* Tempus_Saga.xcdatamodeld */,
-				21E23B631B04DA820050F93B /* Supporting Files */,
 				841448581B04E8FD00BBC829 /* Main.storyboard */,
-				21E23B8D1B04EC7D0050F93B /* PersonagemManager.swift */,
+				21E23B631B04DA820050F93B /* Supporting Files */,
+				21E23B671B04DA820050F93B /* Tempus_Saga.xcdatamodeld */,
 			);
 			path = "Tempus Saga";
 			sourceTree = "<group>";
@@ -147,6 +147,14 @@
 				21E23B651B04DA820050F93B /* AppDelegate.swift */,
 			);
 			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		21E23B8F1B04ED6C0050F93B /* CoreData Manager */ = {
+			isa = PBXGroup;
+			children = (
+				21E23B8D1B04EC7D0050F93B /* PersonagemManager.swift */,
+			);
+			name = "CoreData Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
