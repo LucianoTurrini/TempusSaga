@@ -13,19 +13,108 @@ class SceneViewController: UIViewController {
     @IBOutlet weak var imageCharacter: UIImageView!
     @IBOutlet weak var imageCharacter2: UIImageView!
     @IBOutlet weak var labelSpeak: UILabel!
-    @IBOutlet weak var imageSpeakBackground: UILabel!
+    @IBOutlet weak var imageSpeakBackground: UIImageView!
     @IBOutlet weak var imageBackground: UIImageView!
+    
+    /// Matriz com texto e imagem opcional do tipo [String, String, String]
+    // (Personagem, texto, imagem)
+    var textAndImages: Array< [String?] >!
+    var personagem1: UIImage?
+    var personagem2: UIImage?
+    var background: UIImage?
+    var backgroundSpeak: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        imageCharacter.image = personagem1
+        imageCharacter2.image = personagem2
+        imageBackground.image = background
+        //imageSpeakBackground.image = backgroundSpeak
+        
+        
+        for textImage in textAndImages {
+            let personagem = textImage[0]!
+            let texto = textImage[1]
+            
+            
+            if personagem == "1" {
+                // Personagem 1 em foco, 2 transparente
+                imageCharacter2.alpha = 0.6
+            } else if personagem == "2" {
+                // Personagem 2 em foco, 1 transparente
+                imageCharacter.alpha = 0.6
+            }
+            
+            labelSpeak.text = ""
+            //digitarTexto(texto, label: labelSpeak) //Pega só o texto do Array
+            
+        }
+        
+        Animations.bubble(imageSpeakBackground)
+        Animations.bubble(labelSpeak)
+        
+        
+        Animations.slideToRight(imageCharacter)
+//      fireTimer()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func digitarTexto (texto: String, label: UILabel) {
+        
+        
+        
     }
+    
+    
+
+//    private var myCounter = 0
+//    private var timer:NSTimer?
+//    
+//    private func fireTimer(){
+//        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "typeLetter", userInfo: nil, repeats: true)
+//    }
+//    
+//    func typeLetter(texto: String, label: UILabel){
+//        let arrayChar = Array<Character>(texto)
+//        
+//        if myCounter < arrayChar.count {
+//            label.text = label.text! + String(arrayChar[myCounter])
+//            let randomInterval = Double ((arc4random_uniform(8)+1))/20
+//            timer?.invalidate()
+//            timer = NSTimer.scheduledTimerWithTimeInterval(randomInterval, target: self, selector: "typeLetter", userInfo: nil, repeats: false)
+//        } else {
+//            timer?.invalidate()
+//        }
+//        myCounter++
+//    }
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
     
 
     /*
@@ -39,3 +128,7 @@ class SceneViewController: UIViewController {
     */
 
 }
+
+
+
+
