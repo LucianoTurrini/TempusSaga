@@ -10,6 +10,16 @@ import UIKit
 
 class StageViewController: UIViewController {
 
+    @IBAction func buttonStage1(sender: UIButton) {
+        
+    }
+    @IBAction func buttonStage2(sender: UIButton) {
+        
+    }
+    @IBAction func buttonStage3(sender: UIButton) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

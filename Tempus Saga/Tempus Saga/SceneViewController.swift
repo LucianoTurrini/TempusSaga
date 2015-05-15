@@ -13,8 +13,9 @@ class SceneViewController: UIViewController {
     @IBOutlet weak var imageCharacter: UIImageView!
     @IBOutlet weak var imageCharacter2: UIImageView!
     @IBOutlet weak var labelSpeak: UILabel!
-    @IBOutlet weak var imageSpeakBackground: UILabel!
+    @IBOutlet weak var imageSpeakBackground: UIImageView!
     @IBOutlet weak var imageBackground: UIImageView!
+    @IBOutlet weak var buttonNext: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -52,14 +52,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcd-1I-gB1">
+                                <rect key="frame" x="538" y="562" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="buttonNext" destination="kcd-1I-gB1" id="EtZ-qj-0M6"/>
                         <outlet property="imageBackground" destination="Kys-Nu-jVg" id="52q-YD-OoD"/>
                         <outlet property="imageCharacter" destination="nOm-XG-kwA" id="dK6-Ld-UdJ"/>
                         <outlet property="imageCharacter2" destination="voD-ch-ctF" id="ZHb-Ju-AIY"/>
-                        <outlet property="imageSpeakBackground" destination="ELm-N3-9zX" id="d3q-Js-4Ks"/>
+                        <outlet property="imageSpeakBackground" destination="DFI-m7-yz2" id="v02-qa-d4u"/>
                         <outlet property="labelSpeak" destination="ELm-N3-9zX" id="G18-EB-Pnq"/>
                     </connections>
                 </viewController>
@@ -67,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="1204" y="599"/>
         </scene>
-        <!--View Controller-->
+        <!--Stage View Controller-->
         <scene sceneID="ONL-gc-dmJ">
             <objects>
-                <viewController id="Wuv-e7-lgE" sceneMemberID="viewController">
+                <viewController id="Wuv-e7-lgE" customClass="StageViewController" customModule="Tempus_Saga" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="H3P-9q-ph7"/>
                         <viewControllerLayoutGuide type="bottom" id="wm9-BS-ifQ"/>
@@ -78,12 +85,85 @@
                     <view key="view" contentMode="scaleToFill" id="lAP-2q-fmE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xUe-vA-JGY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYq-3q-2p3">
+                                <rect key="frame" x="240" y="111" width="120" height="99"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonStage1:" destination="Wuv-e7-lgE" eventType="touchUpInside" id="E5R-Qn-Hkq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2G-LR-Y4k">
+                                <rect key="frame" x="141" y="250" width="120" height="99"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonStage2:" destination="Wuv-e7-lgE" eventType="touchUpInside" id="my0-jj-zmY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MV-iw-48a">
+                                <rect key="frame" x="337" y="250" width="120" height="99"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonStage3:" destination="Wuv-e7-lgE" eventType="touchUpInside" id="SqU-yZ-CAv"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="9YV-ZQ-b4x" kind="show" id="Xnt-Ns-wh4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNH-yD-lBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2043" y="599"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Zon-ET-dd6">
+            <objects>
+                <viewController id="9YV-ZQ-b4x" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KRi-RD-5kx"/>
+                        <viewControllerLayoutGuide type="bottom" id="qsr-u1-iaf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pbt-8I-33Q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QBo-cN-W9T">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dFp-Yn-qaN">
+                                <rect key="frame" x="0.0" y="472" width="600" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CV8-V5-R2a">
+                                <rect key="frame" x="16" y="484" width="568" height="108"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FlC-5k-iHE">
+                                <rect key="frame" x="164" y="162" width="272" height="438"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BEK-Qj-XZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2824" y="599"/>
         </scene>
     </scenes>
 </document>
