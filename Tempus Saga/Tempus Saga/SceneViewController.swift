@@ -15,6 +15,7 @@ class SceneViewController: UIViewController {
     @IBOutlet weak var labelSpeak: UILabel!
     @IBOutlet weak var imageSpeakBackground: UIImageView!
     @IBOutlet weak var imageBackground: UIImageView!
+    @IBOutlet weak var buttonNext: UIButton!
     
     /// Matriz com texto e imagem opcional do tipo [String, String, String]
     // (Personagem, texto, imagem)
