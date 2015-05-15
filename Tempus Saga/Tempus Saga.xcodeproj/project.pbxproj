@@ -87,11 +87,11 @@
 		21E23B621B04DA820050F93B /* Tempus Saga */ = {
 			isa = PBXGroup;
 			children = (
-				D6D7E21C1B062C96005543C4 /* Animations.swift */,
 				21E23B8F1B04ED6C0050F93B /* CoreData Manager */,
 				21E23B8C1B04E62D0050F93B /* AppDelegate */,
 				21E23B8B1B04E61E0050F93B /* ViewController */,
 				21E23B8A1B04E60B0050F93B /* Model */,
+				D6D7E21C1B062C96005543C4 /* Animations.swift */,
 				21E23B6F1B04DA820050F93B /* Images.xcassets */,
 				21E23B711B04DA820050F93B /* LaunchScreen.xib */,
 				841448581B04E8FD00BBC829 /* Main.storyboard */,

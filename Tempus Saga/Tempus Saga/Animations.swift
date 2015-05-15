@@ -11,14 +11,24 @@ import AVFoundation
 
 class Animations: NSObject {
     
+    enum direction {
+        case toRight
+        case toLeft
+    }
     
-    
-    class func slideToRight (el: UIView){
+    class func slide (el: UIView, direction: Animations.direction){
         
-        let temp:CGPoint = CGPoint(x: el.frame.origin.x, y: el.frame.origin.x)
-        el.frame.origin = CGPoint(x: 0, y: el.frame.origin.y)
+        let temp:CGPoint = CGPoint(x: el.frame.origin.x, y: el.frame.origin.y)
         
-        UIView.animateWithDuration(0.7, delay: 0.1, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+        if direction == .toRight {
+            el.frame.origin = CGPoint(x: 0, y: el.frame.origin.y)
+        } else if direction == .toLeft {
+            el.frame.origin = CGPoint(x: el.superview!.frame.width, y: el.frame.origin.y)
+        }
+        
+        
+        
+        UIView.animateWithDuration(0.7, delay: 0.3, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             el.frame.origin = temp
             
             //self.view.layoutIfNeeded()
@@ -28,7 +38,7 @@ class Animations: NSObject {
     class func bubble (el: UIView){
         let tempPos = CGPoint(x: el.frame.origin.x, y: el.frame.origin.y)
         
-        el.frame.origin = CGPoint(x: el.frame.origin.x, y: el.superview!.frame.height)
+        el.frame.origin = CGPoint(x: el.frame.origin.x, y: el.superview!.frame.width)
         
         UIView.animateWithDuration(1, delay: 0.8, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             el.frame.origin = tempPos

@@ -19,14 +19,22 @@ class SceneViewController: UIViewController {
     
     /// Matriz com texto e imagem opcional do tipo [String, String, String]
     // (Personagem, texto, imagem)
-    var textAndImages: Array< [String?] >!
+    var textAndImages = Array< [String?] >()
+//    var textAndImages: Array< [String?] >!
     var personagem1: UIImage?
     var personagem2: UIImage?
     var background: UIImage?
     var backgroundSpeak: UIImage?
     
+    private var numDialogo = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Ex:
+        let fala1:[String?] = ["1", "Hey man! Blá blá blá!", ""]
+        textAndImages.append(fala1)
+        
 
         imageCharacter.image = personagem1
         imageCharacter2.image = personagem2
@@ -34,30 +42,35 @@ class SceneViewController: UIViewController {
         //imageSpeakBackground.image = backgroundSpeak
         
         
-        for textImage in textAndImages {
-            let personagem = textImage[0]!
-            let texto = textImage[1]
-            
-            
-            if personagem == "1" {
-                // Personagem 1 em foco, 2 transparente
-                imageCharacter2.alpha = 0.6
-            } else if personagem == "2" {
-                // Personagem 2 em foco, 1 transparente
-                imageCharacter.alpha = 0.6
-            }
-            
-            labelSpeak.text = ""
+        //for textImage in textAndImages {
+//            let textImage = textAndImages[numDialogo]
+//        
+//            let personagem = textImage[0]!
+//            let texto = textImage[1]
+//            
+//            
+//            if personagem == "1" {
+//                // Personagem 1 em foco, 2 transparente
+//                imageCharacter2.alpha = 0.6
+//            } else if personagem == "2" {
+//                // Personagem 2 em foco, 1 transparente
+//                imageCharacter.alpha = 0.6
+//            }
+//            
+//            labelSpeak.text = ""
             //digitarTexto(texto, label: labelSpeak) //Pega só o texto do Array
             
-        }
+        //}
         
         Animations.bubble(imageSpeakBackground)
         Animations.bubble(labelSpeak)
         
         
-        Animations.slideToRight(imageCharacter)
+        Animations.slide(imageCharacter, direction: Animations.direction.toRight)
+        Animations.slide(imageCharacter2, direction: Animations.direction.toLeft)
 //      fireTimer()
+        
+        mostrarDialogo()
     }
 
     
@@ -67,28 +80,55 @@ class SceneViewController: UIViewController {
         
     }
     
+    func mostrarDialogo(){
+        
+        labelSpeak.text = ""
+        
+        let textImage = textAndImages[numDialogo]
+        
+        let personagem = textImage[0]!
+        let texto = textImage[1]
+        
+        
+        if personagem == "1" {
+            // Personagem 1 em foco, 2 transparente
+            imageCharacter2.alpha = 0.6
+        } else if personagem == "2" {
+            // Personagem 2 em foco, 1 transparente
+            imageCharacter.alpha = 0.6
+        }
+        
+        //digitarTexto(texto, label: labelSpeak) //Pega só o texto do Array
+        fireTimer()
+    }
     
-
-//    private var myCounter = 0
-//    private var timer:NSTimer?
-//    
-//    private func fireTimer(){
-//        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "typeLetter", userInfo: nil, repeats: true)
-//    }
-//    
-//    func typeLetter(texto: String, label: UILabel){
-//        let arrayChar = Array<Character>(texto)
-//        
-//        if myCounter < arrayChar.count {
-//            label.text = label.text! + String(arrayChar[myCounter])
-//            let randomInterval = Double ((arc4random_uniform(8)+1))/20
-//            timer?.invalidate()
-//            timer = NSTimer.scheduledTimerWithTimeInterval(randomInterval, target: self, selector: "typeLetter", userInfo: nil, repeats: false)
-//        } else {
-//            timer?.invalidate()
-//        }
-//        myCounter++
-//    }
+    
+    //Refatorar esse método e passar para classe de animação
+    private var myCounter = 0
+    private var timer:NSTimer?
+    
+    private func fireTimer(){
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "typeLetter", userInfo: nil, repeats: true)
+    }
+    
+    //func typeLetter(texto: String, label: UILabel){
+    func typeLetter(){
+        let texto = textAndImages[numDialogo][1]
+        let label = labelSpeak
+        
+        let arrayChar = Array<Character>(texto!)
+        
+        if myCounter < arrayChar.count {
+            label.text = label.text! + String(arrayChar[myCounter])
+            let randomInterval = Double ((arc4random_uniform(6)+1))/20
+            timer?.invalidate()
+            timer = NSTimer.scheduledTimerWithTimeInterval(randomInterval, target: self, selector: "typeLetter", userInfo: nil, repeats: false)
+        } else {
+            timer?.invalidate()
+        }
+        myCounter++
+//        numDialogo++
+    }
     
     
     
