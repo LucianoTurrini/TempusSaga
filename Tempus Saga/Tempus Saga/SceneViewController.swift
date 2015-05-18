@@ -25,15 +25,33 @@ class SceneViewController: UIViewController {
     var personagem2: UIImage?
     var background: UIImage?
     var backgroundSpeak: UIImage?
+    let animations = Animations()
     
     private var numDialogo = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Ex:
-        let fala1:[String?] = ["1", "Hey man! Blá blá blá!", ""]
+        
+///// Teste ////////////
+        let fala1:[String?] = ["1", "- Hey man! What's up?", ""]
+        let fala2:[String?] = ["2", "- I'm ok.", ""]
+        let fala3:[String?] = ["2", "- And you?", ""]
+        let fala4:[String?] = ["1", "- Ok.", ""]
+        let fala5:[String?] = ["1", "- ...", ""]
+        let fala6:[String?] = ["2", "- ...", ""]
+        let fala7:[String?] = ["1", "- Bye.", ""]
+        let fala8:[String?] = ["2", "- Bye.", ""]
         textAndImages.append(fala1)
+        textAndImages.append(fala2)
+        textAndImages.append(fala3)
+        textAndImages.append(fala4)
+        textAndImages.append(fala5)
+        textAndImages.append(fala6)
+        textAndImages.append(fala7)
+        textAndImages.append(fala8)
+        
+///// Teste ////////////
         
 
         imageCharacter.image = personagem1
@@ -42,101 +60,61 @@ class SceneViewController: UIViewController {
         //imageSpeakBackground.image = backgroundSpeak
         
         
-        //for textImage in textAndImages {
-//            let textImage = textAndImages[numDialogo]
-//        
-//            let personagem = textImage[0]!
-//            let texto = textImage[1]
-//            
-//            
-//            if personagem == "1" {
-//                // Personagem 1 em foco, 2 transparente
-//                imageCharacter2.alpha = 0.6
-//            } else if personagem == "2" {
-//                // Personagem 2 em foco, 1 transparente
-//                imageCharacter.alpha = 0.6
-//            }
-//            
-//            labelSpeak.text = ""
-            //digitarTexto(texto, label: labelSpeak) //Pega só o texto do Array
-            
-        //}
-        
-        Animations.bubble(imageSpeakBackground)
-        Animations.bubble(labelSpeak)
-        
-        
-        Animations.slide(imageCharacter, direction: Animations.direction.toRight)
-        Animations.slide(imageCharacter2, direction: Animations.direction.toLeft)
-//      fireTimer()
-        
-        mostrarDialogo()
-    }
-
-    
-    func digitarTexto (texto: String, label: UILabel) {
-        
-        
-        
-    }
-    
-    func mostrarDialogo(){
         
         labelSpeak.text = ""
         
-        let textImage = textAndImages[numDialogo]
+        Animations.bubble(imageSpeakBackground){ }
+        
+        Animations.bubble(labelSpeak){
+            
+            while self.numDialogo < self.textAndImages.count {
+                self.mostrarDialogo()
+                //Exibe o loop de diálogos
+            }
+        }
+        
+        Animations.slide(imageCharacter, direction: Animations.direction.toRight)
+        Animations.slide(imageCharacter2, direction: Animations.direction.toLeft)
+    }
+
+    func mostrarDialogo(){
+            
+        let textImage = self.textAndImages[self.numDialogo]
         
         let personagem = textImage[0]!
         let texto = textImage[1]
+    
+        /// Pega a thread criada para o texto e adiciona
+        let queue = animations.queue
+    
+        dispatch_async (queue, { () -> Void in
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                if personagem == "1" {
+                    // Personagem 1 em foco, 2 transparente
+                    self.imageCharacter2.alpha = 0.4
+                    self.imageCharacter.alpha = 1
+                } else if personagem == "2" {
+                    // Personagem 2 em foco, 1 transparente
+                    self.imageCharacter.alpha = 0.4
+                    self.imageCharacter2.alpha = 1
+                }
+            })
+        })
         
+        self.animations.input(texto!, label: self.labelSpeak) //Pega só o texto do Array
         
-        if personagem == "1" {
-            // Personagem 1 em foco, 2 transparente
-            imageCharacter2.alpha = 0.6
-        } else if personagem == "2" {
-            // Personagem 2 em foco, 1 transparente
-            imageCharacter.alpha = 0.6
+        // Pausa entre as falas
+        dispatch_async (queue, { () -> Void in
+            usleep(1000 * 1000)  // Milisegundos * 1000
+        })
+        
+        // Incrementa o indice do vetor
+        if self.numDialogo < self.textAndImages.count {
+            self.numDialogo++
         }
         
-        //digitarTexto(texto, label: labelSpeak) //Pega só o texto do Array
-        fireTimer()
     }
-    
-    
-    //Refatorar esse método e passar para classe de animação
-    private var myCounter = 0
-    private var timer:NSTimer?
-    
-    private func fireTimer(){
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "typeLetter", userInfo: nil, repeats: true)
-    }
-    
-    //func typeLetter(texto: String, label: UILabel){
-    func typeLetter(){
-        let texto = textAndImages[numDialogo][1]
-        let label = labelSpeak
-        
-        let arrayChar = Array<Character>(texto!)
-        
-        if myCounter < arrayChar.count {
-            label.text = label.text! + String(arrayChar[myCounter])
-            let randomInterval = Double ((arc4random_uniform(6)+1))/20
-            timer?.invalidate()
-            timer = NSTimer.scheduledTimerWithTimeInterval(randomInterval, target: self, selector: "typeLetter", userInfo: nil, repeats: false)
-        } else {
-            timer?.invalidate()
-        }
-        myCounter++
-//        numDialogo++
-    }
-    
-    
-    
-
-    
-    
-    
-    
     
     
     

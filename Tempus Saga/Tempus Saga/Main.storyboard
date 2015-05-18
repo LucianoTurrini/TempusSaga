@@ -35,7 +35,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kys-Nu-jVg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kys-Nu-jVg">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -52,11 +52,11 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOm-XG-kwA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOm-XG-kwA">
                                 <rect key="frame" x="84" y="134" width="186" height="466"/>
                                 <color key="backgroundColor" red="0.72544587039999997" green="1" blue="0.83467170999999996" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="voD-ch-ctF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="voD-ch-ctF">
                                 <rect key="frame" x="363" y="134" width="184" height="466"/>
                                 <color key="backgroundColor" red="0.72544587039999997" green="1" blue="0.83467170999999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -73,17 +73,17 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DFI-m7-yz2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DFI-m7-yz2">
                                 <rect key="frame" x="0.0" y="472" width="600" height="128"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcd-1I-gB1">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcd-1I-gB1">
                                 <rect key="frame" x="538" y="562" width="46" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELm-N3-9zX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELm-N3-9zX">
                                 <rect key="frame" x="16" y="484" width="568" height="108"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -93,24 +93,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="voD-ch-ctF" firstAttribute="leading" secondItem="yRV-f5-mGO" secondAttribute="leading" constant="348" id="2Sd-B7-quj"/>
-                            <constraint firstItem="ELm-N3-9zX" firstAttribute="top" secondItem="tjM-OL-4CO" secondAttribute="bottom" constant="287" id="3Jf-cP-uKg"/>
+                            <constraint firstItem="ELm-N3-9zX" firstAttribute="bottom" secondItem="DFI-m7-yz2" secondAttribute="bottom" id="4cS-pv-HIS"/>
                             <constraint firstItem="DFI-m7-yz2" firstAttribute="leading" secondItem="Kys-Nu-jVg" secondAttribute="leading" id="6s6-sl-RiW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ELm-N3-9zX" secondAttribute="trailing" constant="6" id="9Ec-wW-Lsg"/>
                             <constraint firstItem="voD-ch-ctF" firstAttribute="top" secondItem="nOm-XG-kwA" secondAttribute="top" id="9eu-35-asA"/>
                             <constraint firstItem="nOm-XG-kwA" firstAttribute="leading" secondItem="yRV-f5-mGO" secondAttribute="leadingMargin" constant="53" id="Aei-3z-a4a"/>
                             <constraint firstAttribute="bottomMargin" secondItem="nOm-XG-kwA" secondAttribute="bottom" constant="-94" id="Dm3-6i-eC2"/>
                             <constraint firstItem="voD-ch-ctF" firstAttribute="bottom" secondItem="nOm-XG-kwA" secondAttribute="bottom" id="HXc-xb-gcB"/>
-                            <constraint firstItem="47T-Wh-3Ng" firstAttribute="top" secondItem="ELm-N3-9zX" secondAttribute="bottom" constant="10" id="HeJ-fJ-2sh"/>
                             <constraint firstItem="nOm-XG-kwA" firstAttribute="top" secondItem="tjM-OL-4CO" secondAttribute="bottom" constant="8" symbolic="YES" id="Kaw-wy-Rb1"/>
                             <constraint firstItem="DFI-m7-yz2" firstAttribute="leading" secondItem="yRV-f5-mGO" secondAttribute="leading" id="LeE-5J-HYC"/>
+                            <constraint firstItem="ELm-N3-9zX" firstAttribute="top" secondItem="DFI-m7-yz2" secondAttribute="top" id="Lnq-lP-Sxr"/>
                             <constraint firstItem="47T-Wh-3Ng" firstAttribute="top" secondItem="DFI-m7-yz2" secondAttribute="bottom" constant="1" id="XYH-yB-WgA"/>
                             <constraint firstItem="voD-ch-ctF" firstAttribute="leading" secondItem="nOm-XG-kwA" secondAttribute="trailing" constant="93" id="Ywv-ak-dex"/>
+                            <constraint firstItem="ELm-N3-9zX" firstAttribute="leading" secondItem="yRV-f5-mGO" secondAttribute="leadingMargin" constant="-11" id="ZFS-Fc-qab"/>
                             <constraint firstAttribute="trailing" secondItem="DFI-m7-yz2" secondAttribute="trailing" id="Zhq-89-b2g"/>
                             <constraint firstAttribute="bottom" secondItem="kcd-1I-gB1" secondAttribute="bottom" constant="20" symbolic="YES" id="a34-My-K6T"/>
                             <constraint firstItem="DFI-m7-yz2" firstAttribute="top" secondItem="tjM-OL-4CO" secondAttribute="bottom" constant="279" id="kgO-ru-e4I"/>
-                            <constraint firstItem="ELm-N3-9zX" firstAttribute="leading" secondItem="yRV-f5-mGO" secondAttribute="leadingMargin" id="mcC-Nz-9SY"/>
                             <constraint firstItem="kcd-1I-gB1" firstAttribute="leading" secondItem="voD-ch-ctF" secondAttribute="trailing" constant="6" id="sjF-4o-x1z"/>
                             <constraint firstItem="DFI-m7-yz2" firstAttribute="trailing" secondItem="Kys-Nu-jVg" secondAttribute="trailing" id="sul-Mu-Sbg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ELm-N3-9zX" secondAttribute="trailing" constant="-5" id="tP4-Wm-ZBC"/>
                             <constraint firstItem="Kys-Nu-jVg" firstAttribute="top" secondItem="yRV-f5-mGO" secondAttribute="top" id="ylT-LQ-HUm"/>
                         </constraints>
                         <variation key="default">
@@ -124,14 +124,14 @@
                                 <exclude reference="Zhq-89-b2g"/>
                                 <exclude reference="kgO-ru-e4I"/>
                                 <exclude reference="sul-Mu-Sbg"/>
-                                <exclude reference="3Jf-cP-uKg"/>
-                                <exclude reference="mcC-Nz-9SY"/>
-                                <exclude reference="tP4-Wm-ZBC"/>
+                                <exclude reference="4cS-pv-HIS"/>
+                                <exclude reference="9Ec-wW-Lsg"/>
+                                <exclude reference="Lnq-lP-Sxr"/>
+                                <exclude reference="ZFS-Fc-qab"/>
                                 <exclude reference="2Sd-B7-quj"/>
                                 <exclude reference="9eu-35-asA"/>
                                 <exclude reference="HXc-xb-gcB"/>
                                 <exclude reference="Ywv-ak-dex"/>
-                                <exclude reference="HeJ-fJ-2sh"/>
                                 <exclude reference="XYH-yB-WgA"/>
                                 <exclude reference="a34-My-K6T"/>
                                 <exclude reference="sjF-4o-x1z"/>
@@ -148,14 +148,14 @@
                                 <include reference="Zhq-89-b2g"/>
                                 <include reference="kgO-ru-e4I"/>
                                 <include reference="sul-Mu-Sbg"/>
-                                <include reference="3Jf-cP-uKg"/>
-                                <include reference="mcC-Nz-9SY"/>
-                                <include reference="tP4-Wm-ZBC"/>
+                                <include reference="4cS-pv-HIS"/>
+                                <include reference="9Ec-wW-Lsg"/>
+                                <include reference="Lnq-lP-Sxr"/>
+                                <include reference="ZFS-Fc-qab"/>
                                 <include reference="2Sd-B7-quj"/>
                                 <include reference="9eu-35-asA"/>
                                 <include reference="HXc-xb-gcB"/>
                                 <include reference="Ywv-ak-dex"/>
-                                <include reference="HeJ-fJ-2sh"/>
                                 <include reference="XYH-yB-WgA"/>
                                 <include reference="a34-My-K6T"/>
                                 <include reference="sjF-4o-x1z"/>
