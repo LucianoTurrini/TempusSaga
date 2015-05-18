@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212F8B9E1B0A09E5006A6C5A /* AgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212F8B9D1B0A09E5006A6C5A /* AgesViewController.swift */; };
 		21E23B661B04DA820050F93B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B651B04DA820050F93B /* AppDelegate.swift */; };
 		21E23B691B04DA820050F93B /* Tempus_Saga.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B671B04DA820050F93B /* Tempus_Saga.xcdatamodeld */; };
 		21E23B701B04DA820050F93B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21E23B6F1B04DA820050F93B /* Images.xcassets */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		212F8B9D1B0A09E5006A6C5A /* AgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AgesViewController.swift; path = ViewController/AgesViewController.swift; sourceTree = "<group>"; };
+		212F8B9F1B0A1109006A6C5A /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = "Tempus Saga/MyPlayground.playground"; sourceTree = "<group>"; };
 		21E23B601B04DA820050F93B /* Tempus Saga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tempus Saga.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E23B641B04DA820050F93B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21E23B651B04DA820050F93B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 		21E23B571B04DA820050F93B = {
 			isa = PBXGroup;
 			children = (
+				212F8B9F1B0A1109006A6C5A /* MyPlayground.playground */,
 				21E23B621B04DA820050F93B /* Tempus Saga */,
 				21E23B7B1B04DA820050F93B /* Tempus SagaTests */,
 				21E23B611B04DA820050F93B /* Products */,
@@ -140,6 +144,7 @@
 			children = (
 				841448501B04E81800BBC829 /* StageViewController.swift */,
 				841448521B04E82D00BBC829 /* SceneViewController.swift */,
+				212F8B9D1B0A09E5006A6C5A /* AgesViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 			files = (
 				841448531B04E82D00BBC829 /* SceneViewController.swift in Sources */,
 				21E23B891B04E6010050F93B /* Personagem.swift in Sources */,
+				212F8B9E1B0A09E5006A6C5A /* AgesViewController.swift in Sources */,
 				21E23B8E1B04EC7D0050F93B /* PersonagemManager.swift in Sources */,
 				841448511B04E81800BBC829 /* StageViewController.swift in Sources */,
 				21E23B661B04DA820050F93B /* AppDelegate.swift in Sources */,
