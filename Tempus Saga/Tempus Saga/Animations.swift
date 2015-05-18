@@ -21,9 +21,9 @@ class Animations: NSObject {
         let temp:CGPoint = CGPoint(x: el.frame.origin.x, y: el.frame.origin.y)
         
         if direction == .toRight {
-            el.frame.origin = CGPoint(x: 0, y: el.frame.origin.y)
+            el.frame.origin = CGPoint(x: -el.frame.size.width, y: el.frame.origin.y)
         } else if direction == .toLeft {
-            el.frame.origin = CGPoint(x: el.superview!.frame.width, y: el.frame.origin.y)
+            el.frame.origin = CGPoint(x: el.superview!.frame.width + el.frame.size.width, y: el.frame.origin.y)
         }
         
         
