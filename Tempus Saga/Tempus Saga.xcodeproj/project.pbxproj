@@ -52,7 +52,7 @@
 		841448501B04E81800BBC829 /* StageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StageViewController.swift; path = ViewController/StageViewController.swift; sourceTree = "<group>"; };
 		841448521B04E82D00BBC829 /* SceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		841448581B04E8FD00BBC829 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		D6D7E21C1B062C96005543C4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		D6D7E21C1B062C96005543C4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animations.swift; path = "Tempus Saga/Animations.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,6 @@
 				21E23B8C1B04E62D0050F93B /* AppDelegate */,
 				21E23B8B1B04E61E0050F93B /* ViewController */,
 				21E23B8A1B04E60B0050F93B /* Model */,
-				D6D7E21C1B062C96005543C4 /* Animations.swift */,
 				21E23B6F1B04DA820050F93B /* Images.xcassets */,
 				21E23B711B04DA820050F93B /* LaunchScreen.xib */,
 				841448581B04E8FD00BBC829 /* Main.storyboard */,
@@ -137,6 +136,7 @@
 		21E23B8A1B04E60B0050F93B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D6D7E21C1B062C96005543C4 /* Animations.swift */,
 				21E23B881B04E6010050F93B /* Personagem.swift */,
 				212F8BA01B0A1C36006A6C5A /* Era.swift */,
 				212F8BA21B0A1D71006A6C5A /* Place.swift */,

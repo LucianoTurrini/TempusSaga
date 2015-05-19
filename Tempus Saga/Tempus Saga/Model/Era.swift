@@ -10,9 +10,15 @@ import UIKit
 
 class Era: NSObject {
     
-    var nome: String = ""
+    var nome: String!
     var places: Array<String>!
-    var imageBackground: String = ""
+    var imageBackground: UIImage!
+    
+    convenience init(nome: String, places: Array<String>, imageBackground: UIImage) {
+        
+        self.init()
+        
+    }
 
    
 }

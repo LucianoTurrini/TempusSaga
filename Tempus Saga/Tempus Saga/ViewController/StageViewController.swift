@@ -10,36 +10,65 @@ import UIKit
 
 class StageViewController: UIViewController {
 
+ 
+    // MARK: - Outlets in StoryBoard
+    
+    @IBOutlet weak var buttonStage1: UIButton!
+    
+    @IBOutlet weak var buttonStage2: UIButton!
+    
+    @IBOutlet weak var buttonStage3: UIButton!
+    
+    @IBOutlet weak var imageBackground: UIImageView!
+    
+    
+    // MARK: - Global Variables
+    
+    var era: Era!
+    
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+        defineStage()
+
+        
+    }
+    
+    
+    func defineStage() {
+        
+        imageBackground.image = era.imageBackground
+        
+    }
+    
+    
+    // MARK: - Buttons Actions
+    
     @IBAction func buttonStage1(sender: UIButton) {
         
     }
+    
     @IBAction func buttonStage2(sender: UIButton) {
         
     }
+    
     @IBAction func buttonStage3(sender: UIButton) {
         
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    @IBAction func buttonVoltar(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
+  
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        
     }
-    */
 
 }
