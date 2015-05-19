@@ -19,7 +19,7 @@ class SceneViewController: UIViewController {
     
     /// Matriz com texto e imagem opcional do tipo [String, String, String]
     // (Personagem, texto, imagem)
-    var textAndImages = Array< [String?] >()
+    var textAndImages = Array< [String] >()
 //    var textAndImages: Array< [String?] >!
     var personagem1: UIImage?
     var personagem2: UIImage?
@@ -34,25 +34,7 @@ class SceneViewController: UIViewController {
         
         
         
-///// Teste ////////////
-        let fala1:[String?] = ["1", "- Hey man! What's up?", ""]
-        let fala2:[String?] = ["2", "- I'm ok.", ""]
-        let fala3:[String?] = ["2", "- And you?", ""]
-        let fala4:[String?] = ["1", "- Ok.", ""]
-        let fala5:[String?] = ["1", "- ...", ""]
-        let fala6:[String?] = ["2", "- ...", ""]
-        let fala7:[String?] = ["1", "- Bye.", ""]
-        let fala8:[String?] = ["2", "- Bye.", ""]
-        textAndImages.append(fala1)
-        textAndImages.append(fala2)
-        textAndImages.append(fala3)
-        textAndImages.append(fala4)
-        textAndImages.append(fala5)
-        textAndImages.append(fala6)
-        textAndImages.append(fala7)
-        textAndImages.append(fala8)
-        
-///// Teste ////////////
+        textAndImages = JSONReader.getFalas("teste")
         
 
         imageCharacter.image = personagem1
@@ -68,7 +50,7 @@ class SceneViewController: UIViewController {
         
         Animations.bubble(labelSpeak){
             
-            while self.numDialogo < self.textAndImages.count {
+            while self.numDialogo < self.textAndImages.count {  // Lembrar: Aqui é totalmente assíncrono!
                 self.mostrarDialogo()
                 //Exibe o loop de diálogos
             }
@@ -78,14 +60,15 @@ class SceneViewController: UIViewController {
         Animations.slide(imageCharacter2, direction: Animations.direction.toLeft)
     }
 
-    func mostrarDialogo(){
+    func mostrarDialogo(){  // Totalmente assíncrono
             
         let textImage = self.textAndImages[self.numDialogo]
         
-        let personagem = textImage[0]!
+        let personagem = textImage[0]
         let texto = textImage[1]
         let imageString = textImage[2]
         var image = UIImage()
+        let nDialogo = self.numDialogo
     
         /// Pega a thread criada para o texto e adiciona
         let queue = animations.queue
@@ -94,7 +77,7 @@ class SceneViewController: UIViewController {
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 
-                if let testImage = UIImage(named: imageString!) {
+                if let testImage = UIImage(named: imageString) {
                     image = testImage
                 }
                 
@@ -109,14 +92,21 @@ class SceneViewController: UIViewController {
                     self.imageCharacter2.alpha = 1
                     self.imageCharacter2.image = image
                 }
+                
+                // Verifica se acabou a fala
+                if nDialogo >= self.textAndImages.count-1 {
+                    self.removerPersonagens(self.imageCharacter, p2: self.imageCharacter2)
+                }
             })
         })
         
-        self.animations.input(texto!, label: self.labelSpeak) //Pega só o texto do Array
+        self.animations.input(texto, label: self.labelSpeak) //Pega só o texto do Array
+        
+        
         
         // Pausa entre as falas
         dispatch_async (queue, { () -> Void in
-            usleep(2000 * 1000)  // Milisegundos * 1000
+            usleep(500 * 1000)  // Milisegundos * 1000
         })
         
         // Incrementa o indice do vetor
@@ -129,8 +119,8 @@ class SceneViewController: UIViewController {
     
     func removerPersonagens(p1: UIImageView, p2: UIImageView) {
         
-        Animations.slideOut(imageCharacter, direction: Animations.direction.toLeft)
-        Animations.slideOut(imageCharacter2, direction: Animations.direction.toRight)
+        Animations.slideOut(p1, direction: Animations.direction.toLeft)
+        Animations.slideOut(p2, direction: Animations.direction.toRight)
         
     }
     

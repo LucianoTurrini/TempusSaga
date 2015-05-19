@@ -45,10 +45,11 @@ class Animations: NSObject {
                                    y: el.frame.origin.y)
         }
         
-        UIView.animateWithDuration(0.7, delay: 0.3, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+        UIView.animateWithDuration(10.0, delay: 0.3, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            
             el.frame.origin = finalPos
             //self.view.layoutIfNeeded()
-            }, completion: nil)
+        }, completion: nil)
     }
     
     class func bubble (el: UIView, completion: () -> () ){
@@ -57,12 +58,12 @@ class Animations: NSObject {
         el.frame.origin = CGPoint(x: el.frame.origin.x, y: el.superview!.frame.width)
         
         UIView.animateWithDuration(1, delay: 0.8, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-                el.frame.origin = tempPos
-                //el.layer.cornerRadius = 0
-                //self.view.layoutIfNeeded()
-            }, completion: { (value: Bool) in
-                completion()
-            })
+            el.frame.origin = tempPos
+            //el.layer.cornerRadius = 0
+            //self.view.layoutIfNeeded()
+        }, completion: { (value: Bool) in
+            completion()
+        })
     }
     
     
