@@ -33,6 +33,7 @@ class SceneViewController: UIViewController {
         super.viewDidLoad()
         
         
+        
 ///// Teste ////////////
         let fala1:[String?] = ["1", "- Hey man! What's up?", ""]
         let fala2:[String?] = ["2", "- I'm ok.", ""]
@@ -83,6 +84,8 @@ class SceneViewController: UIViewController {
         
         let personagem = textImage[0]!
         let texto = textImage[1]
+        let imageString = textImage[2]
+        var image = UIImage()
     
         /// Pega a thread criada para o texto e adiciona
         let queue = animations.queue
@@ -90,14 +93,21 @@ class SceneViewController: UIViewController {
         dispatch_async (queue, { () -> Void in
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                
+                if let testImage = UIImage(named: imageString!) {
+                    image = testImage
+                }
+                
                 if personagem == "1" {
                     // Personagem 1 em foco, 2 transparente
                     self.imageCharacter2.alpha = 0.4
                     self.imageCharacter.alpha = 1
+                    self.imageCharacter.image = image
                 } else if personagem == "2" {
                     // Personagem 2 em foco, 1 transparente
                     self.imageCharacter.alpha = 0.4
                     self.imageCharacter2.alpha = 1
+                    self.imageCharacter2.image = image
                 }
             })
         })
@@ -106,7 +116,7 @@ class SceneViewController: UIViewController {
         
         // Pausa entre as falas
         dispatch_async (queue, { () -> Void in
-            usleep(1000 * 1000)  // Milisegundos * 1000
+            usleep(2000 * 1000)  // Milisegundos * 1000
         })
         
         // Incrementa o indice do vetor
@@ -117,6 +127,12 @@ class SceneViewController: UIViewController {
     }
     
     
+    func removerPersonagens(p1: UIImageView, p2: UIImageView) {
+        
+        Animations.slideOut(imageCharacter, direction: Animations.direction.toLeft)
+        Animations.slideOut(imageCharacter2, direction: Animations.direction.toRight)
+        
+    }
     
     
     
