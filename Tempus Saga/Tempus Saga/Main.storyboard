@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gKy-rw-L1F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SnA-oO-8G1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -201,11 +201,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAE-hD-OqP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAE-hD-OqP">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-rL-j1P">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-rL-j1P">
                                 <rect key="frame" x="103" y="350" width="156" height="121"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -225,7 +225,7 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXE-Vf-UCP">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXE-Vf-UCP">
                                 <rect key="frame" x="322" y="233" width="156" height="121"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -248,7 +248,7 @@
                                     <action selector="buttonGrecia:" destination="gKy-rw-L1F" eventType="touchUpInside" id="EJS-At-VyC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEd-UW-gJn">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEd-UW-gJn">
                                 <rect key="frame" x="103" y="94" width="156" height="121"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -301,9 +301,9 @@
                                 <exclude reference="cvP-Af-qRr"/>
                                 <exclude reference="5tG-rG-PYe"/>
                                 <exclude reference="OuU-gV-bHN"/>
-                                <exclude reference="XWb-Ft-RsV"/>
                                 <exclude reference="Qcm-Pc-EwT"/>
                                 <exclude reference="gwk-BP-gH1"/>
+                                <exclude reference="XWb-Ft-RsV"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -317,9 +317,9 @@
                                 <include reference="cvP-Af-qRr"/>
                                 <include reference="5tG-rG-PYe"/>
                                 <include reference="OuU-gV-bHN"/>
-                                <include reference="XWb-Ft-RsV"/>
                                 <include reference="Qcm-Pc-EwT"/>
                                 <include reference="gwk-BP-gH1"/>
+                                <include reference="XWb-Ft-RsV"/>
                             </mask>
                         </variation>
                     </view>
@@ -345,7 +345,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYq-3q-2p3">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYq-3q-2p3">
                                 <rect key="frame" x="240" y="111" width="120" height="99"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -368,7 +368,7 @@
                                     <action selector="buttonStage1:" destination="Wuv-e7-lgE" eventType="touchUpInside" id="E5R-Qn-Hkq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2G-LR-Y4k">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2G-LR-Y4k">
                                 <rect key="frame" x="141" y="250" width="120" height="99"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -394,7 +394,7 @@
                                     <action selector="buttonStage2:" destination="Wuv-e7-lgE" eventType="touchUpInside" id="my0-jj-zmY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MV-iw-48a">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MV-iw-48a">
                                 <rect key="frame" x="337" y="250" width="120" height="99"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -417,7 +417,7 @@
                                     <action selector="buttonStage3:" destination="Wuv-e7-lgE" eventType="touchUpInside" id="SqU-yZ-CAv"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xUe-vA-JGY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xUe-vA-JGY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
@@ -449,9 +449,9 @@
                                 <exclude reference="FVH-Tw-OrB"/>
                                 <exclude reference="GHi-OC-3FF"/>
                                 <exclude reference="Z5J-V1-Vf4"/>
-                                <exclude reference="p4Y-Xv-BG3"/>
                                 <exclude reference="Wu2-SM-bN5"/>
                                 <exclude reference="lqu-vl-C91"/>
+                                <exclude reference="p4Y-Xv-BG3"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -466,9 +466,9 @@
                                 <include reference="FVH-Tw-OrB"/>
                                 <include reference="GHi-OC-3FF"/>
                                 <include reference="Z5J-V1-Vf4"/>
-                                <include reference="p4Y-Xv-BG3"/>
                                 <include reference="Wu2-SM-bN5"/>
                                 <include reference="lqu-vl-C91"/>
+                                <include reference="p4Y-Xv-BG3"/>
                             </mask>
                         </variation>
                     </view>
