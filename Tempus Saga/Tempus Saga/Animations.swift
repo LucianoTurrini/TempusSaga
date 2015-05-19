@@ -33,6 +33,24 @@ class Animations: NSObject {
             }, completion: nil)
     }
     
+    class func slideOut (el: UIView, direction: Animations.direction){
+
+        var finalPos: CGPoint!
+        
+        if direction == .toRight {
+            finalPos = CGPoint(x: el.superview!.frame.width + el.frame.size.width,
+                                   y: el.frame.origin.y)
+        } else if direction == .toLeft {
+            finalPos = CGPoint(x: -el.frame.size.width,
+                                   y: el.frame.origin.y)
+        }
+        
+        UIView.animateWithDuration(0.7, delay: 0.3, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            el.frame.origin = finalPos
+            //self.view.layoutIfNeeded()
+            }, completion: nil)
+    }
+    
     class func bubble (el: UIView, completion: () -> () ){
         let tempPos = CGPoint(x: el.frame.origin.x, y: el.frame.origin.y)
         
@@ -46,6 +64,7 @@ class Animations: NSObject {
                 completion()
             })
     }
+    
     
     let queue = dispatch_queue_create("com.tempusSaga.console", DISPATCH_QUEUE_SERIAL)
     var writeText: String!
