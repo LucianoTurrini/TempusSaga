@@ -27,6 +27,9 @@ class AgesViewController: UIViewController {
         
     }
     @IBAction func buttonGrecia(sender: AnyObject) {
+        
+        performSegueWithIdentifier("selecionarEra", sender: self)
+        
     }
     
     
