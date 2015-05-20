@@ -72,8 +72,8 @@ class Animations: NSObject {
     var writing = 0
     var textBefore: String!
     
-    func input(text: String, label: UILabel)
-    {
+    func input(text: String, label: UILabel) {
+        
         dispatch_async(self.queue, { () -> Void in
             label.text = ""
             self.writing = 0
@@ -91,6 +91,88 @@ class Animations: NSObject {
             }
         })
     }
+    
+    
+    func mostrarDialogo(textImage: Array<String>, img1: UIImageView, img2: UIImageView, label: UILabel, complete: () -> ()){
+        // Totalmente assíncrono
+        
+        
+        //let textImage = self.textAndImages[self.numDialogo]
+        
+        let personagem = textImage[0]
+        let texto = textImage[1]
+        let imageString = textImage[2]
+        var image = UIImage()
+        //let nDialogo = self.numDialogo
+        
+        /// Pega a thread criada para o texto e adiciona
+        //let queue = self.queue
+        
+        dispatch_async (queue, { () -> Void in
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                
+                if let testImage = UIImage(named: imageString) {
+                    image = testImage
+                }
+                
+                if personagem == "1" {
+                    // Personagem 1 em foco, 2 transparente
+                    img2.alpha = 0.4
+                    img1.alpha = 1
+                    img1.image = image
+                } else if personagem == "2" {
+                    // Personagem 2 em foco, 1 transparente
+                    img1.alpha = 0.4
+                    img2.alpha = 1
+                    img2.image = image
+                }
+                
+                // Algo extra que quisar enfileirar
+                complete ()
+                
+            })
+        })
+        
+        self.input(texto, label: label) //Pega só o texto do Array
+        
+        
+        // Pausa entre as falas
+        dispatch_async (queue, { () -> Void in
+            usleep(500 * 1000)  // Milisegundos * 1000
+        })
+        
+      }
+
+    
+    class func fadeToBlack (view: UIView) {
+        
+        let viewWidth = view.bounds.size.width
+        let viewHeight = view.bounds.size.height
+        
+        let blackView = UIView(frame: CGRect(x: 0, y: 0, width: viewWidth, height: viewHeight))
+        blackView.backgroundColor = UIColor.blackColor()
+        blackView.alpha = 0
+        view.addSubview(blackView)
+        
+        UIView.animateWithDuration(2, delay: 2, options: UIViewAnimationOptions.CurveEaseOut, animations:
+        {
+            blackView.alpha = 1
+        
+        }, completion: { (value: Bool) in
+            
+        })
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

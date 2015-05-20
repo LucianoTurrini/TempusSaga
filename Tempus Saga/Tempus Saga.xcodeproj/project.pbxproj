@@ -20,6 +20,7 @@
 		841448511B04E81800BBC829 /* StageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841448501B04E81800BBC829 /* StageViewController.swift */; };
 		841448531B04E82D00BBC829 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841448521B04E82D00BBC829 /* SceneViewController.swift */; };
 		841448591B04E8FD00BBC829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841448581B04E8FD00BBC829 /* Main.storyboard */; };
+		D667615F1B0BB67F002C06A2 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */; };
 		D697A5281B0B78630022B3DD /* JSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D697A5271B0B78630022B3DD /* JSONReader.swift */; };
 		D6D7E21D1B062C96005543C4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D7E21C1B062C96005543C4 /* Animations.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		841448501B04E81800BBC829 /* StageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StageViewController.swift; path = ViewController/StageViewController.swift; sourceTree = "<group>"; };
 		841448521B04E82D00BBC829 /* SceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		841448581B04E8FD00BBC829 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceViewController.swift; path = ViewController/PlaceViewController.swift; sourceTree = "<group>"; };
 		D697A5271B0B78630022B3DD /* JSONReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONReader.swift; sourceTree = "<group>"; };
 		D6D7E21C1B062C96005543C4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +156,7 @@
 				841448501B04E81800BBC829 /* StageViewController.swift */,
 				841448521B04E82D00BBC829 /* SceneViewController.swift */,
 				212F8B9D1B0A09E5006A6C5A /* AgesViewController.swift */,
+				D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D667615F1B0BB67F002C06A2 /* PlaceViewController.swift in Sources */,
 				841448531B04E82D00BBC829 /* SceneViewController.swift in Sources */,
 				21E23B891B04E6010050F93B /* Personagem.swift in Sources */,
 				212F8B9E1B0A09E5006A6C5A /* AgesViewController.swift in Sources */,

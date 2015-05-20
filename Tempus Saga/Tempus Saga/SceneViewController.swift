@@ -32,97 +32,58 @@ class SceneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         textAndImages = JSONReader.getFalas("teste")
         
-
         imageCharacter.image = personagem1
         imageCharacter2.image = personagem2
         imageBackground.image = background
         //imageSpeakBackground.image = backgroundSpeak
         
-        
-        
         labelSpeak.text = ""
+        
+        Animations.slide(imageCharacter, direction: Animations.direction.toRight)
+        Animations.slide(imageCharacter2, direction: Animations.direction.toLeft)
         
         Animations.bubble(imageSpeakBackground){ }
         
         Animations.bubble(labelSpeak){
             
             while self.numDialogo < self.textAndImages.count {  // Lembrar: Aqui é totalmente assíncrono!
-                self.mostrarDialogo()
+
                 //Exibe o loop de diálogos
+                if self.numDialogo < self.textAndImages.count-1 {
+                    self.animations.mostrarDialogo(self.textAndImages[self.numDialogo], img1: self.imageCharacter, img2: self.imageCharacter2, label: self.labelSpeak){ }
+                } else {
+                    //Depois do diálogo
+                    self.animations.mostrarDialogo(self.textAndImages[self.numDialogo], img1: self.imageCharacter, img2: self.imageCharacter2, label: self.labelSpeak){
+                        
+                        Animations.fadeToBlack(self.view)
+                        //Animations.bubble(self.labelSpeak, completion: {})
+                        
+                    }
+                    
+                    // Implementar o fim da cena aqui
+                    
+// ->->->->->->->-  Trocar de cena aqui -------------------
+                    
+                }
+                
+                // Incrementa o indice do vetor
+                if self.numDialogo < self.textAndImages.count {
+                    self.numDialogo++
+                }
+                
             }
         }
-        
-        Animations.slide(imageCharacter, direction: Animations.direction.toRight)
-        Animations.slide(imageCharacter2, direction: Animations.direction.toLeft)
-    }
-
-    func mostrarDialogo(){  // Totalmente assíncrono
-            
-        let textImage = self.textAndImages[self.numDialogo]
-        
-        let personagem = textImage[0]
-        let texto = textImage[1]
-        let imageString = textImage[2]
-        var image = UIImage()
-        let nDialogo = self.numDialogo
-    
-        /// Pega a thread criada para o texto e adiciona
-        let queue = animations.queue
-    
-        dispatch_async (queue, { () -> Void in
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                
-                if let testImage = UIImage(named: imageString) {
-                    image = testImage
-                }
-                
-                if personagem == "1" {
-                    // Personagem 1 em foco, 2 transparente
-                    self.imageCharacter2.alpha = 0.4
-                    self.imageCharacter.alpha = 1
-                    self.imageCharacter.image = image
-                } else if personagem == "2" {
-                    // Personagem 2 em foco, 1 transparente
-                    self.imageCharacter.alpha = 0.4
-                    self.imageCharacter2.alpha = 1
-                    self.imageCharacter2.image = image
-                }
-                
-                // Verifica se acabou a fala
-                if nDialogo >= self.textAndImages.count-1 {
-                    self.removerPersonagens(self.imageCharacter, p2: self.imageCharacter2)
-                }
-            })
-        })
-        
-        self.animations.input(texto, label: self.labelSpeak) //Pega só o texto do Array
-        
-        
-        
-        // Pausa entre as falas
-        dispatch_async (queue, { () -> Void in
-            usleep(500 * 1000)  // Milisegundos * 1000
-        })
-        
-        // Incrementa o indice do vetor
-        if self.numDialogo < self.textAndImages.count {
-            self.numDialogo++
-        }
-        
     }
     
     
-    func removerPersonagens(p1: UIImageView, p2: UIImageView) {
-        
-        Animations.slideOut(p1, direction: Animations.direction.toLeft)
-        Animations.slideOut(p2, direction: Animations.direction.toRight)
-        
-    }
+//    func removerPersonagens(p1: UIImageView, p2: UIImageView) {
+//        
+//        Animations.slideOut(p1, direction: Animations.direction.toLeft)
+//        Animations.slideOut(p2, direction: Animations.direction.toRight)
+//        
+//    }
     
     
     
