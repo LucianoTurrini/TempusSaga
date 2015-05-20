@@ -21,7 +21,6 @@
 		841448531B04E82D00BBC829 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841448521B04E82D00BBC829 /* SceneViewController.swift */; };
 		841448591B04E8FD00BBC829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841448581B04E8FD00BBC829 /* Main.storyboard */; };
 		D667615F1B0BB67F002C06A2 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */; };
-		D66761631B0CEF99002C06A2 /* teste.json in Resources */ = {isa = PBXBuildFile; fileRef = D66761621B0CEF99002C06A2 /* teste.json */; };
 		D697A5281B0B78630022B3DD /* JSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D697A5271B0B78630022B3DD /* JSONReader.swift */; };
 		D6D7E21D1B062C96005543C4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D7E21C1B062C96005543C4 /* Animations.swift */; };
 /* End PBXBuildFile section */
@@ -56,7 +55,6 @@
 		841448521B04E82D00BBC829 /* SceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		841448581B04E8FD00BBC829 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceViewController.swift; path = ViewController/PlaceViewController.swift; sourceTree = "<group>"; };
-		D66761621B0CEF99002C06A2 /* teste.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = teste.json; sourceTree = "<group>"; };
 		D697A5271B0B78630022B3DD /* JSONReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONReader.swift; sourceTree = "<group>"; };
 		D6D7E21C1B062C96005543C4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +109,6 @@
 				21E23B631B04DA820050F93B /* Supporting Files */,
 				21E23B671B04DA820050F93B /* Tempus_Saga.xcdatamodeld */,
 				D697A5271B0B78630022B3DD /* JSONReader.swift */,
-				D66761621B0CEF99002C06A2 /* teste.json */,
 				D6D7E21C1B062C96005543C4 /* Animations.swift */,
 			);
 			path = "Tempus Saga";
@@ -263,7 +260,6 @@
 				841448591B04E8FD00BBC829 /* Main.storyboard in Resources */,
 				21E23B731B04DA820050F93B /* LaunchScreen.xib in Resources */,
 				21E23B701B04DA820050F93B /* Images.xcassets in Resources */,
-				D66761631B0CEF99002C06A2 /* teste.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
