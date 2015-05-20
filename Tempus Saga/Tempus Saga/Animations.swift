@@ -96,7 +96,6 @@ class Animations: NSObject {
     func mostrarDialogo(textImage: Array<String>, img1: UIImageView, img2: UIImageView, label: UILabel, complete: () -> ()){
         // Totalmente assíncrono
         
-        
         //let textImage = self.textAndImages[self.numDialogo]
         
         let personagem = textImage[0]
@@ -128,7 +127,7 @@ class Animations: NSObject {
                     img2.image = image
                 }
                 
-                // Algo extra que quisar enfileirar
+                // Algo extra que quiser enfileirar
                 complete ()
                 
             })

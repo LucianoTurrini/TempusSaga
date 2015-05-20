@@ -26,6 +26,7 @@ class SceneViewController: UIViewController {
     var background: UIImage?
     var backgroundSpeak: UIImage?
     let animations = Animations()
+//    let jsonReader = JSONReader()
     
     private var numDialogo = 0
     
@@ -52,9 +53,11 @@ class SceneViewController: UIViewController {
 
                 //Exibe o loop de diálogos
                 if self.numDialogo < self.textAndImages.count-1 {
+                    
                     self.animations.mostrarDialogo(self.textAndImages[self.numDialogo], img1: self.imageCharacter, img2: self.imageCharacter2, label: self.labelSpeak){ }
+                    
+                //Depois do diálogo
                 } else {
-                    //Depois do diálogo
                     self.animations.mostrarDialogo(self.textAndImages[self.numDialogo], img1: self.imageCharacter, img2: self.imageCharacter2, label: self.labelSpeak){
                         
                         Animations.fadeToBlack(self.view)
@@ -64,7 +67,7 @@ class SceneViewController: UIViewController {
                     
                     // Implementar o fim da cena aqui
                     
-// ->->->->->->->-  Trocar de cena aqui -------------------
+    // ->->->->->->->-  Trocar de cena aqui -------------------
                     
                 }
                 
@@ -74,8 +77,8 @@ class SceneViewController: UIViewController {
                 }
                 
             }
-        }
     }
+}
     
     
 //    func removerPersonagens(p1: UIImageView, p2: UIImageView) {
