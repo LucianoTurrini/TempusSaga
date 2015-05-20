@@ -17,6 +17,7 @@
 		21E23B7F1B04DA820050F93B /* Tempus_SagaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B7E1B04DA820050F93B /* Tempus_SagaTests.swift */; };
 		21E23B891B04E6010050F93B /* Personagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B881B04E6010050F93B /* Personagem.swift */; };
 		21E23B8E1B04EC7D0050F93B /* PersonagemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B8D1B04EC7D0050F93B /* PersonagemManager.swift */; };
+		21F7D70B1B0CD35300FF4FEA /* MenuPrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7D70A1B0CD35300FF4FEA /* MenuPrincipalViewController.swift */; };
 		841448511B04E81800BBC829 /* StageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841448501B04E81800BBC829 /* StageViewController.swift */; };
 		841448531B04E82D00BBC829 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841448521B04E82D00BBC829 /* SceneViewController.swift */; };
 		841448591B04E8FD00BBC829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841448581B04E8FD00BBC829 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		21E23B7E1B04DA820050F93B /* Tempus_SagaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tempus_SagaTests.swift; sourceTree = "<group>"; };
 		21E23B881B04E6010050F93B /* Personagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Personagem.swift; path = "Tempus Saga/Model/Personagem.swift"; sourceTree = "<group>"; };
 		21E23B8D1B04EC7D0050F93B /* PersonagemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonagemManager.swift; path = "CoreData Manager/PersonagemManager.swift"; sourceTree = "<group>"; };
+		21F7D70A1B0CD35300FF4FEA /* MenuPrincipalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuPrincipalViewController.swift; path = ViewController/MenuPrincipalViewController.swift; sourceTree = "<group>"; };
 		841448501B04E81800BBC829 /* StageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StageViewController.swift; path = ViewController/StageViewController.swift; sourceTree = "<group>"; };
 		841448521B04E82D00BBC829 /* SceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		841448581B04E8FD00BBC829 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -156,7 +158,7 @@
 				841448501B04E81800BBC829 /* StageViewController.swift */,
 				841448521B04E82D00BBC829 /* SceneViewController.swift */,
 				212F8B9D1B0A09E5006A6C5A /* AgesViewController.swift */,
-				D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */,
+				21F7D70A1B0CD35300FF4FEA /* MenuPrincipalViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -288,6 +290,7 @@
 				21E23B691B04DA820050F93B /* Tempus_Saga.xcdatamodeld in Sources */,
 				D6D7E21D1B062C96005543C4 /* Animations.swift in Sources */,
 				D697A5281B0B78630022B3DD /* JSONReader.swift in Sources */,
+				21F7D70B1B0CD35300FF4FEA /* MenuPrincipalViewController.swift in Sources */,
 				212F8BA31B0A1D71006A6C5A /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
