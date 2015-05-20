@@ -83,7 +83,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELm-N3-9zX">
                                 <rect key="frame" x="16" y="484" width="568" height="108"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="voD-ch-ctF">
@@ -352,7 +352,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="4Ei-4F-d0m"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Stage1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -375,7 +375,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="vxh-7q-Rv5"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Stage2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -398,7 +398,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="R41-aF-pe4"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Stage3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -449,22 +449,22 @@
                                 <exclude reference="U77-qk-AxN"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="A8c-2t-cfh"/>
+                                <exclude reference="uMP-HA-gqG"/>
                                 <exclude reference="1Qe-4I-Ld7"/>
                                 <exclude reference="OuZ-Sy-B1l"/>
                                 <exclude reference="QWU-Md-sPa"/>
                                 <exclude reference="RUF-9d-ONy"/>
-                                <exclude reference="A8c-2t-cfh"/>
-                                <exclude reference="uMP-HA-gqG"/>
                                 <exclude reference="SyA-4v-YYV"/>
                                 <exclude reference="e3w-4N-itX"/>
                                 <exclude reference="3f4-qn-1KO"/>
                                 <exclude reference="ZgA-e7-a8a"/>
                                 <exclude reference="eza-DI-cvO"/>
-                                <exclude reference="DFL-i9-fLc"/>
-                                <exclude reference="Tvg-yi-dvi"/>
                                 <exclude reference="J45-5v-Ygw"/>
                                 <exclude reference="W8E-HV-7Si"/>
                                 <exclude reference="YVg-HG-qWc"/>
+                                <exclude reference="DFL-i9-fLc"/>
+                                <exclude reference="Tvg-yi-dvi"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -472,22 +472,22 @@
                                 <include reference="U77-qk-AxN"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="A8c-2t-cfh"/>
+                                <include reference="uMP-HA-gqG"/>
                                 <include reference="1Qe-4I-Ld7"/>
                                 <include reference="OuZ-Sy-B1l"/>
                                 <include reference="QWU-Md-sPa"/>
                                 <include reference="RUF-9d-ONy"/>
-                                <include reference="A8c-2t-cfh"/>
-                                <include reference="uMP-HA-gqG"/>
                                 <include reference="SyA-4v-YYV"/>
                                 <include reference="e3w-4N-itX"/>
                                 <include reference="3f4-qn-1KO"/>
                                 <include reference="ZgA-e7-a8a"/>
                                 <include reference="eza-DI-cvO"/>
-                                <include reference="DFL-i9-fLc"/>
-                                <include reference="Tvg-yi-dvi"/>
                                 <include reference="J45-5v-Ygw"/>
                                 <include reference="W8E-HV-7Si"/>
                                 <include reference="YVg-HG-qWc"/>
+                                <include reference="DFL-i9-fLc"/>
+                                <include reference="Tvg-yi-dvi"/>
                             </mask>
                         </variation>
                     </view>
@@ -524,7 +524,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CV8-V5-R2a">
                                 <rect key="frame" x="16" y="484" width="568" height="108"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TBM-JV-I3E">

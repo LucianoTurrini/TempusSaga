@@ -34,6 +34,13 @@ class AgesViewController: UIViewController {
     
     @IBAction func buttonEgito(sender: AnyObject) {
         
+//        var place1 = Place()
+//        var place2 = Place()
+//        var place3 = Place()
+//        place1.nome = "Piramides de Gizé"
+//        place2.nome = "Templo de Apolo"
+//        place3.nome = "Olimpia"
+        
         era.nome = "Egito"
         //era!.places = nil
         era.imageBackground = UIImage(named: "egitoBackground")!
@@ -44,6 +51,13 @@ class AgesViewController: UIViewController {
     
     @IBAction func buttonGrecia(sender: AnyObject) {
         
+//        var place1 = Place()
+//        var place2 = Place()
+//        var place3 = Place()
+//        place1.nome = "Atenas"
+//        place2.nome = "Templo de Apolo"
+//        place3.nome = "Olimpia"
+        
         era.nome = "Grécia"
         //era!.places = nil
         era.imageBackground = UIImage(named: "greciaBackground")!
@@ -53,6 +67,13 @@ class AgesViewController: UIViewController {
     }
     
     @IBAction func buttonReinoUnido(sender: AnyObject) {
+        
+//        var place1 = Place()
+//        var place2 = Place()
+//        var place3 = Place()
+//        place1.nome = "Atenas"
+//        place2.nome = "Templo de Apolo"
+//        place3.nome = "Olimpia"
         
         era.nome = "Reino Unido"
         //era!.places = nil
