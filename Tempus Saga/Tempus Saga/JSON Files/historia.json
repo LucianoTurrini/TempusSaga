@@ -5,8 +5,8 @@
     "falas": [
       {
         "personagem": "1",
-        "fala": "Certo. Chegamos a grécia. Temos que preencher  diário com o máximo de informações.",
-        "imagem": ""
+        "fala": "Certo. Chegamos a grécia. Temos que preencher o diário com o máximo de informações.",
+        "imagem": "char1"
       },
       {
         "personagem": "2",
@@ -15,8 +15,8 @@
       },
       {
         "personagem": "1",
-        "fala": "Isso é história. Uma coisa dessas não deve acontecer, mas eu quero fotografa-la. Não existem registros precisos dela, já que ela foi destruida em um terremoto.",
-        "imagem": ""
+        "fala": "Isso é história... Uma coisa dessas não deve acontecer, mas eu quero fotografá-la. Não existem registros precisos dela, já que ela foi destruida em um terremoto.",
+        "imagem": "char1"
       },
       {
         "personagem": "2",
@@ -26,7 +26,7 @@
       {
         "personagem": "1",
         "fala": "Quem deseja entrar no templo de Zeus?",
-        "imagem": ""
+        "imagem": "char1"
       },
       {
         "personagem": "2",
@@ -36,12 +36,12 @@
       {
         "personagem": "1",
         "fala": "Esse é um lugar sagrado. Somente pessoas que possuem total conhecimento sobre nossa cultura podem entrar.",
-        "imagem": ""
+        "imagem": "char1"
       },
       {
         "personagem": "1",
         "fala": "Viage pela Grécia. Conheça pessoas. Consiga informações. Quando estiver pronto, eu o testarei.",
-        "imagem": ""
+        "imagem": "char1"
       },
       {
         "personagem": "2",
