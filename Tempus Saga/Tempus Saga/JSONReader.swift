@@ -72,12 +72,49 @@ class JSONReader: NSObject {
         return historia
     }
     
-    func getFalasJogo(era: String) -> Era{
+
+
+    class func getFalasJogo(era: String) -> Era{
         
+        let jsonDic: NSDictionary = getJsonDic("game")
+        var era = Era()
         
+        era.nome = jsonDic.objectForKey(era)?.objectForKey("nome") as! String
+        era.imageBackground = UIImage(named: jsonDic.objectForKey("imageBackground") as! String)
         
+        var arrayPlaces = Array<Place>()
         
-        return Era()
+        let placesDic = jsonDic.objectForKey("place") as! Array<NSDictionary>
+        for p in placesDic {
+            
+            var place = Place()
+            
+            place.nome = jsonDic.objectForKey("nome") as! String
+            place.imageBackground = UIImage(named: jsonDic.objectForKey("imageBackground") as! String)
+            
+            var personagens = Array<NPC>()
+            
+            let npcDic = jsonDic.objectForKey("personagens") as! NSDictionary
+            for (key, value) in npcDic {    // value: dentro do npc
+                
+                var npc = NPC()
+                npc.nome = key as? String
+                npc.era = era.nome
+                npc.place = place.nome
+                npc.image = UIImage(named: value.objectForKey("image") as! String)
+                
+                let arrayFala = value.objectForKey("falas") as! [String]
+                
+                npc.texto = arrayFala
+                
+                personagens.append(npc)
+            }
+            place.personagens = personagens //Adiciona os personagens
+            arrayPlaces.append(place)
+        }
+        era.places = arrayPlaces   //Adiciona os places
+        
+        return era
     }
     
     

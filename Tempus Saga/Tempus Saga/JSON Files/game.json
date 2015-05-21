@@ -11,13 +11,16 @@
                         "image": ""
                    },
                    "NPC2": {
-                       "fala": [
+                       "falas": [
                                 "Olha essa vista! A cidade de Atenas está a 150 metros do nível do mar, e possui grande valor militar devido a sua vista privilegiada. Mas se engana se acha que ela foi construida apenas para fins de Guerra: Olhe para esses templos! Olhe para sua beleza. Não existe cidade mais bonita que Atenas."
                         ],
                         "image": ""
                    },
-             }
+             },
+             "imageBackground": ""
         ],
+        //Adaptar tudo ao modelo acima
+        
         [
             "nome": "Templo de Apolo",
             "personagens": {
