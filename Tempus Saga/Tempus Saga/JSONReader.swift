@@ -37,25 +37,45 @@ class JSONReader: NSObject {
         //        println("Leitura: \(s) ")
     }
     
-    class func getFalasHistoria (era: String, numHistoria: String) -> Array<[String]> {
     
-        var textAndImages = Array<[String]>()
+    
+    
+    
+    
+    class func getFalasHistoria (IdHistoria: String) -> Historia {
+    
+        var historia = Historia()
         
-//        let jsonDic: NSDictionary = getJsonDic("teste")
         let jsonDic: NSDictionary = getJsonDic("historia")
         
+        let arrayFalas = jsonDic.objectForKey(IdHistoria)?.objectForKey("falas") as! Array <NSDictionary>
+        let era = jsonDic.objectForKey("era") as! String
+        let place = jsonDic.objectForKey("place") as! String
+    
+        for dic in arrayFalas {
+            
+            let personagem = dic.objectForKey("personagem") as! String
+            let fala = dic.objectForKey("fala") as! String
+            let imagem = dic.objectForKey("fala") as! String
+            
+            let falaObj = Fala()
+            falaObj.personagem = personagem
+            falaObj.fala = fala
+            falaObj.imagem = imagem
+            
+            historia.falas.append(falaObj)
+        }
         
-        // Terminar de implementar aqui
+        historia.era = era
+        historia.place = place
         
-        
-        return textAndImages
+        return historia
     }
     
     
     
+    class func getFalas (arquivo: String) -> Array<[String]> {  // Remover
     
-    class func getFalas (arquivo: String) -> Array<[String]> {
-        
         var textAndImages = Array<[String]>()
         
         ///// Teste ////////////

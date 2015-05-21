@@ -1,0 +1,83 @@
+{
+        historia1: {
+            era: "Grecia Antiga",
+            place: "Templo de Zeus",
+            falas: [
+                {
+                    personagem: "1",
+                    fala: "Certo. Chegamos a grécia. Temos que preencher  diário com o máximo de informações.",
+                    imagem: ""
+                }
+
+                {
+                    personagem: "2",
+                    fala: "Ouvi dizer Zeus aparece em sua estátua, em Olimpia, para falar com os fieis.",
+                    imagem: ""
+                }
+
+                {
+                    personagem: "1",
+                    fala: "Isso é história. Uma coisa dessas não deve acontecer, mas eu quero fotografa-la. Não existem registros precisos dela, já que ela foi destruida em um terremoto.",
+                    imagem: ""
+                }
+
+                {
+                    personagem: "2",
+                    fala: "Vamos lá! Vamos entrar.",
+                    imagem: ""
+                }
+
+                {
+                    personagem: "1",
+                    fala: "Quem deseja entrar no templo de Zeus?",
+                    imagem: ""
+                }
+
+                {
+                    personagem: "2",
+                    fala: "Somos turistas. Queremos ver a estátua.",
+                    imagem: ""
+                }
+
+                {
+                    personagem: "1",
+                    fala: "Esse é um lugar sagrado. Somente pessoas que possuem total conhecimento sobre nossa cultura podem entrar.",
+                    imagem: ""
+                }
+
+                {
+                    personagem: "1",
+                    fala: "Viage pela Grécia. Conheça pessoas. Consiga informações. Quando estiver pronto, eu o testarei.",
+                    imagem: ""
+                }
+
+                {
+                    personagem: "2",
+                    fala: "Não tem problema! Adquirir conhecimento é o nosso trabalho!",
+                    imagem: ""
+                }
+            ]
+        }
+        historia2: {
+            era: "Grecia",
+            place: "Templo de Zeus",
+            falas: [
+                {
+                    personagem: "2",
+                    fala: "UAU! Essa é a estátua de Zeus? Que enorme!",
+                    imagem: ""
+                }
+                {
+                    personagem: "1",
+                    fala: "Preciso fotografa-la. Ela é incrível!",
+                    imagem: ""
+                }
+                {
+                    personagem: "2",
+                    fala: "Vovô vai ficar orgulhoso.",
+                    imagem: ""
+                }
+            ]
+        }
+    
+    }

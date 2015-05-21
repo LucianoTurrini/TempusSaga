@@ -1,20 +1,4 @@
 {
-    "Egito": {
-        "nome": "Egito",
-        "places": {
-            "place1": {
-                "nome": "Piramides de Gizé",
-                "personagens": {
-                    "p1": "blá",
-                    "p2": "blá2",
-                    "p3": "blá3"
-                }
-            },
-            "place2": {
-                "nome": "bla"
-            }
-        }
-    },
     "Grécia": {
         "nome": "Grécia",
         "places": {

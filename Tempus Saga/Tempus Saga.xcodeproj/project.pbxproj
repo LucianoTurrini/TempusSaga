@@ -23,6 +23,8 @@
 		841448531B04E82D00BBC829 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841448521B04E82D00BBC829 /* SceneViewController.swift */; };
 		841448591B04E8FD00BBC829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841448581B04E8FD00BBC829 /* Main.storyboard */; };
 		D667615F1B0BB67F002C06A2 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */; };
+		D67557F31B0E00EB00695097 /* historia.json in Resources */ = {isa = PBXBuildFile; fileRef = D67557F21B0E00EB00695097 /* historia.json */; };
+		D67557F51B0E082E00695097 /* Historia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67557F41B0E082E00695097 /* Historia.swift */; };
 		D697A5281B0B78630022B3DD /* JSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D697A5271B0B78630022B3DD /* JSONReader.swift */; };
 		D6D7E21D1B062C96005543C4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D7E21C1B062C96005543C4 /* Animations.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 		841448521B04E82D00BBC829 /* SceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		841448581B04E8FD00BBC829 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceViewController.swift; path = ViewController/PlaceViewController.swift; sourceTree = "<group>"; };
+		D67557F21B0E00EB00695097 /* historia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = historia.json; sourceTree = "<group>"; };
+		D67557F41B0E082E00695097 /* Historia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Historia.swift; path = "Tempus Saga/Model/Historia.swift"; sourceTree = "<group>"; };
 		D697A5271B0B78630022B3DD /* JSONReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONReader.swift; sourceTree = "<group>"; };
 		D6D7E21C1B062C96005543C4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,7 +88,6 @@
 		21E23B571B04DA820050F93B = {
 			isa = PBXGroup;
 			children = (
-				21F7D70C1B0DFF6700FF4FEA /* JSON Files */,
 				212F8B9F1B0A1109006A6C5A /* MyPlayground.playground */,
 				21E23B621B04DA820050F93B /* Tempus Saga */,
 				21E23B7B1B04DA820050F93B /* Tempus SagaTests */,
@@ -108,6 +111,7 @@
 				21E23B8C1B04E62D0050F93B /* AppDelegate */,
 				21E23B8B1B04E61E0050F93B /* ViewController */,
 				21E23B8A1B04E60B0050F93B /* Model */,
+				21F7D70C1B0DFF6700FF4FEA /* JSON Files */,
 				21E23B6F1B04DA820050F93B /* Images.xcassets */,
 				21E23B711B04DA820050F93B /* LaunchScreen.xib */,
 				841448581B04E8FD00BBC829 /* Main.storyboard */,
@@ -150,6 +154,7 @@
 				21E23B881B04E6010050F93B /* Personagem.swift */,
 				212F8BA01B0A1C36006A6C5A /* Era.swift */,
 				212F8BA21B0A1D71006A6C5A /* Place.swift */,
+				D67557F41B0E082E00695097 /* Historia.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -186,10 +191,10 @@
 		21F7D70C1B0DFF6700FF4FEA /* JSON Files */ = {
 			isa = PBXGroup;
 			children = (
+				D67557F21B0E00EB00695097 /* historia.json */,
 				21F7D70D1B0DFF7F00FF4FEA /* game.json */,
 			);
-			name = "JSON Files";
-			path = "Tempus Saga/JSON Files";
+			path = "JSON Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +280,7 @@
 				841448591B04E8FD00BBC829 /* Main.storyboard in Resources */,
 				21E23B731B04DA820050F93B /* LaunchScreen.xib in Resources */,
 				21E23B701B04DA820050F93B /* Images.xcassets in Resources */,
+				D67557F31B0E00EB00695097 /* historia.json in Resources */,
 				21F7D70E1B0DFF7F00FF4FEA /* game.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +301,7 @@
 			files = (
 				D667615F1B0BB67F002C06A2 /* PlaceViewController.swift in Sources */,
 				841448531B04E82D00BBC829 /* SceneViewController.swift in Sources */,
+				D67557F51B0E082E00695097 /* Historia.swift in Sources */,
 				21E23B891B04E6010050F93B /* Personagem.swift in Sources */,
 				212F8B9E1B0A09E5006A6C5A /* AgesViewController.swift in Sources */,
 				212F8BA11B0A1C36006A6C5A /* Era.swift in Sources */,
