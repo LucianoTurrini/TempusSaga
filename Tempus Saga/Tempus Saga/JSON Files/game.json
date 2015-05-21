@@ -38,6 +38,7 @@
             },
             "place3": {
                 "nome": "Olimpia",
+                "imageBackground": "greciaPlace3Background"
                 "personagens": {
                     "NPC1": [
                         "Quando more uma pessoa, ela é enterrada com uma moeda. Essa moeda é usada para pagar Caronte, o barqueiro que cruza o rio Aqueronte. Ele leva a pessoa para ser julgada pelos três juizes, que decidem se ele vai para o Tartaro ou para os Campos Ilisios"
@@ -50,6 +51,7 @@
             },
             "place4": {
                 "nome": "Templo de Zeus",
+                "imageBackground": "greciaPlace4Background"
                 "personagens": {
                 }
             }

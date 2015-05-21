@@ -41,11 +41,11 @@ class StageViewController: UIViewController {
     
     func defineStage() {
         
-//        buttonStage1.setTitle(era.places[0].nome, forState: UIControlState.Normal)
-//        
-//        buttonStage2.setTitle(era.places[1].nome, forState: UIControlState.Normal)
-//        
-//        buttonStage3.setTitle(era.places[2].nome, forState: UIControlState.Normal)
+        buttonStage1.setTitle(era.places[0].nome, forState: UIControlState.Normal)
+        
+        buttonStage2.setTitle(era.places[1].nome, forState: UIControlState.Normal)
+        
+        buttonStage3.setTitle(era.places[2].nome, forState: UIControlState.Normal)
         
         imageBackground.image = era.imageBackground
         

@@ -34,50 +34,23 @@ class AgesViewController: UIViewController {
     
     @IBAction func buttonEgito(sender: AnyObject) {
         
-//        var place1 = Place()
-//        var place2 = Place()
-//        var place3 = Place()
-//        place1.nome = "Piramides de Gizé"
-//        place2.nome = "Templo de Apolo"
-//        place3.nome = "Olimpia"
-        
-        era.nome = "Egito"
-        //era!.places = nil
-        era.imageBackground = UIImage(named: "egitoBackground")!
-        
+        era = JSONReader.getFalasJogo("Egito")
+
         performSegueWithIdentifier("selecionarEra", sender: self)
         
     }
     
     @IBAction func buttonGrecia(sender: AnyObject) {
         
-//        var place1 = Place()
-//        var place2 = Place()
-//        var place3 = Place()
-//        place1.nome = "Atenas"
-//        place2.nome = "Templo de Apolo"
-//        place3.nome = "Olimpia"
-        
-        era.nome = "Grécia"
-        //era!.places = nil
-        era.imageBackground = UIImage(named: "greciaBackground")!
-
+        era = JSONReader.getFalasJogo("Grécia")
+    
         performSegueWithIdentifier("selecionarEra", sender: self)
         
     }
     
     @IBAction func buttonReinoUnido(sender: AnyObject) {
         
-//        var place1 = Place()
-//        var place2 = Place()
-//        var place3 = Place()
-//        place1.nome = "Atenas"
-//        place2.nome = "Templo de Apolo"
-//        place3.nome = "Olimpia"
-        
-        era.nome = "Reino Unido"
-        //era!.places = nil
-        era.imageBackground = UIImage(named: "reinoUnidoBackground")!
+        era = JSONReader.getFalasJogo("ReinoUnido")
         
         performSegueWithIdentifier("selecionarEra", sender: self)
         
