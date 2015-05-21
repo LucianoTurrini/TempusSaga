@@ -159,6 +159,7 @@
 				841448521B04E82D00BBC829 /* SceneViewController.swift */,
 				212F8B9D1B0A09E5006A6C5A /* AgesViewController.swift */,
 				21F7D70A1B0CD35300FF4FEA /* MenuPrincipalViewController.swift */,
+				D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";

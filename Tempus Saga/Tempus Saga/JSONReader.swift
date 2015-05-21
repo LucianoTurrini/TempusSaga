@@ -16,7 +16,7 @@ class JSONReader: NSObject {
         var textAndImages = Array<[String]>()
         
         ///// Teste ////////////
-        let fala1:[String] = ["1", "- Hey man! What's up?", ""]
+        let fala1:[String] = ["1", "- Hey man! What's up?", "char1"]
         let fala2:[String] = ["2", "- I'm ok.", ""]
         let fala3:[String] = ["2", "- And you?", ""]
         let fala4:[String] = ["1", "- Ok.", ""]
