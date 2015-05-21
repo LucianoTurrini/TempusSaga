@@ -51,6 +51,14 @@ class JSONReader: NSObject {
         return textAndImages
     }
     
+    func getFalasJogo(era: String) -> Era{
+        
+        
+        
+        
+        return Era()
+    }
+    
     
     
     
