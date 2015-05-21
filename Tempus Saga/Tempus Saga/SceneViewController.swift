@@ -18,14 +18,20 @@ class SceneViewController: UIViewController {
     @IBOutlet weak var buttonNext: UIButton!
     
     /// Matriz com texto e imagem opcional do tipo [String, String, String]
-    // (Personagem, texto, imagem)
-    var textAndImages = Array< [String] >()
+    
+    
+    /// Teste - PEGAR AQUI A HISTÓRIA CORRESPONDENTE
+    var historia = JSONReader.getFalasHistoria("historia1")
+    /////
+    
+    
 //    var textAndImages: Array< [String?] >!
     var personagem1: UIImage?
     var personagem2: UIImage?
     var background: UIImage?
     var backgroundSpeak: UIImage?
     let animations = Animations()
+    var falas: Array<Fala>!
 //    let jsonReader = JSONReader()
     
     private var numDialogo = 0
@@ -33,7 +39,7 @@ class SceneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textAndImages = JSONReader.getFalas("teste")
+        falas = historia.falas
         
         imageCharacter.image = personagem1
         imageCharacter2.image = personagem2
@@ -49,16 +55,18 @@ class SceneViewController: UIViewController {
         
         Animations.bubble(labelSpeak){
             
-            while self.numDialogo < self.textAndImages.count {  // Lembrar: Aqui é totalmente assíncrono!
+            while self.numDialogo < self.falas.count {  // Lembrar: Aqui é totalmente assíncrono!
 
+                let fala = self.falas[self.numDialogo]
+                
                 //Exibe o loop de diálogos
-                if self.numDialogo < self.textAndImages.count-1 {
+                if self.numDialogo < self.falas.count-1 {
                     
-                    self.animations.mostrarDialogo(self.textAndImages[self.numDialogo], img1: self.imageCharacter, img2: self.imageCharacter2, label: self.labelSpeak){ }
+                    self.animations.mostrarDialogo(fala, img1: self.imageCharacter, img2: self.imageCharacter2, label: self.labelSpeak){ }
                     
                 //Depois do diálogo
                 } else {
-                    self.animations.mostrarDialogo(self.textAndImages[self.numDialogo], img1: self.imageCharacter, img2: self.imageCharacter2, label: self.labelSpeak){
+                    self.animations.mostrarDialogo(fala, img1: self.imageCharacter, img2: self.imageCharacter2, label: self.labelSpeak){
                         
                         Animations.fadeToBlack(self.view)
                         //Animations.bubble(self.labelSpeak, completion: {})
@@ -72,7 +80,7 @@ class SceneViewController: UIViewController {
                 }
                 
                 // Incrementa o indice do vetor
-                if self.numDialogo < self.textAndImages.count {
+                if self.numDialogo < self.falas.count {
                     self.numDialogo++
                 }
                 

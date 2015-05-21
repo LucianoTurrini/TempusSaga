@@ -47,16 +47,17 @@ class JSONReader: NSObject {
         var historia = Historia()
         
         let jsonDic: NSDictionary = getJsonDic("historia")
+        let arrayHistoria = jsonDic.objectForKey(IdHistoria) as! NSDictionary
         
-        let arrayFalas = jsonDic.objectForKey(IdHistoria)?.objectForKey("falas") as! Array <NSDictionary>
-        let era = jsonDic.objectForKey("era") as! String
-        let place = jsonDic.objectForKey("place") as! String
-    
-        for dic in arrayFalas {
+        let era = arrayHistoria.objectForKey("era") as! String
+        let place = arrayHistoria.objectForKey("place") as! String
+        let arrayFalas = arrayHistoria.objectForKey("falas") as! Array <NSDictionary>
+        
+        for dicFala in arrayFalas {
             
-            let personagem = dic.objectForKey("personagem") as! String
-            let fala = dic.objectForKey("fala") as! String
-            let imagem = dic.objectForKey("fala") as! String
+            let personagem = dicFala.objectForKey("personagem") as! String
+            let fala = dicFala.objectForKey("fala") as! String
+            let imagem = dicFala.objectForKey("imagem") as! String
             
             let falaObj = Fala()
             falaObj.personagem = personagem

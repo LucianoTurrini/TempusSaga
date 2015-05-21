@@ -93,14 +93,14 @@ class Animations: NSObject {
     }
     
     
-    func mostrarDialogo(textImage: Array<String>, img1: UIImageView, img2: UIImageView, label: UILabel, complete: () -> ()){
+    func mostrarDialogo(fala: Fala, img1: UIImageView, img2: UIImageView, label: UILabel, complete: () -> ()){
         // Totalmente assíncrono
         
         //let textImage = self.textAndImages[self.numDialogo]
         
-        let personagem = textImage[0]
-        let texto = textImage[1]
-        let imageString = textImage[2]
+        let personagem = fala.personagem
+        let texto = fala.fala
+        let imageString = fala.imagem
         var image = UIImage()
         //let nDialogo = self.numDialogo
         
