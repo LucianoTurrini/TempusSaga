@@ -9,10 +9,53 @@
 import UIKit
 
 class JSONReader: NSObject {
-   
+    
+    
+    /// Retorna os dados JSON de uma URL (String)
+    private class func getJSONData (fileToRead: String) -> AnyObject? {
+        
+        let filePath = NSBundle.mainBundle().pathForResource(fileToRead, ofType:"json")
+        var readError:NSError?
+        /// Objeto de retorno
+        var dic: AnyObject?
+        
+        if let data = NSData(contentsOfFile:filePath!, options:NSDataReadingOptions.DataReadingUncached, error:&readError) {
+            
+            var error: NSError?
+            dic = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error)
+        } else {
+            println("Não foi possível ler o valor NSData da url passada")
+        }
+        return dic
+    }
+    
+    class func getJsonDic(fileToRead: String) -> NSDictionary{
+        
+        return getJSONData(fileToRead) as! NSDictionary
+        
+        //        let s = jsonObj.objectForKey("teste") as! String
+        //        println("Leitura: \(s) ")
+    }
+    
+    class func getFalasHistoria (era: String, numHistoria: String) -> Array<[String]> {
+    
+        var textAndImages = Array<[String]>()
+        
+//        let jsonDic: NSDictionary = getJsonDic("teste")
+        let jsonDic: NSDictionary = getJsonDic("historia")
+        
+        
+        // Terminar de implementar aqui
+        
+        
+        return textAndImages
+    }
+    
+    
+    
     
     class func getFalas (arquivo: String) -> Array<[String]> {
-    
+        
         var textAndImages = Array<[String]>()
         
         ///// Teste ////////////
@@ -37,6 +80,12 @@ class JSONReader: NSObject {
         return textAndImages
     }
 
+    
+    
+    
+    
+    
+    
     
     
     
