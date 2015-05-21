@@ -1,150 +1,136 @@
 {
-historia1: {
-era: "Grecia Antiga",
-place: "Templo de Zeus",
-falas: [
-        {
-        personagem: "1",
-        fala: "Certo. Chegamos a grécia. Temos que preencher  diário com o máximo de informações.",
-        imagem: ""
-        },
-        
-        {
-        personagem: "2",
-        fala: "Ouvi dizer Zeus aparece em sua estátua, em Olimpia, para falar com os fieis.",
-        imagem: ""
-        },
-        
-        {
-        personagem: "1",
-        fala: "Isso é história. Uma coisa dessas não deve acontecer, mas eu quero fotografa-la. Não existem registros precisos dela, já que ela foi destruida em um terremoto.",
-        imagem: ""
-        },
-        
-        {
-        personagem: "2",
-        fala: "Vamos lá! Vamos entrar.",
-        imagem: ""
-        },
-        
-        {
-        personagem: "1",
-        fala: "Quem deseja entrar no templo de Zeus?",
-        imagem: ""
-        },
-        
-        {
-        personagem: "2",
-        fala: "Somos turistas. Queremos ver a estátua.",
-        imagem: ""
-        },
-        
-        {
-        personagem: "1",
-        fala: "Esse é um lugar sagrado. Somente pessoas que possuem total conhecimento sobre nossa cultura podem entrar.",
-        imagem: ""
-        },
-        
-        {
-        personagem: "1",
-        fala: "Viage pela Grécia. Conheça pessoas. Consiga informações. Quando estiver pronto, eu o testarei.",
-        imagem: ""
-        },
-        
-        {
-        personagem: "2",
-        fala: "Não tem problema! Adquirir conhecimento é o nosso trabalho!",
-        imagem: ""
-        }
-        ]
-}
-historia2: {
-era: "Grecia",
-place: "Templo de Zeus",
-falas: [
-        {
-        personagem: "2",
-        fala: "UAU! Essa é a estátua de Zeus? Que enorme!",
-        imagem: ""
-        },
-        {
-        personagem: "1",
-        fala: "Preciso fotografa-la. Ela é incrível!",
-        imagem: ""
-        },
-        {
-        personagem: "2",
-        fala: "Vovô vai ficar orgulhoso.",
-        imagem: ""
-        }
-        ]
-}
-    
-historia3: {
-era: "Egito",
-place: "Palácio de Tutanlamon",
-falas: [
-        {
-        personagem: "2",
-        fala: "Caramba! Esse lugar é muito quente.",
-        imagem: ""
-        },
-        {
-        personagem: "1",
-        fala: "Deixe de reclamar. Temos que encontrar Tutankamon.",
-        imagem: ""
-        },
-        {
-        personagem: "2",
-        fala: "Aquele que foi faraó com nove anos? Ele devia ser incrível.",
-        imagem: ""
-        },
-        
-        {
-        personagem: "1",
-        fala: "Quem deseja entrar no palacio de Tutankamon?",
-        imagem: ""
-        },
-        
-        {
-        personagem: "2",
-        fala: "Somos viajantes. Estamos pesquisando a vida dos egipcios. Somos grandes admiradores do jovem faraó",
-        imagem: ""
-        },
-        {
-        personagem: "1",
-        fala: "Infelizmente, para entrar aqui, você deve se provar um grande conhecedor. Converse com o povo. Eles possuem muitas informações interessantes. Quando estiverem prontos voltem aqui e provem seu conhecimento.",
-        imagem: ""
-        },
-        
-        {
-        personagem: "2",
-        fala: "Certo.",
-        imagem: ""
-        },
-        ]
-}
-    
-historia3: {
-era: "Egito",
-place: "Palácio de Tutankamon",
-falas: [
-        {
-        personagem: "2",
-        fala: "É um prazer conhecer uma figura tão importante quanto o senhor.",
-        imagem: ""
-        },
-        {
-        personagem: "1",
-        fala: "Fico lisongeado. Minha história sera contada no futuro.",
-        imagem: ""
-        },
-        {
-        personagem: "2",
-        fala: "Preciso fotografar isso. Imagina a cara do vovô quando mostrarmos nosso progresso!",
-        imagem: ""
-        }
-        ]
-}
-    
+  "historia1": {
+    "era": "Grecia",
+    "place": "Templo de Zeus",
+    "falas": [
+      {
+        "personagem": "1",
+        "fala": "Certo. Chegamos a grécia. Temos que preencher  diário com o máximo de informações.",
+        "imagem": ""
+      },
+      {
+        "personagem": "2",
+        "fala": "Ouvi dizer Zeus aparece em sua estátua, em Olimpia, para falar com os fieis.",
+        "imagem": ""
+      },
+      {
+        "personagem": "1",
+        "fala": "Isso é história. Uma coisa dessas não deve acontecer, mas eu quero fotografa-la. Não existem registros precisos dela, já que ela foi destruida em um terremoto.",
+        "imagem": ""
+      },
+      {
+        "personagem": "2",
+        "fala": "Vamos lá! Vamos entrar.",
+        "imagem": ""
+      },
+      {
+        "personagem": "1",
+        "fala": "Quem deseja entrar no templo de Zeus?",
+        "imagem": ""
+      },
+      {
+        "personagem": "2",
+        "fala": "Somos turistas. Queremos ver a estátua.",
+        "imagem": ""
+      },
+      {
+        "personagem": "1",
+        "fala": "Esse é um lugar sagrado. Somente pessoas que possuem total conhecimento sobre nossa cultura podem entrar.",
+        "imagem": ""
+      },
+      {
+        "personagem": "1",
+        "fala": "Viage pela Grécia. Conheça pessoas. Consiga informações. Quando estiver pronto, eu o testarei.",
+        "imagem": ""
+      },
+      {
+        "personagem": "2",
+        "fala": "Não tem problema! Adquirir conhecimento é o nosso trabalho!",
+        "imagem": ""
+      }
+    ]
+  },
+  "historia2": {
+    "era": "Grecia",
+    "place": "Templo de Zeus",
+    "falas": [
+      {
+        "personagem": "2",
+        "fala": "UAU! Essa é a estátua de Zeus? Que enorme!",
+        "imagem": ""
+      },
+      {
+        "personagem": "1",
+        "fala": "Preciso fotografa-la. Ela é incrível!",
+        "imagem": ""
+      },
+      {
+        "personagem": "2",
+        "fala": "Vovô vai ficar orgulhoso.",
+        "imagem": ""
+      }
+    ]
+  },
+  "historia3": {
+    "era": "Egito",
+    "place": "Palácio de Tutankamon",
+    "falas": [
+      {
+        "personagem": "2",
+        "fala": "Caramba! Esse lugar é muito quente.",
+        "imagem": ""
+      },
+      {
+        "personagem": "1",
+        "fala": "Deixe de reclamar. Temos que encontrar Tutankamon.",
+        "imagem": ""
+      },
+      {
+        "personagem": "2",
+        "fala": "Aquele que foi faraó com nove anos? Ele devia ser incrível.",
+        "imagem": ""
+      },
+      {
+        "personagem": "1",
+        "fala": "Quem deseja entrar no palacio de Tutankamon?",
+        "imagem": ""
+      },
+      {
+        "personagem": "2",
+        "fala": "Somos viajantes. Estamos pesquisando a vida dos egipcios. Somos grandes admiradores do jovem faraó",
+        "imagem": ""
+      },
+      {
+        "personagem": "1",
+        "fala": "Infelizmente, para entrar aqui, você deve se provar um grande conhecedor. Converse com o povo. Eles possuem muitas informações interessantes. Quando estiverem prontos voltem aqui e provem seu conhecimento.",
+        "imagem": ""
+      },
+      {
+        "personagem": "2",
+        "fala": "Certo.",
+        "imagem": ""
+      }
+    ]
+  },
+  "historia4": {
+    "era": "Egito",
+    "place": "Palácio de Tutankamon",
+    "falas": [
+      {
+        "personagem": "2",
+        "fala": "É um prazer conhecer uma figura tão importante quanto o senhor.",
+        "imagem": ""
+      },
+      {
+        "personagem": "1",
+        "fala": "Fico lisongeado. Minha história será contada no futuro.",
+        "imagem": ""
+      },
+      {
+        "personagem": "2",
+        "fala": "Preciso fotografar isso. Imagina a cara do vovô quando mostrarmos nosso progresso!",
+        "imagem": ""
+      }
+    ]
+  }
 }
