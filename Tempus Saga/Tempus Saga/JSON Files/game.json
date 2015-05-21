@@ -1,9 +1,11 @@
 {
     "Egito": {
         "nome": "Egito",
+        "imageBackground": "egitoBackground",
         "places": {
             "place1": {
                 "nome": "Piramides de Gizé",
+                "imageBackground": "egitoPlace1Background",
                 "personagens": {
                     "p1": "blá",
                     "p2": "blá2",
@@ -12,14 +14,17 @@
             },
             "place2": {
                 "nome": "bla"
+                "imageBackground": "egitoPlace2Background"
             }
         }
     },
     "Grécia": {
         "nome": "Grécia",
+        "imageBackground": "greciaBackground",
         "places": {
             "place1": {
                 "nome": "Atenas",
+                "imageBackground": "greciaPlace1Background"
                 "personagens": {
                     "NPC1": [
                         "Vocês conhecem o Partenon? Ele é o orgulho dos gregos. Ele foi construido para honrar a deusa Atena e é o simbolo da reconstrução, já que foi erguido após a cidade ser arrasada pelos persas"
@@ -32,6 +37,7 @@
             },
             "place2": {
                 "nome": "Templo de Apolo",
+                "imageBackground": "greciaPlace2Background"
                 "personagens": {
                     "NPC1": [
                         "Nossos deuses moram no olimpo. Eles costumam interagir ativamente na vida dos humanos. Apolo, por exemplo, nos garante tanto a proteção contra os males da vida quando a morte súbita com suas flechas infalíveis e Athena garante o triunfo dos justos nas batalhas."
@@ -44,6 +50,7 @@
             },
             "place3": {
                 "nome": "Olimpia",
+                "imageBackground": "greciaPlace3Background"
                 "personagens": {
                     "NPC1": [
                         "Quando more uma pessoa, ela é enterrada com uma moeda. Essa moeda é usada para pagar Caronte, o barqueiro que cruza o rio Aqueronte. Ele leva a pessoa para ser julgada pelos três juizes, que decidem se ele vai para o Tartaro ou para os Campos Ilisios"
@@ -56,6 +63,7 @@
             },
             "place4": {
                 "nome": "Templo de Zeus",
+                "imageBackground": "greciaPlace4Background"
                 "personagens": {
                 }
             }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oZz-mH-OVW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gKy-rw-L1F">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -301,31 +301,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAE-hD-OqP">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXE-Vf-UCP">
-                                <rect key="frame" x="322" y="233" width="156" height="121"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="a1S-8b-sC5"/>
-                                </constraints>
-                                <state key="normal" title="Grécia">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="a1S-8b-sC5"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="a1S-8b-sC5"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="buttonGrecia:" destination="gKy-rw-L1F" eventType="touchUpInside" id="EJS-At-VyC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEd-UW-gJn">
                                 <rect key="frame" x="103" y="94" width="156" height="121"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -360,6 +336,29 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonReinoUnido:" destination="gKy-rw-L1F" eventType="touchUpInside" id="XGY-N2-TTL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXE-Vf-UCP">
+                                <rect key="frame" x="322" y="233" width="156" height="121"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="a1S-8b-sC5"/>
+                                </constraints>
+                                <state key="normal" title="Grécia">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="a1S-8b-sC5"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="a1S-8b-sC5"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="buttonGrecia:" destination="gKy-rw-L1F" eventType="touchUpInside" id="EJS-At-VyC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -418,7 +417,7 @@
                         <outlet property="buttonEgito" destination="VEd-UW-gJn" id="hce-cD-aqN"/>
                         <outlet property="buttonGrecia" destination="dXE-Vf-UCP" id="dQ1-hW-jsp"/>
                         <outlet property="buttonReinoUnido" destination="dkI-rL-j1P" id="p9R-JJ-Dn4"/>
-                        <segue destination="Wuv-e7-lgE" kind="show" identifier="selecionarEra" id="59f-1j-g8h"/>
+                        <segue destination="Wuv-e7-lgE" kind="presentation" identifier="selecionarEra" modalTransitionStyle="flipHorizontal" id="59f-1j-g8h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEA-eu-FP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
