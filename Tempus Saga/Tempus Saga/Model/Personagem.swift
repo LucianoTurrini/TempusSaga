@@ -7,13 +7,28 @@
 //
 
 import Foundation
-import CoreData
+//import CoreData
+//
+//class Personagem: NSManagedObject {
+//
+//    @NSManaged var nome: String
+//    @NSManaged var era: String
+//    @NSManaged var texto: String
+//    @NSManaged var estado: Bool
+//
+//}
 
-class Personagem: NSManagedObject {
 
-    @NSManaged var nome: String
-    @NSManaged var era: String
-    @NSManaged var texto: String
-    @NSManaged var estado: Bool
+
+
+class Personagem: NSObject {
+
+    var nome: String?
+    var era: String?
+    var place: String?
+    var texto = Array<String>()
+    var estado: Bool = false
 
 }
+
+

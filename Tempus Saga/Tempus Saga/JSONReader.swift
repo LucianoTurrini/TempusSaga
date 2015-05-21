@@ -72,6 +72,14 @@ class JSONReader: NSObject {
         return historia
     }
     
+    func getFalasJogo(era: String) -> Era{
+        
+        
+        
+        
+        return Era()
+    }
+    
     
     
     class func getFalas (arquivo: String) -> Array<[String]> {  // Remover
