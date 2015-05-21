@@ -1,30 +1,37 @@
 {
     "Grécia": {
         "nome": "Grécia",
-        "places": {
-            "place1": {
-                "nome": "Atenas",
-                "personagens": {
-                    "NPC1": [
-                        "Vocês conhecem o Partenon? Ele é o orgulho dos gregos. Ele foi construido para honrar a deusa Atena e é o simbolo da reconstrução, já que foi erguido após a cidade ser arrasada pelos persas"
-                    ],
-                    "NPC2": [
-                        "Olha essa vista! A cidade de Atenas está a 150 metros do nível do mar, e possui grande valor militar devido a sua vista privilegiada. Mas se engana se acha que ela foi construida apenas para fins de Guerra: Olhe para esses templos! Olhe para sua beleza. Não existe cidade mais bonita que Atenas."
-                    ]
+        "places": [
+            "nome": "Atenas",
+            "personagens": {
+                   "NPC1": {
+                       "fala": [
+                          "Vocês conhecem o Partenon? Ele é o orgulho dos gregos. Ele foi construido para honrar a deusa Atena e é o simbolo da reconstrução, já que foi erguido após a cidade ser arrasada pelos persas"
+                        ],
+                        "image": ""
+                   },
+                   "NPC2": {
+                       "fala": [
+                                "Olha essa vista! A cidade de Atenas está a 150 metros do nível do mar, e possui grande valor militar devido a sua vista privilegiada. Mas se engana se acha que ela foi construida apenas para fins de Guerra: Olhe para esses templos! Olhe para sua beleza. Não existe cidade mais bonita que Atenas."
+                        ],
+                        "image": ""
+                   },
+             }
+        ],
+        [
+            "nome": "Templo de Apolo",
+            "personagens": {
+                "NPC1": [
+                    "Nossos deuses moram no olimpo. Eles costumam interagir ativamente na vida dos humanos. Apolo, por exemplo, nos garante tanto a proteção contra os males da vida quando a morte súbita com suas flechas infalíveis e Athena garante o triunfo dos justos nas batalhas."
+                ],
+                "NPC2": [
+                    "Zeus é o pai de todos os deus do Olimpo. Ele tem dois irmãos: Poseidon e Hades. Poseidon habita os mares, dando proteção aos navegantes e Hades guarda os portões do submundo."
+                ]
 
-                }
-            },
-            "place2": {
-                "nome": "Templo de Apolo",
-                "personagens": {
-                    "NPC1": [
-                        "Nossos deuses moram no olimpo. Eles costumam interagir ativamente na vida dos humanos. Apolo, por exemplo, nos garante tanto a proteção contra os males da vida quando a morte súbita com suas flechas infalíveis e Athena garante o triunfo dos justos nas batalhas."
-                    ],
-                    "NPC2": [
-                        "Zeus é o pai de todos os deus do Olimpo. Ele tem dois irmãos: Poseidon e Hades. Poseidon habita os mares, dando proteção aos navegantes e Hades guarda os portões do submundo."
-                    ]
-
-                }
+            }
+         ],
+        
+        
             },
             "place3": {
                 "nome": "Olimpia",

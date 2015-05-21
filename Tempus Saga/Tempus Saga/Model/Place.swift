@@ -12,6 +12,6 @@ class Place: NSObject {
     
     var nome: String!
     var imageBackground: UIImage!
-    var personagens: Array<Personagem>!    
-   
+    var personagens: Array<NPC>!
+    var imageBackground: String?
 }

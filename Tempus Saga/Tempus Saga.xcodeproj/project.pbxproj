@@ -15,7 +15,7 @@
 		21E23B701B04DA820050F93B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21E23B6F1B04DA820050F93B /* Images.xcassets */; };
 		21E23B731B04DA820050F93B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E23B711B04DA820050F93B /* LaunchScreen.xib */; };
 		21E23B7F1B04DA820050F93B /* Tempus_SagaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B7E1B04DA820050F93B /* Tempus_SagaTests.swift */; };
-		21E23B891B04E6010050F93B /* Personagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B881B04E6010050F93B /* Personagem.swift */; };
+		21E23B891B04E6010050F93B /* NPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B881B04E6010050F93B /* NPC.swift */; };
 		21E23B8E1B04EC7D0050F93B /* PersonagemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B8D1B04EC7D0050F93B /* PersonagemManager.swift */; };
 		21F7D70B1B0CD35300FF4FEA /* MenuPrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7D70A1B0CD35300FF4FEA /* MenuPrincipalViewController.swift */; };
 		21F7D70E1B0DFF7F00FF4FEA /* game.json in Resources */ = {isa = PBXBuildFile; fileRef = 21F7D70D1B0DFF7F00FF4FEA /* game.json */; };
@@ -53,7 +53,7 @@
 		21E23B781B04DA820050F93B /* Tempus SagaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tempus SagaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E23B7D1B04DA820050F93B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21E23B7E1B04DA820050F93B /* Tempus_SagaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tempus_SagaTests.swift; sourceTree = "<group>"; };
-		21E23B881B04E6010050F93B /* Personagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Personagem.swift; path = "Tempus Saga/Model/Personagem.swift"; sourceTree = "<group>"; };
+		21E23B881B04E6010050F93B /* NPC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NPC.swift; path = "Tempus Saga/Model/NPC.swift"; sourceTree = "<group>"; };
 		21E23B8D1B04EC7D0050F93B /* PersonagemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonagemManager.swift; path = "CoreData Manager/PersonagemManager.swift"; sourceTree = "<group>"; };
 		21F7D70A1B0CD35300FF4FEA /* MenuPrincipalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuPrincipalViewController.swift; path = ViewController/MenuPrincipalViewController.swift; sourceTree = "<group>"; };
 		21F7D70D1B0DFF7F00FF4FEA /* game.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game.json; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		21E23B8A1B04E60B0050F93B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				21E23B881B04E6010050F93B /* Personagem.swift */,
+				21E23B881B04E6010050F93B /* NPC.swift */,
 				212F8BA01B0A1C36006A6C5A /* Era.swift */,
 				212F8BA21B0A1D71006A6C5A /* Place.swift */,
 				D67557F41B0E082E00695097 /* Historia.swift */,
@@ -302,7 +302,7 @@
 				D667615F1B0BB67F002C06A2 /* PlaceViewController.swift in Sources */,
 				841448531B04E82D00BBC829 /* SceneViewController.swift in Sources */,
 				D67557F51B0E082E00695097 /* Historia.swift in Sources */,
-				21E23B891B04E6010050F93B /* Personagem.swift in Sources */,
+				21E23B891B04E6010050F93B /* NPC.swift in Sources */,
 				212F8B9E1B0A09E5006A6C5A /* AgesViewController.swift in Sources */,
 				212F8BA11B0A1C36006A6C5A /* Era.swift in Sources */,
 				21E23B8E1B04EC7D0050F93B /* PersonagemManager.swift in Sources */,

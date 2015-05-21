@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Luciano Moreira Turrini. All rights reserved.
 //
 
+import UIKit
 import Foundation
 //import CoreData
 //
@@ -21,14 +22,14 @@ import Foundation
 
 
 
-class Personagem: NSObject {
+class NPC: NSObject {
 
     var nome: String?
     var era: String?
     var place: String?
     var texto = Array<String>()
     var estado: Bool = false
-
+    var image: UIImage?
 }
 
 
