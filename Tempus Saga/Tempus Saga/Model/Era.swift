@@ -12,9 +12,9 @@ class Era: NSObject {
     
     var nome: String!
     var places: Array<Place>!
-    var imageBackground: UIImage?
+    var imageBackground: String?
     
-    convenience init(nome: String, places: Array<Place>, imageBackground: UIImage) {
+    convenience init(nome: String, places: Array<Place>, imageBackground: String) {
         self.init()
         
         self.nome = nome

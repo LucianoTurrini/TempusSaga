@@ -11,6 +11,6 @@ import UIKit
 class Place: NSObject {
     
     var nome: String!
-    var imageBackground: UIImage?
+    var imageBackground: String?
     var personagens: Array<NPC>!
 }

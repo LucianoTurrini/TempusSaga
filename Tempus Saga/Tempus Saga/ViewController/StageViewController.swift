@@ -47,7 +47,7 @@ class StageViewController: UIViewController {
         
         buttonStage3.setTitle(era.places[2].nome, forState: UIControlState.Normal)
         
-        imageBackground.image = era.imageBackground
+        imageBackground.image = UIImage(named: era.imageBackground!)
         
     }
     

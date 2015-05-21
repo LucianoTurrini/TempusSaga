@@ -74,27 +74,29 @@ class JSONReader: NSObject {
     
 
 
-    class func getFalasJogo(era: String) -> Era{
+    class func getFalasJogo(nomeEra: String) -> Era{
         
         let jsonDic: NSDictionary = getJsonDic("game")
         var era = Era()
         
-        era.nome = jsonDic.objectForKey(era)?.objectForKey("nome") as! String
-        era.imageBackground = UIImage(named: jsonDic.objectForKey("imageBackground") as! String)
+        let eraDic = jsonDic.objectForKey(nomeEra) as! NSDictionary
+        
+        era.nome = eraDic.objectForKey("nome") as! String
+        era.imageBackground = eraDic.objectForKey("imageBackground") as? String
         
         var arrayPlaces = Array<Place>()
         
-        let placesDic = jsonDic.objectForKey("place") as! Array<NSDictionary>
+        let placesDic = eraDic.objectForKey("places") as! Array<NSDictionary>
         for p in placesDic {
             
             var place = Place()
             
-            place.nome = jsonDic.objectForKey("nome") as! String
-            place.imageBackground = UIImage(named: jsonDic.objectForKey("imageBackground") as! String)
+            place.nome = p.objectForKey("nome") as! String
+            place.imageBackground = p.objectForKey("imageBackground") as? String
             
             var personagens = Array<NPC>()
             
-            let npcDic = jsonDic.objectForKey("personagens") as! NSDictionary
+            let npcDic = p.objectForKey("personagens") as! NSDictionary
             for (key, value) in npcDic {    // value: dentro do npc
                 
                 var npc = NPC()
@@ -134,12 +136,12 @@ class JSONReader: NSObject {
         let fala8:[String] = ["2", "- Bye.", ""]
         textAndImages.append(fala1)
         textAndImages.append(fala2)
-//        textAndImages.append(fala3)
-//        textAndImages.append(fala4)
-//        textAndImages.append(fala5)
-//        textAndImages.append(fala6)
-//        textAndImages.append(fala7)
-//        textAndImages.append(fala8)
+        textAndImages.append(fala3)
+        textAndImages.append(fala4)
+        textAndImages.append(fala5)
+        textAndImages.append(fala6)
+        textAndImages.append(fala7)
+        textAndImages.append(fala8)
         ///// Teste ////////////
     
         return textAndImages
