@@ -10,28 +10,35 @@ import UIKit
 
 class SceneViewController: UIViewController {
 
+    
+    // MARK - Outlets in StoryBoard
+    
+    @IBOutlet weak var buttonNext: UIButton!
+    @IBOutlet weak var labelSpeak: UILabel!
     @IBOutlet weak var imageCharacter: UIImageView!
     @IBOutlet weak var imageCharacter2: UIImageView!
-    @IBOutlet weak var labelSpeak: UILabel!
     @IBOutlet weak var imageSpeakBackground: UIImageView!
     @IBOutlet weak var imageBackground: UIImageView!
-    @IBOutlet weak var buttonNext: UIButton!
+    
     
     /// Matriz com texto e imagem opcional do tipo [String, String, String]
     
     
     /// Teste - PEGAR AQUI A HISTÓRIA CORRESPONDENTE
     var historia = JSONReader.getFalasHistoria("historia1")
-    /////
     
     
-//    var textAndImages: Array< [String?] >!
+    // MARK - Global Variables
+    
+//  var textAndImages: Array< [String?] >!
     var personagem1: UIImage?
     var personagem2: UIImage?
     var background: UIImage?
     var backgroundSpeak: UIImage?
     let animations = Animations()
     var falas: Array<Fala>!
+    var place = Place()
+    
 //    let jsonReader = JSONReader()
     
     private var numDialogo = 0
@@ -44,7 +51,7 @@ class SceneViewController: UIViewController {
         imageCharacter.image = personagem1
         imageCharacter2.image = personagem2
         imageBackground.image = background
-        //imageSpeakBackground.image = backgroundSpeak
+        imageSpeakBackground.image = backgroundSpeak
         
         labelSpeak.text = ""
         
