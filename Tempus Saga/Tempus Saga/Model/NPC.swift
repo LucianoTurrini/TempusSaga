@@ -27,7 +27,7 @@ class NPC: NSObject {
     var nome: String?
     var era: String?
     var place: String?
-    var texto = Array<String>()
+    var fala = Array<Fala>()
     var estado: Bool = false
     var image: UIImage?
 }

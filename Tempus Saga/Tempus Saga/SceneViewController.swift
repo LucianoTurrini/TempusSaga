@@ -25,16 +25,14 @@ class SceneViewController: UIViewController {
     /////
     
     
-//    var textAndImages: Array< [String?] >!
     var personagem1: UIImage?
     var personagem2: UIImage?
     var background: UIImage?
-    var backgroundSpeak: UIImage?
+    //var backgroundSpeak: UIImage?
     let animations = Animations()
     var falas: Array<Fala>!
-//    let jsonReader = JSONReader()
     
-    private var numDialogo = 0
+    //private var numDialogo = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,39 +52,45 @@ class SceneViewController: UIViewController {
         Animations.bubble(imageSpeakBackground){ }
         
         Animations.bubble(labelSpeak){
+            self.falar()
+        }
+}
+    
+    
+    func falar() {
+        
+        var numDialogo = 0
+        
+        while numDialogo < falas.count {  // Lembrar: Aqui é totalmente assíncrono!
             
-            while self.numDialogo < self.falas.count {  // Lembrar: Aqui é totalmente assíncrono!
-
-                let fala = self.falas[self.numDialogo]
+            let fala = self.falas[numDialogo]
+            
+            //Exibe o loop de diálogos
+            if numDialogo < self.falas.count {
                 
-                //Exibe o loop de diálogos
-                if self.numDialogo < self.falas.count-1 {
-                    
-                    self.animations.mostrarDialogo(fala, img1: self.imageCharacter, img2: self.imageCharacter2, label: self.labelSpeak){ }
-                    
+                self.animations.mostrarDialogo(fala, img1: self.imageCharacter, img2: self.imageCharacter2, label: self.labelSpeak){ }
+                
                 //Depois do diálogo
-                } else {
-                    self.animations.mostrarDialogo(fala, img1: self.imageCharacter, img2: self.imageCharacter2, label: self.labelSpeak){
-                        
-                        Animations.fadeToBlack(self.view)
-                        //Animations.bubble(self.labelSpeak, completion: {})
-                        
-                    }
+                numDialogo++
+            } else {
+                self.animations.mostrarDialogo(fala, img1: self.imageCharacter, img2: self.imageCharacter2, label: self.labelSpeak){
                     
-                    // Implementar o fim da cena aqui
-                    
-    // ->->->->->->->-  Trocar de cena aqui -------------------
+                    Animations.fadeToBlack(self.view)
+                    //Animations.bubble(self.labelSpeak, completion: {})
                     
                 }
                 
-                // Incrementa o indice do vetor
-                if self.numDialogo < self.falas.count {
-                    self.numDialogo++
-                }
+                // Implementar o fim da cena aqui
+                
+                // ->->->->->->->-  Trocar de cena aqui -------------------
                 
             }
+
+            
+        }
+        
     }
-}
+    
     
     
 //    func removerPersonagens(p1: UIImageView, p2: UIImageView) {

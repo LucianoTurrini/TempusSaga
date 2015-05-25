@@ -96,16 +96,10 @@ class Animations: NSObject {
     func mostrarDialogo(fala: Fala, img1: UIImageView, img2: UIImageView, label: UILabel, complete: () -> ()){
         // Totalmente assíncrono
         
-        //let textImage = self.textAndImages[self.numDialogo]
-        
         let personagem = fala.personagem
         let texto = fala.fala
         let imageString = fala.imagem
         var image = UIImage()
-        //let nDialogo = self.numDialogo
-        
-        /// Pega a thread criada para o texto e adiciona
-        //let queue = self.queue
         
         dispatch_async (queue, { () -> Void in
             
@@ -132,9 +126,7 @@ class Animations: NSObject {
                 
             })
         })
-        
         self.input(texto, label: label) //Pega só o texto do Array
-        
         
         // Pausa entre as falas
         dispatch_async (queue, { () -> Void in
@@ -143,6 +135,38 @@ class Animations: NSObject {
         
       }
 
+    
+    func mostrarDialogoSimples(fala: Fala, img: UIImageView, label: UILabel, complete: () -> ()){
+        // Totalmente assíncrono
+        
+        //let personagem = fala.personagem
+        let texto = fala.fala
+        let imageString = fala.imagem
+        var image = UIImage()
+        //let nDialogo = self.numDialogo
+        
+        /// Pega a thread criada para o texto e adiciona
+        dispatch_async (queue, { () -> Void in
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                
+//                if let testImage = UIImage(named: imageString) {
+//                    image = testImage
+//                }
+                
+                // Algo extra que quiser enfileirar
+                complete ()
+            })
+        })
+        
+        self.input(texto, label: label) //Pega só o texto do Array
+        
+        // Pausa entre as falas
+        dispatch_async (queue, { () -> Void in
+            usleep(500 * 1000)  // Milisegundos * 1000
+        })
+    }
+    
     
     class func fadeToBlack (view: UIView) {
         

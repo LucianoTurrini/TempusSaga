@@ -9,19 +9,114 @@
 import UIKit
 
 class PlaceViewController: UIViewController {
-
+    
+    /// Teste - PEGAR AQUI O PLACE CORRESPONDENTE
+    var place: Place = JSONReader.getFalasJogo("Grécia").places[0]    // Recebe a segue
+    ////////////
+    
+    var personagem: UIImage?
+    var backgroundImage: UIImage?
+    //var backgroundSpeak: UIImage?
+    let animations = Animations()
+    var falas: Array<Fala>!
+    
+    @IBOutlet weak var labelTexto: UILabel!
+    @IBOutlet weak var imgPersonagem: UIImageView!
+    @IBOutlet weak var background: UIImageView!
+    @IBOutlet weak var speakBackground: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        // NPC inicial (1) (troca depois no botão)
+        falas = place.personagens[0].fala
+        
+        imgPersonagem.image = personagem
+        background.image = backgroundImage
+        //imageSpeakBackground.image = backgroundSpeak
+        
+        labelTexto.text = ""
+        
+        Animations.slide(imgPersonagem, direction: Animations.direction.toRight)
+        
+        //Animations.bubble(speakBackground){ }
+        
+        Animations.bubble(labelTexto){
+            self.falar()
+        }
     }
     
+    func falar(){
+        var numDialogo = 0
+        
+        while numDialogo < self.falas.count {  // Lembrar: Aqui é totalmente assíncrono!
+            
+            let fala = falas[numDialogo] //Fala()
+//            fala.fala = self.falas[numDialogo]
+//            fala.imagem =
+            
+            //Exibe o loop de diálogos
+            if numDialogo < self.falas.count {
+                
+                self.animations.mostrarDialogoSimples(fala, img: self.imgPersonagem, label: self.labelTexto) { }
+                //self.animations.mostrarDialogo(fala, img1: self.imgPersonagem, img2: self.imgPersonagem, label: self.labelTexto) { }
+                //Depois do diálogo
+                
+            } else {
+                
+                self.animations.mostrarDialogoSimples(fala, img: self.imgPersonagem, label: self.labelTexto) {
+                    
+                    Animations.fadeToBlack(self.view)
+                    //Animations.bubble(self.labelSpeak, completion: {})
+                }
+                
+                // Implementar o fim da cena aqui
+                
+                // ->->->->->->->-  Trocar de cena aqui -------------------
+            }
+            numDialogo++
+        }
+    }
+    
+    @IBAction func btNPC1(sender: AnyObject) {
+        
+        
+        
+    }
+    
+    @IBAction func btNPC2(sender: AnyObject) {
+        
+        
+        
+    }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

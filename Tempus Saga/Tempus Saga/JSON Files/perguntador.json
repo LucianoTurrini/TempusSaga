@@ -1,0 +1,24 @@
+{
+    
+    
+    
+    "personagem1": {
+        "era": "Grecia",
+        "place": "Templo de Zeus",
+        "perguntas": [
+          {
+              "Pergunta": "Teste?",
+              "Resposta": "Sim, teste."
+          },
+          {
+              "Pergunta": "Teste 2?",
+              "Resposta": "Sim, teste 2."
+          }
+        ]
+    
+    }
+    
+    
+    
+    
+}

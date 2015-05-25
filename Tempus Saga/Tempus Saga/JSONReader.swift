@@ -108,7 +108,16 @@ class JSONReader: NSObject {
                 
                 let arrayFala = value.objectForKey("falas") as! [String]
                 
-                npc.texto = arrayFala
+                for fala in arrayFala {
+                    
+                    let falaObj = Fala()
+                    falaObj.fala = fala
+                    falaObj.imagem = value.objectForKey("image") as! String
+                    
+                    npc.fala.append(falaObj)
+                }
+                
+                
                 
                 personagens.append(npc)
             }

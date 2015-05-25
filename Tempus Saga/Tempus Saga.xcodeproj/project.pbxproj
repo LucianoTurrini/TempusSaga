@@ -25,6 +25,7 @@
 		D667615F1B0BB67F002C06A2 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */; };
 		D67557F31B0E00EB00695097 /* historia.json in Resources */ = {isa = PBXBuildFile; fileRef = D67557F21B0E00EB00695097 /* historia.json */; };
 		D67557F51B0E082E00695097 /* Historia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67557F41B0E082E00695097 /* Historia.swift */; };
+		D67FDE111B0F5D1A00264B53 /* perguntador.json in Resources */ = {isa = PBXBuildFile; fileRef = D67FDE101B0F5D1A00264B53 /* perguntador.json */; };
 		D697A5281B0B78630022B3DD /* JSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D697A5271B0B78630022B3DD /* JSONReader.swift */; };
 		D6D7E21D1B062C96005543C4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D7E21C1B062C96005543C4 /* Animations.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceViewController.swift; path = ViewController/PlaceViewController.swift; sourceTree = "<group>"; };
 		D67557F21B0E00EB00695097 /* historia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = historia.json; sourceTree = "<group>"; };
 		D67557F41B0E082E00695097 /* Historia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Historia.swift; path = "Tempus Saga/Model/Historia.swift"; sourceTree = "<group>"; };
+		D67FDE101B0F5D1A00264B53 /* perguntador.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = perguntador.json; sourceTree = "<group>"; };
 		D697A5271B0B78630022B3DD /* JSONReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONReader.swift; sourceTree = "<group>"; };
 		D6D7E21C1B062C96005543C4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +195,7 @@
 			children = (
 				D67557F21B0E00EB00695097 /* historia.json */,
 				21F7D70D1B0DFF7F00FF4FEA /* game.json */,
+				D67FDE101B0F5D1A00264B53 /* perguntador.json */,
 			);
 			path = "JSON Files";
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				841448591B04E8FD00BBC829 /* Main.storyboard in Resources */,
+				D67FDE111B0F5D1A00264B53 /* perguntador.json in Resources */,
 				21E23B731B04DA820050F93B /* LaunchScreen.xib in Resources */,
 				21E23B701B04DA820050F93B /* Images.xcassets in Resources */,
 				D67557F31B0E00EB00695097 /* historia.json in Resources */,
