@@ -50,7 +50,7 @@ class AgesViewController: UIViewController {
     
     @IBAction func buttonReinoUnido(sender: AnyObject) {
         
-        era = JSONReader.getFalasJogo("ReinoUnido")
+        era = JSONReader.getFalasJogo("Reino Unido")
         
         performSegueWithIdentifier("selecionarEra", sender: self)
         
