@@ -33,13 +33,13 @@ class StageViewController: UIViewController {
         
         super.viewDidLoad()
         
-        defineStage()
+        selectStage()
 
         
     }
     
-    
-    func defineStage() {
+    /// Função que define os titulos dos botões e a imagem de fundo
+    func selectStage() {
         
         buttonStage1.setTitle(era.places[0].nome, forState: UIControlState.Normal)
         
@@ -56,13 +56,22 @@ class StageViewController: UIViewController {
     
     @IBAction func buttonStage1(sender: UIButton) {
         
+        place = era.places[0]
+        performSegueWithIdentifier("selecionarPlace", sender: self)
+        
     }
     
     @IBAction func buttonStage2(sender: UIButton) {
         
+        place = era.places[1]
+        performSegueWithIdentifier("selecionarPlace", sender: self)
+    
     }
     
     @IBAction func buttonStage3(sender: UIButton) {
+    
+        place = era.places[2]
+        performSegueWithIdentifier("selecionarPlace", sender: self)
         
     }
 
@@ -75,6 +84,14 @@ class StageViewController: UIViewController {
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "selecionarPlace" {
+            
+            let destination = segue.destinationViewController as! PlaceViewController
+            
+            destination.place = place
+            
+        }
         
         
     }

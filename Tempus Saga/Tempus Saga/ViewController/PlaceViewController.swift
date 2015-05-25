@@ -10,20 +10,25 @@ import UIKit
 
 class PlaceViewController: UIViewController {
     
-    /// Teste - PEGAR AQUI O PLACE CORRESPONDENTE
-    var place: Place = JSONReader.getFalasJogo("Grécia").places[0]    // Recebe a segue
-    ////////////
     
-    var personagem: UIImage?
-    var backgroundImage: UIImage?
-    //var backgroundSpeak: UIImage?
-    let animations = Animations()
-    var falas: Array<Fala>!
+    // MARK - Outlets in StoryBoard\
     
     @IBOutlet weak var labelTexto: UILabel!
     @IBOutlet weak var imgPersonagem: UIImageView!
     @IBOutlet weak var background: UIImageView!
     @IBOutlet weak var speakBackground: UIImageView!
+    
+    
+    //MARK - Global Variables
+    
+    /// Teste - PEGAR AQUI O PLACE CORRESPONDENTE
+    var place = Place()//: Place = JSONReader.getFalasJogo("Grécia").places[0]    // Recebe a segue
+    var personagem: UIImage?
+    var backgroundImage: UIImage?
+    //var backgroundSpeak: UIImage?
+    let animations = Animations()
+    var falas: Array<Fala>!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +82,9 @@ class PlaceViewController: UIViewController {
             numDialogo++
         }
     }
+    
+    
+    // MARK - Buttons Actions
     
     @IBAction func btNPC1(sender: AnyObject) {
         

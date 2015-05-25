@@ -20,13 +20,8 @@ class SceneViewController: UIViewController {
     @IBOutlet weak var imageSpeakBackground: UIImageView!
     @IBOutlet weak var imageBackground: UIImageView!
     
-    
-    /// Matriz com texto e imagem opcional do tipo [String, String, String]
-    
-    
     /// Teste - PEGAR AQUI A HISTÓRIA CORRESPONDENTE
     var historia = JSONReader.getFalasHistoria("historia1")
-    
     
     var personagem1: UIImage?
     var personagem2: UIImage?
