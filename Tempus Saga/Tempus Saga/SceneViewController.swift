@@ -31,7 +31,7 @@ class SceneViewController: UIViewController {
     var personagem1: UIImage?
     var personagem2: UIImage?
     var background: UIImage?
-    //var backgroundSpeak: UIImage?
+    var backgroundSpeak: UIImage?
     let animations = Animations()
     var falas: Array<Fala>!
     
