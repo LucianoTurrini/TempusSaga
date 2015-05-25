@@ -95,7 +95,7 @@ class JSONReader: NSObject {
             place.nome = p.objectForKey("nome") as! String
             place.imageBackground = p.objectForKey("imageBackground") as? String
             
-            var personagens = Array<NPC>()
+            var personagens = NSMutableDictionary()
             
             let npcDic = p.objectForKey("personagens") as! NSDictionary
             for (key, value) in npcDic {    // value: dentro do npc
@@ -117,9 +117,9 @@ class JSONReader: NSObject {
                     npc.fala.append(falaObj)
                 }
                 
+                personagens.setValue(npc, forKeyPath: npc.nome!)
                 
-                
-                personagens.append(npc)
+                //personagens.append(npc)
             }
             place.personagens = personagens //Adiciona os personagens
             arrayPlaces.append(place)

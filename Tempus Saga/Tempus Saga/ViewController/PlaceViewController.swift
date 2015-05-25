@@ -34,7 +34,8 @@ class PlaceViewController: UIViewController {
         super.viewDidLoad()
         
         // NPC inicial (1) (troca depois no botão)
-        falas = place.personagens[0].fala
+        let npc = place.personagens.valueForKey("NPC1") as! NPC
+        falas = npc.fala
         
         imgPersonagem.image = personagem
         background.image = backgroundImage

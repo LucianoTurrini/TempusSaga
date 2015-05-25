@@ -12,5 +12,5 @@ class Place: NSObject {
     
     var nome: String!
     var imageBackground: String?
-    var personagens: Array<NPC>!
+    var personagens: NSDictionary!
 }
