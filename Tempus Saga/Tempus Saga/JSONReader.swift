@@ -29,16 +29,12 @@ class JSONReader: NSObject {
         return dic
     }
     
+    /// Retorna o JSON em forma de NSDictionary à partir do nome do arquivo
     class func getJsonDic(fileToRead: String) -> NSDictionary{
         
         return getJSONData(fileToRead) as! NSDictionary
         
-        //        let s = jsonObj.objectForKey("teste") as! String
-        //        println("Leitura: \(s) ")
     }
-    
-    
-    
     
     
     
@@ -114,7 +110,7 @@ class JSONReader: NSObject {
                     falaObj.fala = fala
                     falaObj.imagem = value.objectForKey("image") as! String
                     
-                    npc.fala.append(falaObj)
+                    npc.falas.append(falaObj)
                 }
                 
                 personagens.setValue(npc, forKeyPath: npc.nome!)
@@ -128,6 +124,31 @@ class JSONReader: NSObject {
         
         return era
     }
+    
+    
+    class func getPerguntasJogo(nomeNPC: String) -> Perguntador{
+        
+        var perguntador = Perguntador()
+        
+        let perguntadoresDic = getJsonDic("perguntador")
+        let personagemDic = perguntadoresDic.objectForKey(nomeNPC) as! NSDictionary
+        let perguntasArray = perguntadoresDic.objectForKey("perguntas") as! Array<NSDictionary>
+        
+        perguntador.nome = personagemDic.objectForKey("nome") as? String
+        perguntador.era = personagemDic.objectForKey("era") as? String
+        perguntador.place = personagemDic.objectForKey("place") as? String
+        
+        
+        for pergunta in perguntasArray {
+            
+            var p = Pergunta()
+            p.pergunta = pergunta.objectForKey("pergunta") as! String
+            p.resposta = pergunta.objectForKey("resposta") as! String
+            
+        }
+        return perguntador
+    }
+    
     
     
     

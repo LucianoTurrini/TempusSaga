@@ -1,23 +1,21 @@
 {
     
     
-    
     "personagem1": {
+        "nome": "NPC3"
         "era": "Grecia",
         "place": "Templo de Zeus",
         "perguntas": [
           {
-              "Pergunta": "Teste?",
-              "Resposta": "Sim, teste."
+              "pergunta": "Teste?",
+              "resposta": "Sim, teste."
           },
           {
-              "Pergunta": "Teste 2?",
-              "Resposta": "Sim, teste 2."
+              "pergunta": "Teste 2?",
+              "resposta": "Sim, teste 2."
           }
         ]
-    
     }
-    
     
     
     

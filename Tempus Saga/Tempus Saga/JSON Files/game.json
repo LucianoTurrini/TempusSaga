@@ -8,7 +8,8 @@
 		"personagens": {
 		  "NPC1": {
 			"falas": [
-			  "Vocês conhecem o Partenon? Ele é o orgulho dos gregos. Ele foi construido para honrar a deusa Atena e é o simbolo da reconstrução, já que foi erguido após a cidade ser arrasada pelos persas."
+			  "Vocês conhecem o Partenon? Ele é o orgulho dos gregos.",
+              "Ele foi construido para honrar a deusa Atena e é o simbolo da reconstrução, já que foi erguido após a cidade ser arrasada pelos persas."
 			],
 			"image": ""
 		  },

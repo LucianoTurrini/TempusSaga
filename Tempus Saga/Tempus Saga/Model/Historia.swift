@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class Historia: NSObject {
    
     var era: String!

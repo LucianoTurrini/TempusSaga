@@ -29,14 +29,14 @@ class PlaceViewController: UIViewController {
     //var backgroundSpeak: UIImage?
     let animations = Animations()
     var falas: Array<Fala>!
-   
+    var NPC3: Perguntador?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // NPC inicial (1) (troca depois no botão)
         let npc = place.personagens.valueForKey("NPC1") as! NPC
-        falas = npc.fala
+        falas = npc.falas
         
         imgPersonagem.image = personagem
         background.image = backgroundImage
