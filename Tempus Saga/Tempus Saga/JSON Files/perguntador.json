@@ -1,22 +1,166 @@
 {
-    
-    
-    "personagem1": {
-        "nome": "NPC3"
-        "era": "Grecia",
-        "place": "Templo de Zeus",
-        "perguntas": [
-          {
-              "pergunta": "Teste?",
-              "resposta": "Sim, teste."
-          },
-          {
-              "pergunta": "Teste 2?",
-              "resposta": "Sim, teste 2."
-          }
-        ]
-    }
-    
-    
-    
+	
+	
+	"personagem1": {
+		"nome": "NPC3",
+		"era": "Grécia",
+		"place": "Atenas",
+		"desafio": "false",
+		"perguntas": [
+			{
+				"pergunta": "O que você quer aqui?",
+				"respostas": [
+					{
+						"resposta": "Sou apenas um visitante.",
+						"replica": "Aproveite a visita. A grecia tem muito a oferecer."
+					},
+					{
+						"resposta": "Nada. Na verdade eu estou apenas de passagem.",
+						"replica": "Entendo. Aproveite a estadia."
+					},
+					{
+						"resposta": "O que é a escultura de Zeus?",
+						"replica": "É a mais bela escultura construída pelos gregos. Foi esculpida por Phidias e possui tamanho colossal. Dizem que Zeus encarna na estátua para responder a prece dos seus fieis."
+					}
+				]
+			}
+		]
+	},
+	"personagem2": {
+		"nome": "NPC3",
+		"era": "Grécia",
+		"place": "Templo de Apolo",
+		"desafio": "false",
+		"perguntas": [
+			{
+				"pergunta": "O que você faz aqui?",
+				"respostas": [
+					{
+						"resposta": "Estou de passagem.",
+						"replica": "Aproveite pra homenagear os deuses."
+					},
+					{
+						"resposta": "Como surgiram os deuses? ",
+						"replica": "Os deuses nasceram da união de Urano e Gaia. Urano, por medo de ser destronado, engolia todos os seus filhos. Zeus foi salvo e, quando crescido, derrotou seu pai e batalhou contra os gigantes e Titãs e tornou-se pai de praticamente todos os outros deuses."
+					},
+					{
+						"resposta": "O que são semi-deuses?",
+						"replica": "São filhos de Zeus com criaturas mortais, como humanos. Hercules, por exemplo, é um semi-deus nascido da união entre Zeus e Alcmena."
+					}
+				]
+			}
+		]
+	},
+	"personagem3": {
+		"nome": "NPC3",
+		"era": "Grécia",
+		"place": "Olimpia",
+		"desafio": "false",
+		"perguntas": [
+			{
+				"pergunta": "O que você está procurando?",
+				"respostas": [
+					{
+						"resposta": "A estátua de Zeus.",
+						"replica": "A estátua está no templo de Zeus. Para entrar lá, pore, você terá que passar pelo desafio do oráculo e provar seu conhecimento. Somente pessoas aprovadas pelo oráculo podem ver a estátua."
+					},
+					{
+						"resposta": "Um bom lugar pra comer ",
+						"replica": "Comida boa é o que não falta aqui. Já experimentou uma sopa de lentilhas, uma skordalia ou um delicioso pasteli?"
+					},
+					{
+						"resposta": "Um bom lugar pra dormir",
+						"replica": "Já procurou alguma estalagem? Eu não posso te ajudar nisso."
+					}
+				]
+			}
+		]
+	},
+	"oraculo": {
+		"nome": "Oráculo",
+		"era": "Grécia",
+		"place": "Templo de Zeus",
+		"desafio": "true",
+		"perguntas": [
+			{
+				"pergunta": "Vejo que deseja ver a estátua de Zeus. Só posso deixar entrar aquele que vencer o meu desafio. Você está pronto?",
+				"respostas": [
+					{
+						"resposta": "Sim.",
+						"replica": "Todas as pessoas com quem você conversou te deram importantes dicas. Caso tenha prestado atenção, você se sairá bem.."
+					},
+					{
+						"resposta": "Não",
+						"replica": "Volte quando estiver mais preparado."
+					}
+				]
+			},
+			{
+				"pergunta": "Por que os gregos enterram os mortos com uma moeda?",
+				"respostas": [
+					{
+						"resposta": "Para pagar o Caronte, barqueiro do Aqueronte.",
+						"replica": "Correto.",
+						"correto": "true"
+					},
+					{
+						"resposta": "Para pagar a entrada do mundo dos mortos",
+						"replica": "Você errou. Volte quando estiver mais preparado.",
+						"correto": "false"
+					},
+					{
+						"resposta": "Para pagar um advogado no julgamento.",
+						"replica": "Você errou. Volte quando estiver mais preparado.",
+						"correto": "false"
+					}
+				]
+			}
+			{
+				"pergunta": "O Paternon foi construido em homenagem a que deus?",
+				"respostas": [
+					{
+						"resposta": "Atena.",
+						"replica": "Correto.",
+						"correto": "true"
+					},
+					{
+						"resposta": "Zeus",
+						"replica": "Você errou. Volte quando estiver mais preparado.",
+						"correto": "false"
+					},
+					{
+						"resposta": "Afrodite",
+						"replica": "Você errou. Volte quando estiver mais preparado.",
+						"correto": "false"
+					}
+				]
+			},
+			{
+				"pergunta": "Quem são os irmãos de Zeus?",
+				"respostas": [
+					{
+						"resposta": "Hades e Poseidon.",
+						"replica": "Correto.",
+						"correto": "true"
+					},
+					{
+						"resposta": "Apolo e Afrodite",
+						"replica": "Você errou. Volte quando estiver mais preparado.",
+						"correto": "false"
+					},
+					{
+						"resposta": "Atena e Perserfone",
+						"replica": "Você errou. Volte quando estiver mais preparado.",
+						"correto": "false"
+					}
+				]
+			}
+		],
+		"sucesso": "Parabéns. Você mostrou possuir conhecimento suficiente para entrar no templo de Zeus. Aproveite. Quem sabe você não terá a honra de conversar com o próprio Zeus?"
+	}
+	
+	
+	
+	
+	
 }

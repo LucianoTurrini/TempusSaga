@@ -143,7 +143,20 @@ class JSONReader: NSObject {
             
             var p = Pergunta()
             p.pergunta = pergunta.objectForKey("pergunta") as! String
-            p.resposta = pergunta.objectForKey("resposta") as! String
+            //p.resposta = pergunta.objectForKey("resposta") as! String   //Trocar pra ler vetor de dic
+            
+            let respDic = pergunta.objectForKey("respostas") as! [Dictionary<String, String>]
+            
+            for resp in respDic {
+                
+                var r = Resposta()
+                r.resposta = resp["resposta"]
+                r.replica = resp["replica"]
+                
+                p.resposta.append(r)
+            }
+            
+            perguntador.perguntas.append(p)
             
         }
         return perguntador

@@ -19,6 +19,18 @@ class Fala: NSObject {
 class Pergunta: NSObject {
     
     var pergunta: String!
-    var resposta: String!
+    var resposta = Array<Resposta>()
+    var respostaCerta: String?
     
 }
+
+class Resposta: NSObject {
+    
+    var resposta: String!
+    var replica: String?
+    var treplica: String?   // Não implementado
+    
+}
+
+
+
