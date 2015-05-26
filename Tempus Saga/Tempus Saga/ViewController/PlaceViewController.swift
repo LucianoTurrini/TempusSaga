@@ -26,7 +26,7 @@ class PlaceViewController: UIViewController {
     var place = Place()
     var personagem: UIImage?
     var backgroundImage: UIImage?
-    //var backgroundSpeak: UIImage?
+    var backgroundSpeak: UIImage?
     let animations = Animations()
     var falas: Array<Fala>!
     var NPC3: Perguntador?
@@ -40,17 +40,17 @@ class PlaceViewController: UIViewController {
         
         imgPersonagem.image = personagem
         background.image = backgroundImage
-        //imageSpeakBackground.image = backgroundSpeak
+        speakBackground.image = backgroundSpeak
         
         labelTexto.text = ""
         
         Animations.slide(imgPersonagem, direction: Animations.direction.toRight)
         
-        //Animations.bubble(speakBackground){ }
+        Animations.bubble(speakBackground, viewHeight: view.frame.width){ }
         
-        //Animations.bubble(labelTexto){
+        Animations.bubble(labelTexto, viewHeight: view.frame.width) {
             self.falar()
-        //}
+        }
     }
     
     func falar(){
@@ -59,8 +59,10 @@ class PlaceViewController: UIViewController {
         while numDialogo < self.falas.count {  // Lembrar: Aqui é totalmente assíncrono!
             
             let fala = falas[numDialogo] //Fala()
-//            fala.fala = self.falas[numDialogo]
-//            fala.imagem =
+            
+            if let img = fala.imagem {
+                imgPersonagem.image = UIImage(named: img)
+            }
             
             //Exibe o loop de diálogos
             if numDialogo < self.falas.count {

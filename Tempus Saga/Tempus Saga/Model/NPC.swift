@@ -31,3 +31,13 @@ class NPC: NSObject {
 }
 
 
+
+class Perguntador: NPC {
+    
+    var perguntas = Array<Pergunta>()
+    
+}
+
+
+
+

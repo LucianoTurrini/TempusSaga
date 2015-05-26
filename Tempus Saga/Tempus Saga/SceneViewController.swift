@@ -47,9 +47,9 @@ class SceneViewController: UIViewController {
         Animations.slide(imageCharacter, direction: Animations.direction.toRight)
         Animations.slide(imageCharacter2, direction: Animations.direction.toLeft)
         
-        Animations.bubble(imageSpeakBackground){ }
+        Animations.bubble(imageSpeakBackground, viewHeight: view.frame.width) { }
         
-        Animations.bubble(labelSpeak){
+        Animations.bubble(labelSpeak, viewHeight: view.frame.width){
             self.falar()
         }
 }
@@ -62,6 +62,13 @@ class SceneViewController: UIViewController {
         while numDialogo < falas.count {  // Lembrar: Aqui é totalmente assíncrono!
             
             let fala = self.falas[numDialogo]
+            
+            if let img = fala.imagem {
+                if fala.personagem == "1" {
+                    imageCharacter.image = UIImage(named: img)
+                } else if fala.personagem == "2" {
+                    imageCharacter2.image = UIImage(named: img)
+            }
             
             //Exibe o loop de diálogos
             if numDialogo < self.falas.count {

@@ -1,19 +1,20 @@
 //
-//  Perguntador.swift
+//  Fala.swift
 //  Tempus Saga
 //
-//  Created by Jorge Henrique P. Garcia on 5/25/15.
+//  Created by Jorge Henrique P. Garcia on 5/26/15.
 //  Copyright (c) 2015 Luciano Moreira Turrini. All rights reserved.
 //
 
 import UIKit
 
-class Perguntador: NPC {
-   
-    var perguntas = Array<Pergunta>()
+class Fala: NSObject {
+    
+    var personagem = ""
+    var fala: String!
+    var imagem: String!
     
 }
-
 
 class Pergunta: NSObject {
     
