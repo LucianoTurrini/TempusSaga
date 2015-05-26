@@ -31,7 +31,7 @@ class NPC: NSObject {
 }
 
 
-
+/// Igual o NPC, mas possui o atributo "perguntas"
 class Perguntador: NPC {
     
     var perguntas = Array<Pergunta>()

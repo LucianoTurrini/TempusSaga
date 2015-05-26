@@ -68,6 +68,7 @@ class SceneViewController: UIViewController {
                     imageCharacter.image = UIImage(named: img)
                 } else if fala.personagem == "2" {
                     imageCharacter2.image = UIImage(named: img)
+                }
             }
             
             //Exibe o loop de diálogos
