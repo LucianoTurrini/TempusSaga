@@ -35,9 +35,7 @@ class JSONReader: NSObject {
         return getJSONData(fileToRead) as! NSDictionary
         
     }
-    
-    
-    
+
     class func getFalasHistoria (IdHistoria: String) -> Historia {
     
         var historia = Historia()
@@ -132,7 +130,7 @@ class JSONReader: NSObject {
         
         let perguntadoresDic = getJsonDic("perguntador")
         let personagemDic = perguntadoresDic.objectForKey(nomeNPC) as! NSDictionary
-        let perguntasArray = perguntadoresDic.objectForKey("perguntas") as! Array<NSDictionary>
+        let perguntasArray = personagemDic.objectForKey("perguntas") as! Array<NSDictionary>
         
         perguntador.nome = personagemDic.objectForKey("nome") as? String
         perguntador.era = personagemDic.objectForKey("era") as? String
@@ -152,7 +150,9 @@ class JSONReader: NSObject {
                 var r = Resposta()
                 r.resposta = resp["resposta"]
                 r.replica = resp["replica"]
-                
+                if let correto = resp["correto"] {
+                    r.correto = NSString(string: correto).boolValue //Conversão para Bool
+                }
                 p.resposta.append(r)
             }
             
