@@ -20,7 +20,6 @@ class Pergunta: NSObject {
     
     var pergunta: String!
     var resposta = Array<Resposta>()
-    var respostaCerta: String?
     
 }
 

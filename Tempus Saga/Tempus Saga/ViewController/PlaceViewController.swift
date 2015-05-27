@@ -19,11 +19,17 @@ class PlaceViewController: UIViewController {
     @IBOutlet weak var background: UIImageView!
     @IBOutlet weak var speakBackground: UIImageView!
     
+    @IBOutlet weak var btResp1: UIButton!
+    @IBOutlet weak var btResp2: UIButton!
+    @IBOutlet weak var btResp3: UIButton!
     
-    //MARK - Global Variables
+    
+    //MARK: Global Variables
     
     /// Teste - PEGAR AQUI O PLACE CORRESPONDENTE
     var place = Place()
+    //////
+    
     var personagem: UIImage?
     var backgroundImage: UIImage?
     var backgroundSpeak: UIImage?
@@ -35,7 +41,7 @@ class PlaceViewController: UIViewController {
         super.viewDidLoad()
         
         // NPC inicial (1) (troca depois no botão)
-        let npc = place.personagens.valueForKey("NPC1") as! NPC
+        let npc = place.personagens["NPC1"]!
         falas = npc.falas
         
         imgPersonagem.image = personagem
@@ -58,7 +64,7 @@ class PlaceViewController: UIViewController {
         
         while numDialogo < self.falas.count {  // Lembrar: Aqui é totalmente assíncrono!
             
-            let fala = falas[numDialogo] //Fala()
+            let fala = falas[numDialogo]
             
             if let img = fala.imagem {
                 imgPersonagem.image = UIImage(named: img)
@@ -68,7 +74,6 @@ class PlaceViewController: UIViewController {
             if numDialogo < self.falas.count {
                 
                 self.animations.mostrarDialogoSimples(fala, img: self.imgPersonagem, label: self.labelTexto) { }
-                //self.animations.mostrarDialogo(fala, img1: self.imgPersonagem, img2: self.imgPersonagem, label: self.labelTexto) { }
                 //Depois do diálogo
                 
             } else {
@@ -88,7 +93,7 @@ class PlaceViewController: UIViewController {
     }
     
     
-    // MARK - Buttons Actions
+    // MARK: NPC Buttons
     
     @IBAction func btNPC1(sender: AnyObject) {
         
@@ -104,22 +109,39 @@ class PlaceViewController: UIViewController {
 
     
     
+    @IBAction func btNPC3(sender: AnyObject) {
+        
+        // Exibe as alternativas
+        let labelWidth = labelTexto.frame.size.width
+        labelTexto.frame.size.width = labelWidth/2
+        btResp1.hidden = false
+        btResp2.hidden = false
+        btResp3.hidden = false
+        
+        NPC3 = JSONReader.getPerguntasJogo("personagem3")   // Teste; Vai vir pela segue - tirar depois
+    }
     
     
+    // MARK: Botões de resposta
     
+    @IBAction func btResp1(sender: AnyObject) {
+        
+        
+        
+        
+    }
     
+    @IBAction func btResp2(sender: AnyObject) {
+        
+        
+        
+    }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    @IBAction func btResp3(sender: AnyObject) {
+        
+        
+        
+    }
     
     
     

@@ -89,7 +89,7 @@ class JSONReader: NSObject {
             place.nome = p.objectForKey("nome") as! String
             place.imageBackground = p.objectForKey("imageBackground") as? String
             
-            var personagens = NSMutableDictionary()
+            var personagens = Dictionary<String, NPC>()
             
             let npcDic = p.objectForKey("personagens") as! NSDictionary
             for (key, value) in npcDic {    // value: dentro do npc
@@ -111,11 +111,11 @@ class JSONReader: NSObject {
                     npc.falas.append(falaObj)
                 }
                 
-                personagens.setValue(npc, forKeyPath: npc.nome!)
+                //personagens.setValue(npc, forKeyPath: npc.nome!)
                 
-                //personagens.append(npc)
+                personagens [npc.nome!] = npc
             }
-            place.personagens = personagens //Adiciona os personagens
+            place.personagens = personagens     //Adiciona os personagens
             arrayPlaces.append(place)
         }
         era.places = arrayPlaces   //Adiciona os places
@@ -130,13 +130,12 @@ class JSONReader: NSObject {
         
         let perguntadoresDic = getJsonDic("perguntador")
         let personagemDic = perguntadoresDic.objectForKey(nomeNPC) as! NSDictionary
-        let perguntasArray = personagemDic.objectForKey("perguntas") as! Array<NSDictionary>
         
         perguntador.nome = personagemDic.objectForKey("nome") as? String
         perguntador.era = personagemDic.objectForKey("era") as? String
         perguntador.place = personagemDic.objectForKey("place") as? String
         
-        
+        let perguntasArray = personagemDic.objectForKey("perguntas") as! Array<NSDictionary>
         for pergunta in perguntasArray {
             
             var p = Pergunta()
@@ -157,39 +156,10 @@ class JSONReader: NSObject {
             }
             
             perguntador.perguntas.append(p)
-            
+            perguntador.msgSucesso = personagemDic.objectForKey("sucesso") as? String
         }
         return perguntador
     }
-    
-    
-    
-    
-//    class func getFalas (arquivo: String) -> Array<[String]> {  // Remover
-//    
-//        var textAndImages = Array<[String]>()
-//        
-//        ///// Teste ////////////
-//        let fala1:[String] = ["1", "- Hey man! What's up?", "char1"]
-//        let fala2:[String] = ["2", "- I'm ok.", ""]
-//        let fala3:[String] = ["2", "- And you?", ""]
-//        let fala4:[String] = ["1", "- Ok.", ""]
-//        let fala5:[String] = ["1", "- ...", ""]
-//        let fala6:[String] = ["2", "- ...", ""]
-//        let fala7:[String] = ["1", "- Bye.", ""]
-//        let fala8:[String] = ["2", "- Bye.", ""]
-//        textAndImages.append(fala1)
-//        textAndImages.append(fala2)
-//        textAndImages.append(fala3)
-//        textAndImages.append(fala4)
-//        textAndImages.append(fala5)
-//        textAndImages.append(fala6)
-//        textAndImages.append(fala7)
-//        textAndImages.append(fala8)
-//        ///// Teste ////////////
-//    
-//        return textAndImages
-//    }
 
     
     

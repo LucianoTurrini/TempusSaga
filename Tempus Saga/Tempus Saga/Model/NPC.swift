@@ -35,7 +35,7 @@ class NPC: NSObject {
 class Perguntador: NPC {
     
     var perguntas = Array<Pergunta>()
-    
+    var msgSucesso: String?
 }
 
 
