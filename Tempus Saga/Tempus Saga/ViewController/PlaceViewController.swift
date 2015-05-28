@@ -100,6 +100,11 @@ class PlaceViewController: UIViewController {
         
     }
 
+    @IBAction func buttonCancelar(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
     
     
     

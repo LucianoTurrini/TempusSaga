@@ -41,13 +41,17 @@ class StageViewController: UIViewController {
     /// Função que define os titulos dos botões e a imagem de fundo
     func selectStage() {
         
-        buttonStage1.setTitle(era.places[0].nome, forState: UIControlState.Normal)
+        //buttonStage1.setImage(UIImage(named: "imageButton"), forState: .Normal)
         
-        buttonStage2.setTitle(era.places[1].nome, forState: UIControlState.Normal)
+        buttonStage1.setBackgroundImage(UIImage(named: "teste"), forState: UIControlState.Normal)
         
-        buttonStage3.setTitle(era.places[2].nome, forState: UIControlState.Normal)
+        //buttonStage1.setTitle(era.places[0].nome, forState: UIControlState.Normal)
         
-        imageBackground.image = UIImage(named: era.imageBackground!)
+        //buttonStage2.setTitle(era.places[1].nome, forState: UIControlState.Normal)
+        
+        //buttonStage3.setTitle(era.places[2].nome, forState: UIControlState.Normal)
+        
+        //imageBackground.image = UIImage(named: era.imageBackground!)
         
     }
     
