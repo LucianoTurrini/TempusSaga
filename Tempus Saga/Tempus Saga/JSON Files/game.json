@@ -8,7 +8,8 @@
 		"personagens": {
 		  "NPC1": {
 			"falas": [
-			  "Vocês conhecem o Partenon? Ele é o orgulho dos gregos. Ele foi construido para honrar a deusa Atena e é o simbolo da reconstrução, já que foi erguido após a cidade ser arrasada pelos persas."
+			  "Vocês conhecem o Partenon? Ele é o orgulho dos gregos.",
+              "Ele foi construido para honrar a deusa Atena e é o simbolo da reconstrução, já que foi erguido após a cidade ser arrasada pelos persas."
 			],
 			"image": ""
 		  },
@@ -44,7 +45,7 @@
 		"personagens": {
 			"NPC1": {
 				"falas": [
-					"Quando morre uma pessoa, ela é enterrada com uma moeda. Essa moeda é usada para pagar Caronte, o barqueiro que cruza o rio Aqueronte. Ele leva a pessoa para ser julgada pelos três juizes, que decidem se ele vai para o Tartaro ou para os Campos Ilisios"
+					"Quando morre uma pessoa ela é enterrada com uma moeda. Essa moeda é usada para pagar Caronte, o barqueiro que cruza o rio Aqueronte. Ele leva a pessoa para ser julgada pelos três juizes, que decidem se ele vai para o Tartaro ou para os Campos Ilisios"
 				],
 				"image": ""
 			},

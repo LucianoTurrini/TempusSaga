@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Foundation
+//import Foundation
 //import CoreData
 //
 //class Personagem: NSManagedObject {
@@ -20,16 +20,24 @@ import Foundation
 //}
 
 
-
-
 class NPC: NSObject {
 
     var nome: String?
     var era: String?
     var place: String?
-    var fala = Array<Fala>()
+    var falas = Array<Fala>()
     var estado: Bool = false
     var image: UIImage?
 }
+
+
+/// Igual o NPC, mas possui o atributo "perguntas"
+class Perguntador: NPC {
+    
+    var perguntas = Array<Pergunta>()
+    var msgSucesso: String?
+}
+
+
 
 

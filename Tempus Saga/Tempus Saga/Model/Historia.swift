@@ -8,20 +8,10 @@
 
 import UIKit
 
-
-
 class Historia: NSObject {
    
     var era: String!
     var place: String!
     var falas = Array<Fala>()
-    
-}
-
-class Fala: NSObject {
-    
-    var personagem = ""
-    var fala: String!
-    var imagem: String!
     
 }

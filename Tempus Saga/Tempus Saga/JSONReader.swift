@@ -29,19 +29,13 @@ class JSONReader: NSObject {
         return dic
     }
     
+    /// Retorna o JSON em forma de NSDictionary à partir do nome do arquivo
     class func getJsonDic(fileToRead: String) -> NSDictionary{
         
         return getJSONData(fileToRead) as! NSDictionary
         
-        //        let s = jsonObj.objectForKey("teste") as! String
-        //        println("Leitura: \(s) ")
     }
-    
-    
-    
-    
-    
-    
+
     class func getFalasHistoria (IdHistoria: String) -> Historia {
     
         var historia = Historia()
@@ -95,7 +89,7 @@ class JSONReader: NSObject {
             place.nome = p.objectForKey("nome") as! String
             place.imageBackground = p.objectForKey("imageBackground") as? String
             
-            var personagens = NSMutableDictionary()
+            var personagens = Dictionary<String, NPC>()
             
             let npcDic = p.objectForKey("personagens") as! NSDictionary
             for (key, value) in npcDic {    // value: dentro do npc
@@ -114,14 +108,14 @@ class JSONReader: NSObject {
                     falaObj.fala = fala
                     falaObj.imagem = value.objectForKey("image") as! String
                     
-                    npc.fala.append(falaObj)
+                    npc.falas.append(falaObj)
                 }
                 
-                personagens.setValue(npc, forKeyPath: npc.nome!)
+                //personagens.setValue(npc, forKeyPath: npc.nome!)
                 
-                //personagens.append(npc)
+                personagens [npc.nome!] = npc
             }
-            place.personagens = personagens //Adiciona os personagens
+            place.personagens = personagens     //Adiciona os personagens
             arrayPlaces.append(place)
         }
         era.places = arrayPlaces   //Adiciona os places
@@ -130,32 +124,42 @@ class JSONReader: NSObject {
     }
     
     
-    
-//    class func getFalas (arquivo: String) -> Array<[String]> {  // Remover
-//    
-//        var textAndImages = Array<[String]>()
-//        
-//        ///// Teste ////////////
-//        let fala1:[String] = ["1", "- Hey man! What's up?", "char1"]
-//        let fala2:[String] = ["2", "- I'm ok.", ""]
-//        let fala3:[String] = ["2", "- And you?", ""]
-//        let fala4:[String] = ["1", "- Ok.", ""]
-//        let fala5:[String] = ["1", "- ...", ""]
-//        let fala6:[String] = ["2", "- ...", ""]
-//        let fala7:[String] = ["1", "- Bye.", ""]
-//        let fala8:[String] = ["2", "- Bye.", ""]
-//        textAndImages.append(fala1)
-//        textAndImages.append(fala2)
-//        textAndImages.append(fala3)
-//        textAndImages.append(fala4)
-//        textAndImages.append(fala5)
-//        textAndImages.append(fala6)
-//        textAndImages.append(fala7)
-//        textAndImages.append(fala8)
-//        ///// Teste ////////////
-//    
-//        return textAndImages
-//    }
+    class func getPerguntasJogo(nomeNPC: String) -> Perguntador{
+        
+        var perguntador = Perguntador()
+        
+        let perguntadoresDic = getJsonDic("perguntador")
+        let personagemDic = perguntadoresDic.objectForKey(nomeNPC) as! NSDictionary
+        
+        perguntador.nome = personagemDic.objectForKey("nome") as? String
+        perguntador.era = personagemDic.objectForKey("era") as? String
+        perguntador.place = personagemDic.objectForKey("place") as? String
+        
+        let perguntasArray = personagemDic.objectForKey("perguntas") as! Array<NSDictionary>
+        for pergunta in perguntasArray {
+            
+            var p = Pergunta()
+            p.pergunta = pergunta.objectForKey("pergunta") as! String
+            //p.resposta = pergunta.objectForKey("resposta") as! String   //Trocar pra ler vetor de dic
+            
+            let respDic = pergunta.objectForKey("respostas") as! [Dictionary<String, String>]
+            
+            for resp in respDic {
+                
+                var r = Resposta()
+                r.resposta = resp["resposta"]
+                r.replica = resp["replica"]
+                if let correto = resp["correto"] {
+                    r.correto = NSString(string: correto).boolValue //Conversão para Bool
+                }
+                p.resposta.append(r)
+            }
+            
+            perguntador.perguntas.append(p)
+            perguntador.msgSucesso = personagemDic.objectForKey("sucesso") as? String
+        }
+        return perguntador
+    }
 
     
     
