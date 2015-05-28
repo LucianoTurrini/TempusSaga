@@ -43,6 +43,7 @@ class PlaceViewController: UIViewController {
         // NPC inicial (1) (troca depois no botão)
         let npc = place.personagens["NPC1"]!
         falas = npc.falas
+        ///////////////////////
         
         imgPersonagem.image = personagem
         background.image = backgroundImage
@@ -61,6 +62,10 @@ class PlaceViewController: UIViewController {
     
     func falar(){
         var numDialogo = 0
+        
+//        let dd = self.falas.count as! useconds_t
+        usleep(1000 * 1000)  // Milisegundos * 1000     -- REVER na refatoração
+        Animations.continuar = true
         
         while numDialogo < self.falas.count {  // Lembrar: Aqui é totalmente assíncrono!
             
@@ -97,28 +102,83 @@ class PlaceViewController: UIViewController {
     
     @IBAction func btNPC1(sender: AnyObject) {
         
+        Animations.continuar = false    // Provável Skip
+        labelTexto.text = ""    // Limpar speak label
         
+        // Exibe os botões de alternativas
+        let viewWidth = view.frame.size.width
+        labelTexto.frame.size.width = viewWidth
+        btResp1.hidden = true
+        btResp2.hidden = true
+        btResp3.hidden = true
         
+        let npc = place.personagens["NPC1"]!
+        falas = npc.falas
+        falar()
     }
     
     @IBAction func btNPC2(sender: AnyObject) {
         
+        Animations.continuar = false    // Provável Skip
+        labelTexto.text = ""    // Limpar speak label
         
+        // Exibe os botões de alternativas
+        let viewWidth = view.frame.size.width
+        labelTexto.frame.size.width = viewWidth
+        btResp1.hidden = true
+        btResp2.hidden = true
+        btResp3.hidden = true
         
+        let npc = place.personagens["NPC2"]!
+        falas = npc.falas
+        falar()
     }
 
     
     
-    @IBAction func btNPC3(sender: AnyObject) {
+    @IBAction func btNPC3(sender: AnyObject) {      //TENTAR USAR NSOPERATION DEPOIS
         
-        // Exibe as alternativas
-        let labelWidth = labelTexto.frame.size.width
-        labelTexto.frame.size.width = labelWidth/2
+        // Limpar queue aqui
+//        let queueSpeak = Animations.queue
+//        dispatch_resume(Animations.queue)
+        
+        Animations.continuar = false    // Provável Skip
+        
+        
+        
+//        delete(Animations.queue)
+//        Animations.queue = dispatch_queue_create("com.tempusSaga.speak", DISPATCH_QUEUE_SERIAL)
+//        Animations.queue
+        
+        labelTexto.text = ""    // Limpar speak label
+        
+        
+        // Exibe os botões de alternativas
+        let viewWidth = view.frame.size.width
+        labelTexto.frame.size.width = 100
         btResp1.hidden = false
         btResp2.hidden = false
         btResp3.hidden = false
         
         NPC3 = JSONReader.getPerguntasJogo("personagem3")   // Teste; Vai vir pela segue - tirar depois
+        
+        btResp1.setTitle(NPC3?.perguntas[0].resposta[0].resposta, forState: UIControlState.Normal)
+        btResp2.setTitle(NPC3?.perguntas[0].resposta[1].resposta, forState: UIControlState.Normal)
+        btResp3.setTitle(NPC3?.perguntas[0].resposta[2].resposta, forState: UIControlState.Normal)
+        
+        //Define array de falas
+        let falaTemp = Fala()
+        falaTemp.fala = NPC3?.perguntas[0].pergunta
+        let arrayFalaTemp = [falaTemp]
+        
+        //Define array para o método falar() conseguir ler
+        falas = arrayFalaTemp
+        
+        
+//        for i=0 in self.falas.count {}
+        
+        falar()
+        
     }
     
     
@@ -126,20 +186,45 @@ class PlaceViewController: UIViewController {
     
     @IBAction func btResp1(sender: AnyObject) {
         
+        let viewWidth = view.frame.size.width
+        labelTexto.frame.size.width = 100
         
+        // Limpar queue aqui
+        Animations.continuar = false    // Provável Skip
         
+        //Define array de falas
+        let falaTemp = Fala()
+        falaTemp.fala = NPC3?.perguntas[0].resposta[0].replica
+        let arrayFalaTemp = [falaTemp]
         
+        //Define array para o método falar() conseguir ler
+        falas = arrayFalaTemp
+        falar()
     }
     
     @IBAction func btResp2(sender: AnyObject) {
         
+        //Define array de falas
+        let falaTemp = Fala()
+        falaTemp.fala = NPC3?.perguntas[0].resposta[1].replica
+        let arrayFalaTemp = [falaTemp]
         
+        //Define array para o método falar() conseguir ler
+        falas = arrayFalaTemp
+        falar()
         
     }
     
     @IBAction func btResp3(sender: AnyObject) {
         
+        //Define array de falas
+        let falaTemp = Fala()
+        falaTemp.fala = NPC3?.perguntas[0].resposta[2].replica
+        let arrayFalaTemp = [falaTemp]
         
+        //Define array para o método falar() conseguir ler
+        falas = arrayFalaTemp
+        falar()
         
     }
     
