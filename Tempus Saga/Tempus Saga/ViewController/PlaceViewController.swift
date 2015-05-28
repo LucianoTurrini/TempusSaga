@@ -155,7 +155,9 @@ class PlaceViewController: UIViewController {
         
         // Exibe os botões de alternativas
         let viewWidth = view.frame.size.width
-        labelTexto.frame.size.width = 100
+        //labelTexto.frame.size.width = 100
+        labelTexto.frame.size.width = viewWidth
+        
         btResp1.hidden = false
         btResp2.hidden = false
         btResp3.hidden = false
@@ -186,8 +188,8 @@ class PlaceViewController: UIViewController {
     
     @IBAction func btResp1(sender: AnyObject) {
         
-        let viewWidth = view.frame.size.width
-        labelTexto.frame.size.width = 100
+//        let viewWidth = view.frame.size.width
+//        labelTexto.frame.size.width = 100
         
         // Limpar queue aqui
         Animations.continuar = false    // Provável Skip
@@ -204,6 +206,9 @@ class PlaceViewController: UIViewController {
     
     @IBAction func btResp2(sender: AnyObject) {
         
+        // Limpar queue aqui
+        Animations.continuar = false    // Provável Skip
+        
         //Define array de falas
         let falaTemp = Fala()
         falaTemp.fala = NPC3?.perguntas[0].resposta[1].replica
@@ -216,6 +221,9 @@ class PlaceViewController: UIViewController {
     }
     
     @IBAction func btResp3(sender: AnyObject) {
+        
+        // Limpar queue aqui
+        Animations.continuar = false    // Provável Skip
         
         //Define array de falas
         let falaTemp = Fala()
