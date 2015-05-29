@@ -36,6 +36,8 @@ class Perguntador: NPC {
     
     var perguntas = Array<Pergunta>()
     var msgSucesso: String?
+    var imagem: String?
+    var desafio: Bool?
 }
 
 

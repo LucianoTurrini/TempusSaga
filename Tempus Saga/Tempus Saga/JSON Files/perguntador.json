@@ -6,6 +6,7 @@
 		"era": "Grécia",
 		"place": "Atenas",
 		"desafio": "false",
+        "imagem": "",
 		"perguntas": [
 			{
 				"pergunta": "O que você quer aqui?",
@@ -30,7 +31,8 @@
 		"nome": "NPC3",
 		"era": "Grécia",
 		"place": "Templo de Apolo",
-		"desafio": "false",
+        "desafio": "false",
+        "imagem": "",
 		"perguntas": [
 			{
 				"pergunta": "O que você faz aqui?",
@@ -55,7 +57,8 @@
 		"nome": "NPC3",
 		"era": "Grécia",
 		"place": "Olimpia",
-		"desafio": "false",
+        "desafio": "false",
+        "imagem": "",
 		"perguntas": [
 			{
 				"pergunta": "O que você está procurando?",
@@ -80,7 +83,8 @@
 		"nome": "Oráculo",
 		"era": "Grécia",
 		"place": "Templo de Zeus",
-		"desafio": "true",
+        "desafio": "true",
+        "imagem": "",
 		"perguntas": [
 			{
 				"pergunta": "Vejo que deseja ver a estátua de Zeus. Só posso deixar entrar aquele que vencer o meu desafio. Você está pronto?",

@@ -134,6 +134,9 @@ class JSONReader: NSObject {
         perguntador.nome = personagemDic.objectForKey("nome") as? String
         perguntador.era = personagemDic.objectForKey("era") as? String
         perguntador.place = personagemDic.objectForKey("place") as? String
+        perguntador.imagem = personagemDic.objectForKey("imagem") as? String
+        perguntador.desafio = personagemDic.objectForKey("desafio") as? Bool
+        
         
         let perguntasArray = personagemDic.objectForKey("perguntas") as! Array<NSDictionary>
         for pergunta in perguntasArray {

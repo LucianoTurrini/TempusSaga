@@ -73,6 +73,7 @@ class PlaceViewController: UIViewController {
             
             if let img = fala.imagem {
                 imgPersonagem.image = UIImage(named: img)
+                Animations.slide(imgPersonagem, direction: Animations.direction.toRight)
             }
             
             //Exibe o loop de diálogos
@@ -136,7 +137,7 @@ class PlaceViewController: UIViewController {
 
     
     
-    @IBAction func btNPC3(sender: AnyObject) {      //TENTAR USAR NSOPERATION DEPOIS
+    @IBAction func btNPC3(sender: AnyObject) {      //TENTAR USAR NSOPERATION DEPOIS ao invés do dispatch_
         
         // Limpar queue aqui
 //        let queueSpeak = Animations.queue
@@ -171,6 +172,12 @@ class PlaceViewController: UIViewController {
         //Define array de falas
         let falaTemp = Fala()
         falaTemp.fala = NPC3?.perguntas[0].pergunta
+        
+        
+        if let img = NPC3?.imagem {
+            falaTemp.imagem = img
+        }
+        
         let arrayFalaTemp = [falaTemp]
         
         //Define array para o método falar() conseguir ler
@@ -217,7 +224,6 @@ class PlaceViewController: UIViewController {
         //Define array para o método falar() conseguir ler
         falas = arrayFalaTemp
         falar()
-        
     }
     
     @IBAction func btResp3(sender: AnyObject) {
