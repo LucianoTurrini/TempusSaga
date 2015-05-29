@@ -104,9 +104,7 @@ class Animations: NSObject {
         let imageString = fala.imagem
         var image = UIImage()
         
-        dispatch_async (Animations.queue, { () -> Void in
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        Animations.enfileirar(){
                 
                 if let testImage = UIImage(named: imageString) {
                     image = testImage
@@ -126,9 +124,8 @@ class Animations: NSObject {
                 
                 // Algo extra que quiser enfileirar
                 complete ()
-                
-            })
-        })
+        }
+        
         self.input(texto, label: label) //Pega só o texto do Array
         
         // Pausa entre as falas
@@ -139,6 +136,8 @@ class Animations: NSObject {
       }
 
     
+    
+    
     /// Totalmente assíncrono
     func mostrarDialogoSimples(fala: Fala, img: UIImageView, label: UILabel, complete: () -> ()){
         
@@ -148,19 +147,17 @@ class Animations: NSObject {
         var image = UIImage()
         //let nDialogo = self.numDialogo
         
-        /// Pega a thread criada para o texto e adiciona
-        dispatch_async (Animations.queue, { () -> Void in
+        // Pega a thread criada para o texto e adiciona
+        Animations.enfileirar(){
             
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                
-//                if let testImage = UIImage(named: imageString) {
-//                    image = testImage
-//                }
+            if let testImage = UIImage(named: imageString) {
+                //                    image = testImage
+                //                }
                 
                 // Algo extra que quiser enfileirar
                 complete ()
-            })
-        })
+            }
+        }
         
         self.input(texto, label: label) //Pega só o texto do Array
         
@@ -193,8 +190,18 @@ class Animations: NSObject {
         
     }
     
-    
-    
+    class func enfileirar (metodos: () -> () ) {
+        
+        dispatch_async (Animations.queue, { () -> Void in
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                
+                metodos()
+                
+            })
+        })
+    }
+
     
     
     
