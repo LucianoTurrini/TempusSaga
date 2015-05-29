@@ -190,6 +190,8 @@ class Animations: NSObject {
         
     }
     
+    
+    /// Enfileira na thread que contém as animações de texto
     class func enfileirar (metodos: () -> () ) {
         
         dispatch_async (Animations.queue, { () -> Void in
