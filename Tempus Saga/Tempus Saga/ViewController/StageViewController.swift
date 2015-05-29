@@ -19,6 +19,8 @@ class StageViewController: UIViewController {
     
     @IBOutlet weak var buttonStage3: UIButton!
     
+    @IBOutlet weak var buttonStage4: UIButton!
+    
     @IBOutlet weak var imageBackground: UIImageView!
     
     
@@ -80,6 +82,14 @@ class StageViewController: UIViewController {
     
         place = era.places[2]
         performSegueWithIdentifier("selecionarPlace", sender: self)
+        
+    }
+    
+    @IBAction func buttonStage4(sender: UIButton) {
+        
+        
+        
+        
         
     }
 

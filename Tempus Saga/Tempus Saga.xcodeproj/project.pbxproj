@@ -10,6 +10,7 @@
 		212F8B9E1B0A09E5006A6C5A /* AgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212F8B9D1B0A09E5006A6C5A /* AgesViewController.swift */; };
 		212F8BA11B0A1C36006A6C5A /* Era.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212F8BA01B0A1C36006A6C5A /* Era.swift */; };
 		212F8BA31B0A1D71006A6C5A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212F8BA21B0A1D71006A6C5A /* Place.swift */; };
+		2195642E1B18BADC001C6451 /* OracleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195642D1B18BADC001C6451 /* OracleViewController.swift */; };
 		21E23B661B04DA820050F93B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B651B04DA820050F93B /* AppDelegate.swift */; };
 		21E23B691B04DA820050F93B /* Tempus_Saga.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21E23B671B04DA820050F93B /* Tempus_Saga.xcdatamodeld */; };
 		21E23B701B04DA820050F93B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21E23B6F1B04DA820050F93B /* Images.xcassets */; };
@@ -46,6 +47,7 @@
 		212F8B9F1B0A1109006A6C5A /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = "Tempus Saga/MyPlayground.playground"; sourceTree = "<group>"; };
 		212F8BA01B0A1C36006A6C5A /* Era.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Era.swift; path = "Tempus Saga/Model/Era.swift"; sourceTree = "<group>"; };
 		212F8BA21B0A1D71006A6C5A /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = "Tempus Saga/Model/Place.swift"; sourceTree = "<group>"; };
+		2195642D1B18BADC001C6451 /* OracleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OracleViewController.swift; path = ViewController/OracleViewController.swift; sourceTree = "<group>"; };
 		21E23B601B04DA820050F93B /* Tempus Saga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tempus Saga.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E23B641B04DA820050F93B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21E23B651B04DA820050F93B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				212F8B9D1B0A09E5006A6C5A /* AgesViewController.swift */,
 				21F7D70A1B0CD35300FF4FEA /* MenuPrincipalViewController.swift */,
 				D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */,
+				2195642D1B18BADC001C6451 /* OracleViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				21E23B8E1B04EC7D0050F93B /* PersonagemManager.swift in Sources */,
 				841448511B04E81800BBC829 /* StageViewController.swift in Sources */,
 				21E23B661B04DA820050F93B /* AppDelegate.swift in Sources */,
+				2195642E1B18BADC001C6451 /* OracleViewController.swift in Sources */,
 				21E23B691B04DA820050F93B /* Tempus_Saga.xcdatamodeld in Sources */,
 				D6D7E21D1B062C96005543C4 /* Animations.swift in Sources */,
 				D697A5281B0B78630022B3DD /* JSONReader.swift in Sources */,
