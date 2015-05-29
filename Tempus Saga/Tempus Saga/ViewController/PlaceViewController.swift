@@ -13,8 +13,8 @@ class PlaceViewController: UIViewController {
     
     // MARK - Outlets in StoryBoard\
     
-//    @IBOutlet weak var labelTexto: UILabel!
     @IBOutlet weak var labelTexto: UILabel!
+    
     @IBOutlet weak var imgPersonagem: UIImageView!
     @IBOutlet weak var background: UIImageView!
     @IBOutlet weak var speakBackground: UIImageView!
@@ -23,6 +23,9 @@ class PlaceViewController: UIViewController {
     @IBOutlet weak var btResp2: UIButton!
     @IBOutlet weak var btResp3: UIButton!
     
+    @IBOutlet weak var buttonOpcao1: UIButton!
+    @IBOutlet weak var buttonOpcao2: UIButton!
+    @IBOutlet weak var buttonOpcao3: UIButton!
     
     //MARK: Global Variables
     
@@ -135,6 +138,11 @@ class PlaceViewController: UIViewController {
         falar()
     }
 
+    @IBAction func buttonCancelar(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
     
     
     @IBAction func btNPC3(sender: AnyObject) {      //TENTAR USAR NSOPERATION DEPOIS ao invés do dispatch_
