@@ -41,6 +41,10 @@ class StageViewController: UIViewController {
     /// Função que define os titulos dos botões e a imagem de fundo
     func selectStage() {
         
+//        UIView.animateWithDuration(200.0, animations: {
+//            self.buttonStage1.transform = CGAffineTransformMakeRotation((180.0 * CGFloat(M_PI)) / 180.0)
+//        })
+        
         //buttonStage1.setImage(UIImage(named: "imageButton"), forState: .Normal)
         
         buttonStage1.setBackgroundImage(UIImage(named: "teste"), forState: UIControlState.Normal)
