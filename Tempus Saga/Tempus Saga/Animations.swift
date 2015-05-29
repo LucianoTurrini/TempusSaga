@@ -16,6 +16,9 @@ class Animations: NSObject {
         case toLeft
     }
     
+    
+    static var continuar = true
+    
     class func slide (el: UIView, direction: Animations.direction){
         
         let temp:CGPoint = CGPoint(x: el.frame.origin.x, y: el.frame.origin.y)
@@ -67,20 +70,20 @@ class Animations: NSObject {
     }
     
     
-    let queue = dispatch_queue_create("com.tempusSaga.console", DISPATCH_QUEUE_SERIAL)
+    static var queue = dispatch_queue_create("com.tempusSaga.speak", DISPATCH_QUEUE_SERIAL)
     var writeText: String!
     var writing = 0
     var textBefore: String!
     
     func input(text: String, label: UILabel) {
         
-        dispatch_async(self.queue, { () -> Void in
+        dispatch_async(Animations.queue, { () -> Void in
             label.text = ""
             self.writing = 0
             self.writeText = text
             self.textBefore = label.text! + "\n"
             let write = NSString(string: self.writeText)
-            while self.writing <= write.length
+            while self.writing <= write.length && Animations.continuar
             {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     label.text = self.textBefore + write.substringToIndex(self.writing)
@@ -101,7 +104,7 @@ class Animations: NSObject {
         let imageString = fala.imagem
         var image = UIImage()
         
-        dispatch_async (queue, { () -> Void in
+        dispatch_async (Animations.queue, { () -> Void in
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 
@@ -129,15 +132,15 @@ class Animations: NSObject {
         self.input(texto, label: label) //Pega só o texto do Array
         
         // Pausa entre as falas
-        dispatch_async (queue, { () -> Void in
+        dispatch_async (Animations.queue, { () -> Void in
             usleep(500 * 1000)  // Milisegundos * 1000
         })
         
       }
 
     
+    /// Totalmente assíncrono
     func mostrarDialogoSimples(fala: Fala, img: UIImageView, label: UILabel, complete: () -> ()){
-        // Totalmente assíncrono
         
         //let personagem = fala.personagem
         let texto = fala.fala
@@ -146,7 +149,7 @@ class Animations: NSObject {
         //let nDialogo = self.numDialogo
         
         /// Pega a thread criada para o texto e adiciona
-        dispatch_async (queue, { () -> Void in
+        dispatch_async (Animations.queue, { () -> Void in
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 
@@ -162,9 +165,11 @@ class Animations: NSObject {
         self.input(texto, label: label) //Pega só o texto do Array
         
         // Pausa entre as falas
-        dispatch_async (queue, { () -> Void in
+        dispatch_async (Animations.queue, { () -> Void in
             usleep(500 * 1000)  // Milisegundos * 1000
+//            dispatch_suspend(Animations.queue)
         })
+        
     }
     
     
