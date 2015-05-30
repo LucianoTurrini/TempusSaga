@@ -18,7 +18,7 @@ class AgesViewController: UIViewController {
     @IBOutlet weak var buttonReinoUnido: UIButton!
     
     
-    // MARK: - Variables
+    // MARK: - Global Variables
     
     var era = Era()
     

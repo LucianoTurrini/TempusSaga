@@ -2,6 +2,10 @@
   "Grécia": {
 	"nome": "Grécia",
     "imageBackground": "greciaBackground",
+    "botao1": "botaoAtenas",
+    "botao2": "botaoOlympia",
+    "botao3": "botaoTemploDeApolo",
+    "botao4": "botaoTemploDeZeus",
 	"places": [
 	  {
 		"nome": "Atenas",

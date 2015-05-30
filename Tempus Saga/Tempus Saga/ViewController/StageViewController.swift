@@ -43,21 +43,15 @@ class StageViewController: UIViewController {
     /// Função que define os titulos dos botões e a imagem de fundo
     func selectStage() {
         
-//        UIView.animateWithDuration(200.0, animations: {
-//            self.buttonStage1.transform = CGAffineTransformMakeRotation((180.0 * CGFloat(M_PI)) / 180.0)
-//        })
+        buttonStage1.setImage(UIImage(named: era.botao1!), forState: .Normal)
         
-        //buttonStage1.setImage(UIImage(named: "imageButton"), forState: .Normal)
+        buttonStage2.setImage(UIImage(named: era.botao2!), forState: .Normal)
         
-        buttonStage1.setBackgroundImage(UIImage(named: "teste"), forState: UIControlState.Normal)
+        buttonStage3.setImage(UIImage(named: era.botao3!), forState: .Normal)
         
-        //buttonStage1.setTitle(era.places[0].nome, forState: UIControlState.Normal)
+        buttonStage4.setImage(UIImage(named: era.botao4!), forState: .Normal)
         
-        //buttonStage2.setTitle(era.places[1].nome, forState: UIControlState.Normal)
-        
-        //buttonStage3.setTitle(era.places[2].nome, forState: UIControlState.Normal)
-        
-        //imageBackground.image = UIImage(named: era.imageBackground!)
+        imageBackground.image = UIImage(named: era.imageBackground!)
         
     }
     
@@ -86,8 +80,6 @@ class StageViewController: UIViewController {
     }
     
     @IBAction func buttonStage4(sender: UIButton) {
-        
-        
         
         
         
