@@ -112,6 +112,14 @@ class SceneViewController: UIViewController {
     
     
     
+    @IBAction func butttonPular(sender: UIButton) {
+        
+        
+        Animations.continuar = false
+        performSegueWithIdentifier("history", sender: self)
+        
+        
+    }
     
     
     
