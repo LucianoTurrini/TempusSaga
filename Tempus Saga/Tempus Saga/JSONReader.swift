@@ -78,6 +78,10 @@ class JSONReader: NSObject {
         
         era.nome = eraDic.objectForKey("nome") as! String
         era.imageBackground = eraDic.objectForKey("imageBackground") as? String
+        era.botao1 = eraDic.objectForKey("botao1") as? String
+        era.botao2 = eraDic.objectForKey("botao2") as? String
+        era.botao3 = eraDic.objectForKey("botao3") as? String
+        era.botao4 = eraDic.objectForKey("botao4") as? String
         
         var arrayPlaces = Array<Place>()
         
