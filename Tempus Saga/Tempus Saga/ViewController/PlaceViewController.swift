@@ -11,7 +11,7 @@ import UIKit
 class PlaceViewController: UIViewController {
     
     
-    // MARK - Outlets in StoryBoard\
+    // MARK: Outlets in StoryBoard
     
     @IBOutlet weak var labelTexto: UILabel!
     
@@ -62,6 +62,7 @@ class PlaceViewController: UIViewController {
             self.falar()
         }
     }
+    
     
     func falar(){
         var numDialogo = 0
@@ -173,9 +174,9 @@ class PlaceViewController: UIViewController {
         
         NPC3 = JSONReader.getPerguntasJogo("personagem3")   // Teste; Vai vir pela segue - tirar depois
         
-        btResp1.setTitle(NPC3?.perguntas[0].resposta[0].resposta, forState: UIControlState.Normal)
-        btResp2.setTitle(NPC3?.perguntas[0].resposta[1].resposta, forState: UIControlState.Normal)
-        btResp3.setTitle(NPC3?.perguntas[0].resposta[2].resposta, forState: UIControlState.Normal)
+        btResp1.setTitle(NPC3?.perguntas[0].respostas[0].resposta, forState: UIControlState.Normal)
+        btResp2.setTitle(NPC3?.perguntas[0].respostas[1].resposta, forState: UIControlState.Normal)
+        btResp3.setTitle(NPC3?.perguntas[0].respostas[2].resposta, forState: UIControlState.Normal)
         
         //Define array de falas
         let falaTemp = Fala()
@@ -211,7 +212,7 @@ class PlaceViewController: UIViewController {
         
         //Define array de falas
         let falaTemp = Fala()
-        falaTemp.fala = NPC3?.perguntas[0].resposta[0].replica
+        falaTemp.fala = NPC3?.perguntas[0].respostas[0].replica
         let arrayFalaTemp = [falaTemp]
         
         //Define array para o método falar() conseguir ler
@@ -226,7 +227,7 @@ class PlaceViewController: UIViewController {
         
         //Define array de falas
         let falaTemp = Fala()
-        falaTemp.fala = NPC3?.perguntas[0].resposta[1].replica
+        falaTemp.fala = NPC3?.perguntas[0].respostas[1].replica
         let arrayFalaTemp = [falaTemp]
         
         //Define array para o método falar() conseguir ler
@@ -241,7 +242,7 @@ class PlaceViewController: UIViewController {
         
         //Define array de falas
         let falaTemp = Fala()
-        falaTemp.fala = NPC3?.perguntas[0].resposta[2].replica
+        falaTemp.fala = NPC3?.perguntas[0].respostas[2].replica
         let arrayFalaTemp = [falaTemp]
         
         //Define array para o método falar() conseguir ler

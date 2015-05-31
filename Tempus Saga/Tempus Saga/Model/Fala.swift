@@ -16,10 +16,10 @@ class Fala: NSObject {
     
 }
 
-class Pergunta: NSObject {
+class Pergunta: Fala {
     
     var pergunta: String!
-    var resposta = Array<Resposta>()
+    var respostas = Array<Resposta>()
     
 }
 

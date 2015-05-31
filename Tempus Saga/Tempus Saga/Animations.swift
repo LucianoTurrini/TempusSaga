@@ -190,6 +190,8 @@ class Animations: NSObject {
         
     }
     
+    
+    /// Enfileira na thread que contém as animações de texto
     class func enfileirar (metodos: () -> () ) {
         
         dispatch_async (Animations.queue, { () -> Void in
@@ -203,8 +205,44 @@ class Animations: NSObject {
     }
 
     
-    
-    
+//    /// Funcao não usada, por enquanto,
+//    func falar(viewController: UIViewController, labelTexto: UILabel, falas: [Fala], imgPersonagem: UIImageView){
+//        var numDialogo = 0
+//        
+//        //        let dd = self.falas.count as! useconds_t
+//        usleep(1000 * 1000)  // Milisegundos * 1000     -- REVER na refatoração
+//        Animations.continuar = true
+//        
+//        while numDialogo < falas.count {  // Lembrar: Aqui é totalmente assíncrono!
+//            
+//            let fala = falas[numDialogo]
+//            
+//            if let img = fala.imagem {
+//                imgPersonagem.image = UIImage(named: img)
+//                Animations.slide(imgPersonagem, direction: Animations.direction.toRight)
+//            }
+//            
+//            //Exibe o loop de diálogos
+//            if numDialogo < falas.count {
+//                
+//                mostrarDialogoSimples(fala, img: imgPersonagem, label: labelTexto) { }
+//                //Depois do diálogo
+//                
+//            } else {
+//                
+//                mostrarDialogoSimples(fala, img: imgPersonagem, label: labelTexto) {
+//                    
+//                    Animations.fadeToBlack(viewController.view)
+//                    //Animations.bubble(self.labelSpeak, completion: {})
+//                }
+//                
+//                // Implementar o fim da cena aqui
+//                
+//                // ->->->->->->->-  Trocar de cena aqui -------------------
+//            }
+//            numDialogo++
+//        }
+//    }
     
     
     
