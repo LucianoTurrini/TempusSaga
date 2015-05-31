@@ -87,9 +87,7 @@ class StageViewController: UIViewController {
     
     @IBAction func buttonStage4(sender: UIButton) {
         
-        
-        
-        
+        performSegueWithIdentifier("irOracle", sender: self)
         
     }
 

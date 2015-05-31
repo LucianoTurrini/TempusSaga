@@ -91,11 +91,13 @@
 				"respostas": [
 					{
 						"resposta": "Sim.",
-						"replica": "Todas as pessoas com quem você conversou te deram importantes dicas. Caso tenha prestado atenção, você se sairá bem.."
+						"replica": "Todas as pessoas com quem você conversou te deram importantes dicas. Caso tenha prestado atenção, você se sairá bem...",
+                        "correto": "true"
 					},
 					{
 						"resposta": "Não",
-						"replica": "Volte quando estiver mais preparado."
+						"replica": "Volte quando estiver mais preparado.",
+                        "correto": "false"
 					}
 				]
 			},

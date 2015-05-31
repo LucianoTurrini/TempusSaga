@@ -155,7 +155,7 @@ class JSONReader: NSObject {
                 if let correto = resp["correto"] {
                     r.correto = NSString(string: correto).boolValue //Conversão para Bool
                 }
-                p.resposta.append(r)
+                p.respostas.append(r)
             }
             
             perguntador.perguntas.append(p)
