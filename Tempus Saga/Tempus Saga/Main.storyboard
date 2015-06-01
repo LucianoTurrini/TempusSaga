@@ -257,6 +257,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="butttonPular:" destination="SnA-oO-8G1" eventType="touchUpInside" id="DYV-Lm-uce"/>
+                                    <segue destination="gKy-rw-L1F" kind="presentation" identifier="history" modalTransitionStyle="crossDissolve" id="vTQ-Of-Y7P"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -339,12 +340,92 @@
                         <outlet property="imageCharacter2" destination="voD-ch-ctF" id="ZHb-Ju-AIY"/>
                         <outlet property="imageSpeakBackground" destination="DFI-m7-yz2" id="v02-qa-d4u"/>
                         <outlet property="labelSpeak" destination="ELm-N3-9zX" id="G18-EB-Pnq"/>
-                        <segue destination="gKy-rw-L1F" kind="presentation" identifier="history" modalTransitionStyle="crossDissolve" id="IEF-hQ-6M3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1IB-3m-oiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1129" y="585"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ulQ-vv-h3U">
+            <objects>
+                <viewController id="aoo-vI-XDu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="we0-GY-rPe"/>
+                        <viewControllerLayoutGuide type="bottom" id="oSn-Uk-JIp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eZs-62-soa">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bXm-cI-gTb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lWl-kN-uGF">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="295" width="600" height="105"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoI-cm-G2n">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="295" width="568" height="105"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FST-ha-qjm">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Pular">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="529" y="28" width="36" height="30"/>
+                                </variation>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hdo-XR-Y1W">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="46" y="109" width="191" height="271"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2xD-qg-8Ud">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="375" y="109" width="190" height="271"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bXm-cI-gTb"/>
+                                <exclude reference="lWl-kN-uGF"/>
+                                <exclude reference="zoI-cm-G2n"/>
+                                <exclude reference="FST-ha-qjm"/>
+                                <exclude reference="Hdo-XR-Y1W"/>
+                                <exclude reference="2xD-qg-8Ud"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="bXm-cI-gTb"/>
+                                <include reference="lWl-kN-uGF"/>
+                                <include reference="zoI-cm-G2n"/>
+                                <include reference="FST-ha-qjm"/>
+                                <include reference="Hdo-XR-Y1W"/>
+                                <include reference="2xD-qg-8Ud"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tYb-rQ-Y1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="1561.5"/>
         </scene>
         <!--Ages View Controller-->
         <scene sceneID="eKD-Oe-jzR">
@@ -485,6 +566,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEA-eu-FP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1845" y="585"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rLy-8F-sgV">
+            <objects>
+                <viewController id="UHr-SN-Ecj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nG4-R5-vpy"/>
+                        <viewControllerLayoutGuide type="bottom" id="d7H-QR-cJ8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ry3-Uu-65x">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIN-M6-iWF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837" y="1561.5"/>
         </scene>
         <!--Oracle View Controller-->
         <scene sceneID="rgS-N0-hly">
