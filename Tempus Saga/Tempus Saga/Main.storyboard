@@ -360,63 +360,82 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAE-hD-OqP">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
+                                </variation>
                                 <variation key="widthClass=regular" ambiguous="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEd-UW-gJn">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEd-UW-gJn">
                                 <rect key="frame" x="103" y="94" width="156" height="121"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="aKB-UJ-z8O"/>
-                                    <constraint firstAttribute="height" constant="150" id="ubK-m2-L00"/>
+                                    <constraint firstAttribute="width" constant="170" id="WCA-Tr-f2n"/>
+                                    <constraint firstAttribute="height" constant="170" id="e4c-gk-9Oc"/>
                                 </constraints>
-                                <state key="normal" title="Egito">
+                                <state key="normal" image="botaoEgito">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="aKB-UJ-z8O"/>
-                                        <exclude reference="ubK-m2-L00"/>
+                                        <exclude reference="WCA-Tr-f2n"/>
+                                        <exclude reference="e4c-gk-9Oc"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
-                                        <include reference="aKB-UJ-z8O"/>
-                                        <include reference="ubK-m2-L00"/>
+                                        <include reference="WCA-Tr-f2n"/>
+                                        <include reference="e4c-gk-9Oc"/>
                                     </mask>
                                 </variation>
                                 <connections>
                                     <action selector="buttonEgito:" destination="gKy-rw-L1F" eventType="touchUpInside" id="cd7-Ea-MJZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-rL-j1P">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-rL-j1P">
                                 <rect key="frame" x="103" y="350" width="156" height="121"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Reino Unido">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonReinoUnido:" destination="gKy-rw-L1F" eventType="touchUpInside" id="XGY-N2-TTL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXE-Vf-UCP">
-                                <rect key="frame" x="322" y="233" width="156" height="121"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="a1S-8b-sC5"/>
+                                    <constraint firstAttribute="width" constant="150" id="4CL-bG-JK2"/>
+                                    <constraint firstAttribute="height" constant="150" id="wjP-19-M5P"/>
                                 </constraints>
-                                <state key="normal" title="Grécia">
+                                <state key="normal" image="botaoReinoUnido">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="a1S-8b-sC5"/>
+                                        <exclude reference="4CL-bG-JK2"/>
+                                        <exclude reference="wjP-19-M5P"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
-                                        <include reference="a1S-8b-sC5"/>
+                                        <include reference="4CL-bG-JK2"/>
+                                        <include reference="wjP-19-M5P"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="buttonReinoUnido:" destination="gKy-rw-L1F" eventType="touchUpInside" id="XGY-N2-TTL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXE-Vf-UCP">
+                                <rect key="frame" x="322" y="233" width="156" height="121"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0uf-5n-GMw"/>
+                                    <constraint firstAttribute="height" constant="150" id="VRz-mk-nFi"/>
+                                </constraints>
+                                <state key="normal" image="botaoGrecia">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0uf-5n-GMw"/>
+                                        <exclude reference="VRz-mk-nFi"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="0uf-5n-GMw"/>
+                                        <include reference="VRz-mk-nFi"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -426,52 +445,31 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VEd-UW-gJn" firstAttribute="leading" secondItem="dkI-rL-j1P" secondAttribute="leading" id="7Xz-Dn-VJu"/>
-                            <constraint firstItem="VEd-UW-gJn" firstAttribute="top" secondItem="7Jd-qu-a4j" secondAttribute="bottom" constant="8" symbolic="YES" id="EB3-3j-t88"/>
-                            <constraint firstItem="VEd-UW-gJn" firstAttribute="leading" secondItem="uSw-S2-Hlx" secondAttribute="leadingMargin" constant="87" id="FVQ-4e-bU0"/>
-                            <constraint firstItem="rAE-hD-OqP" firstAttribute="centerY" secondItem="dXE-Vf-UCP" secondAttribute="centerY" id="L2z-Uh-fxh"/>
-                            <constraint firstItem="VEd-UW-gJn" firstAttribute="trailing" secondItem="dkI-rL-j1P" secondAttribute="trailing" id="LGM-6J-0al"/>
-                            <constraint firstAttribute="bottom" secondItem="dkI-rL-j1P" secondAttribute="bottom" constant="20" symbolic="YES" id="NRw-rR-E5s"/>
-                            <constraint firstItem="dXE-Vf-UCP" firstAttribute="top" secondItem="7Jd-qu-a4j" secondAttribute="bottom" constant="105" id="Tt2-lh-Gle"/>
-                            <constraint firstItem="rAE-hD-OqP" firstAttribute="leading" secondItem="uSw-S2-Hlx" secondAttribute="leading" id="Y0X-tz-m97"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dXE-Vf-UCP" secondAttribute="trailing" constant="69" id="i40-Ri-xSh"/>
-                            <constraint firstItem="rAE-hD-OqP" firstAttribute="bottom" secondItem="yrd-Yc-0Vu" secondAttribute="top" id="iQe-xL-US8"/>
-                            <constraint firstAttribute="trailing" secondItem="rAE-hD-OqP" secondAttribute="trailing" id="n4o-Ps-o2j"/>
-                            <constraint firstItem="rAE-hD-OqP" firstAttribute="top" secondItem="uSw-S2-Hlx" secondAttribute="top" id="qgU-wE-iP2"/>
-                            <constraint firstItem="dkI-rL-j1P" firstAttribute="top" secondItem="VEd-UW-gJn" secondAttribute="bottom" constant="52" id="uCX-nB-XOE"/>
+                            <constraint firstItem="VEd-UW-gJn" firstAttribute="leading" secondItem="uSw-S2-Hlx" secondAttribute="leadingMargin" constant="31" id="HT0-Cu-yCV"/>
+                            <constraint firstAttribute="centerX" secondItem="dkI-rL-j1P" secondAttribute="centerX" id="P9z-VG-iIs"/>
+                            <constraint firstItem="dXE-Vf-UCP" firstAttribute="top" secondItem="7Jd-qu-a4j" secondAttribute="bottom" constant="15" id="W8h-aA-yLo"/>
+                            <constraint firstItem="VEd-UW-gJn" firstAttribute="top" secondItem="7Jd-qu-a4j" secondAttribute="bottom" constant="5" id="WrE-Q6-ECu"/>
+                            <constraint firstItem="yrd-Yc-0Vu" firstAttribute="top" secondItem="dkI-rL-j1P" secondAttribute="bottom" constant="20" id="iU2-W4-Rkf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dXE-Vf-UCP" secondAttribute="trailing" constant="51" id="rdM-gW-EaZ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="L2z-Uh-fxh"/>
-                                <exclude reference="Y0X-tz-m97"/>
-                                <exclude reference="iQe-xL-US8"/>
-                                <exclude reference="n4o-Ps-o2j"/>
-                                <exclude reference="qgU-wE-iP2"/>
-                                <exclude reference="7Xz-Dn-VJu"/>
-                                <exclude reference="EB3-3j-t88"/>
-                                <exclude reference="FVQ-4e-bU0"/>
-                                <exclude reference="LGM-6J-0al"/>
-                                <exclude reference="NRw-rR-E5s"/>
-                                <exclude reference="uCX-nB-XOE"/>
-                                <exclude reference="Tt2-lh-Gle"/>
-                                <exclude reference="i40-Ri-xSh"/>
+                                <exclude reference="HT0-Cu-yCV"/>
+                                <exclude reference="WrE-Q6-ECu"/>
+                                <exclude reference="P9z-VG-iIs"/>
+                                <exclude reference="W8h-aA-yLo"/>
+                                <exclude reference="rdM-gW-EaZ"/>
+                                <exclude reference="iU2-W4-Rkf"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <include reference="L2z-Uh-fxh"/>
-                                <include reference="Y0X-tz-m97"/>
-                                <include reference="iQe-xL-US8"/>
-                                <include reference="n4o-Ps-o2j"/>
-                                <include reference="qgU-wE-iP2"/>
-                                <include reference="7Xz-Dn-VJu"/>
-                                <include reference="EB3-3j-t88"/>
-                                <include reference="FVQ-4e-bU0"/>
-                                <include reference="LGM-6J-0al"/>
-                                <include reference="NRw-rR-E5s"/>
-                                <include reference="uCX-nB-XOE"/>
-                                <include reference="Tt2-lh-Gle"/>
-                                <include reference="i40-Ri-xSh"/>
+                                <include reference="HT0-Cu-yCV"/>
+                                <include reference="WrE-Q6-ECu"/>
+                                <include reference="P9z-VG-iIs"/>
+                                <include reference="W8h-aA-yLo"/>
+                                <include reference="rdM-gW-EaZ"/>
+                                <include reference="iU2-W4-Rkf"/>
                             </mask>
                         </variation>
                     </view>
@@ -1071,7 +1069,10 @@
         <image name="CHAR_1-2" width="380" height="512"/>
         <image name="CHAR_3-1" width="380" height="512"/>
         <image name="botaoAtenas" width="361" height="361"/>
+        <image name="botaoEgito" width="450" height="450"/>
+        <image name="botaoGrecia" width="361" height="361"/>
         <image name="botaoOlympia" width="361" height="361"/>
+        <image name="botaoReinoUnido" width="361" height="361"/>
         <image name="botaoTemploDeApolo" width="361" height="361"/>
         <image name="botaoTemploDeZeus" width="361" height="361"/>
         <image name="botaoVoltar" width="156" height="156"/>
