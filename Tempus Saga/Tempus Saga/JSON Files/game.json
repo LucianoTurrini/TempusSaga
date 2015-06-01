@@ -9,6 +9,7 @@
 	"places": [
 	  {
 		"nome": "Atenas",
+        "imageBackground": "atenas",
 		"personagens": {
 		  "NPC1": {
 			"falas": [
@@ -28,6 +29,7 @@
 	  },
 	  {
 		"nome": "Templo de Apolo",
+        "imageBackground": "TemploDeApolo",
 		"personagens": {
 			"NPC1": {
 				"falas": [
@@ -42,10 +44,10 @@
 				"image": ""
 			}
 		},
-		"imageBackground": "greciaPlace2Background"
 	  },
 	  {
 		"nome": "Olimpia",
+        "imageBackground": "Olympia",
 		"personagens": {
 			"NPC1": {
 				"falas": [
@@ -59,8 +61,7 @@
 				],
 				"image": ""
 			}
-		},
-		"imageBackground": "greciaPlace3Background"
+		}
 	  },
 	  {
 		"nome": "Templo de Zeus",

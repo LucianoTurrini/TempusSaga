@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oZz-mH-OVW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oZz-mH-OVW">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -832,6 +832,9 @@
                                 <state key="normal" title="Opcao 3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btNPC3:" destination="9YV-ZQ-b4x" eventType="touchUpInside" id="iwE-7g-G6F"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FlC-5k-iHE">
                                 <rect key="frame" x="164" y="162" width="272" height="438"/>
@@ -888,6 +891,42 @@
                                     <action selector="btNPC1:" destination="9YV-ZQ-b4x" eventType="touchUpInside" id="ubs-S3-Oyh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3x-dw-FYU">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="532" y="28" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="btResp1:" destination="9YV-ZQ-b4x" eventType="touchUpInside" id="m7u-Jm-1IW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NW-Hp-s6v">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="532" y="92" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="btResp2:" destination="9YV-ZQ-b4x" eventType="touchUpInside" id="uQR-J8-1Ig"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfI-NT-AGT">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="532" y="154" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="btResp3:" destination="9YV-ZQ-b4x" eventType="touchUpInside" id="v2b-TD-8m3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -928,6 +967,9 @@
                                 <exclude reference="AHI-nT-su6"/>
                                 <exclude reference="t1w-xS-YIM"/>
                                 <exclude reference="d9U-71-lW9"/>
+                                <exclude reference="y3x-dw-FYU"/>
+                                <exclude reference="8NW-Hp-s6v"/>
+                                <exclude reference="VfI-NT-AGT"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="LXY-r8-Hyd"/>
@@ -968,6 +1010,9 @@
                                 <include reference="AHI-nT-su6"/>
                                 <include reference="t1w-xS-YIM"/>
                                 <include reference="d9U-71-lW9"/>
+                                <include reference="y3x-dw-FYU"/>
+                                <include reference="8NW-Hp-s6v"/>
+                                <include reference="VfI-NT-AGT"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="LXY-r8-Hyd"/>
@@ -1006,6 +1051,9 @@
                     </view>
                     <connections>
                         <outlet property="background" destination="QBo-cN-W9T" id="d7z-c9-lQq"/>
+                        <outlet property="btResp1" destination="y3x-dw-FYU" id="EkP-WK-DbE"/>
+                        <outlet property="btResp2" destination="8NW-Hp-s6v" id="ICd-7S-as7"/>
+                        <outlet property="btResp3" destination="VfI-NT-AGT" id="V2k-1Y-aaT"/>
                         <outlet property="buttonOpcao1" destination="ELu-Qh-Bgt" id="6bL-Mu-a7s"/>
                         <outlet property="buttonOpcao2" destination="S2m-32-9To" id="1lB-3S-cYz"/>
                         <outlet property="buttonOpcao3" destination="ZUS-df-l4s" id="NTm-AU-jgE"/>

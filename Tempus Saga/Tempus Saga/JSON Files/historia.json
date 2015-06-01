@@ -1,5 +1,77 @@
 {
-  "historia1": {
+    "historia1": {
+        "era": "Presente",
+        "place": "Laboratorio",
+        "falas": [
+          {
+              "personagem": "2",
+              "fala": "Vô, cheguei!.",
+              "imagem": "CHAR_1-1"
+          },
+          {
+              "personagem": "1",
+              "fala": "Que bom que veio. Estava te esperado.",
+              "imagem": "CHAR_3-1"
+          },
+          {
+              "personagem": "2",
+              "fala": "Então, o senhor terminou? Finalmente podemos usar?",
+              "imagem": "CHAR_1-1"
+          },
+          {
+              "personagem": "1",
+              "fala": "Agora mesmo. A Sara está quase pronta",
+              "imagem": "CHAR_3-1"
+          },
+          {
+              "personagem": "2",
+              "fala": "Ela também vai? Pensei que só ia nós dois.",
+              "imagem": "CHAR_1-2"
+          },
+          {
+              "personagem": "1",
+              "fala": "Não sei porque o vovô te escolheu.",
+              "imagem": "CHAR_2-1"
+          },
+          {
+              "personagem": "1",
+              "fala": "Achou mesmo que o vovô iria mandar um pirralho sozinho viajando pelo tempo?",
+              "imagem": "CHAR_2-3"
+          },
+          {
+              "personagem": "2",
+              "fala": "O senhor não vai, vovô?",
+              "imagem": "CHAR_1-3"
+          },
+          {
+              "personagem": "1",
+              "fala": "Não. Eu ficarei para trazer vocês de volta. Ficarei de prontidão para que voltem são e salvos.",
+              "imagem": "CHAR_3-1"
+          },
+          {
+              "personagem": "2",
+              "fala": "Entendi. Estou pronto.",
+              "imagem": "CHAR_1-1"
+          },
+          {
+              "personagem": "1",
+              "fala": "Vai ser dificil te aturar a viagem toda, mas eu aguento.",
+              "imagem": "CHAR_2-3"
+          },
+          {
+              "personagem": "1",
+              "fala": "Lembrem-se: O objetivo de vocês é conseguir o máximo de informações possíveis. Usem o tempo que precisar e tomem cuidado.",
+              "imagem": "CHAR_3-1"
+          },
+          {
+              "personagem": "2",
+              "fala": "Pode deixar, vovô.",
+              "imagem": "CHAR_1-1"
+          },
+        ]
+    },
+
+  "historia5": {
     "era": "Grecia",
     "place": "Templo de Zeus",
     "falas": [
