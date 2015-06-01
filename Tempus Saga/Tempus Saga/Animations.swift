@@ -170,7 +170,7 @@ class Animations: NSObject {
     }
     
     
-    class func fadeToBlack (view: UIView) {
+    class func fadeToBlack (view: UIView, completion: () -> () ) {
         
         let viewWidth = view.bounds.size.width
         let viewHeight = view.bounds.size.height
@@ -180,12 +180,12 @@ class Animations: NSObject {
         blackView.alpha = 0
         view.addSubview(blackView)
         
-        UIView.animateWithDuration(2, delay: 2, options: UIViewAnimationOptions.CurveEaseOut, animations:
+        UIView.animateWithDuration(2, delay: 1, options: UIViewAnimationOptions.CurveEaseOut, animations:
         {
             blackView.alpha = 1
         
         }, completion: { (value: Bool) in
-            
+            completion()
         })
         
     }

@@ -91,7 +91,7 @@ class PlaceViewController: UIViewController {
                 
                 self.animations.mostrarDialogoSimples(fala, img: self.imgPersonagem, label: self.labelTexto) {
                     
-                    Animations.fadeToBlack(self.view)
+                    Animations.fadeToBlack(self.view, completion: {})
                     //Animations.bubble(self.labelSpeak, completion: {})
                 }
                 
@@ -244,6 +244,7 @@ class PlaceViewController: UIViewController {
         //Define array de falas
         let falaTemp = Fala()
         falaTemp.fala = NPC3?.perguntas[0].respostas[2].replica
+        falaTemp.imagem = NPC3?.imagem  //Temporário
         let arrayFalaTemp = [falaTemp]
         
         //Define array para o método falar() conseguir ler

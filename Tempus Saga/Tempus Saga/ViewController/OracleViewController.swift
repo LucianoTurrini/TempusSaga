@@ -94,7 +94,7 @@ class OracleViewController: UIViewController {
                 
                 self.animations.mostrarDialogoSimples(pergunta, img: self.imgPersonagem, label: self.labelTexto) {
                     
-                    Animations.fadeToBlack(self.view)
+                    Animations.fadeToBlack(self.view, completion: {})
                     //Animations.bubble(self.labelSpeak, completion: {})
                 }
                 

@@ -51,8 +51,20 @@ class SceneViewController: UIViewController {
         
         Animations.bubble(labelSpeak, viewHeight: view.frame.width){
             self.falar()
+            
+            // Quando acabar a cena escurece tudo
+            Animations.enfileirar() {
+    
+                Animations.fadeToBlack(self.view){
+                    
+                    //Fim da cena aqui
+                    
+                    Animations.continuar = false
+                    self.performSegueWithIdentifier("history", sender: self)
+                }
+            }
         }
-}
+    }
     
     
     func falar() {
@@ -78,21 +90,7 @@ class SceneViewController: UIViewController {
                 
                 //Depois do diálogo
                 numDialogo++
-            } else {
-                self.animations.mostrarDialogo(fala, img1: self.imageCharacter, img2: self.imageCharacter2, label: self.labelSpeak){
-                    
-                    Animations.fadeToBlack(self.view)
-                    //Animations.bubble(self.labelSpeak, completion: {})
-                    
-                }
-                
-                // Implementar o fim da cena aqui
-                
-                // ->->->->->->->-  Trocar de cena aqui -------------------
-                
             }
-
-            
         }
         
     }
