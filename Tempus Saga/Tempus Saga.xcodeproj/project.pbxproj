@@ -23,6 +23,7 @@
 		841448511B04E81800BBC829 /* StageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841448501B04E81800BBC829 /* StageViewController.swift */; };
 		841448531B04E82D00BBC829 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841448521B04E82D00BBC829 /* SceneViewController.swift */; };
 		841448591B04E8FD00BBC829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841448581B04E8FD00BBC829 /* Main.storyboard */; };
+		84C0EE2B1B1BE42F006DDA33 /* ScenePlaceVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0EE2A1B1BE42F006DDA33 /* ScenePlaceVIewController.swift */; };
 		D667615F1B0BB67F002C06A2 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */; };
 		D67557F31B0E00EB00695097 /* historia.json in Resources */ = {isa = PBXBuildFile; fileRef = D67557F21B0E00EB00695097 /* historia.json */; };
 		D67557F51B0E082E00695097 /* Historia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67557F41B0E082E00695097 /* Historia.swift */; };
@@ -64,6 +65,7 @@
 		841448501B04E81800BBC829 /* StageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StageViewController.swift; path = ViewController/StageViewController.swift; sourceTree = "<group>"; };
 		841448521B04E82D00BBC829 /* SceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		841448581B04E8FD00BBC829 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		84C0EE2A1B1BE42F006DDA33 /* ScenePlaceVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenePlaceVIewController.swift; sourceTree = "<group>"; };
 		D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceViewController.swift; path = ViewController/PlaceViewController.swift; sourceTree = "<group>"; };
 		D67557F21B0E00EB00695097 /* historia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = historia.json; sourceTree = "<group>"; };
 		D67557F41B0E082E00695097 /* Historia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Historia.swift; path = "Tempus Saga/Model/Historia.swift"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				21F7D70A1B0CD35300FF4FEA /* MenuPrincipalViewController.swift */,
 				D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */,
 				2195642D1B18BADC001C6451 /* OracleViewController.swift */,
+				84C0EE2A1B1BE42F006DDA33 /* ScenePlaceVIewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				D697A5281B0B78630022B3DD /* JSONReader.swift in Sources */,
 				21F7D70B1B0CD35300FF4FEA /* MenuPrincipalViewController.swift in Sources */,
 				212F8BA31B0A1D71006A6C5A /* Place.swift in Sources */,
+				84C0EE2B1B1BE42F006DDA33 /* ScenePlaceVIewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

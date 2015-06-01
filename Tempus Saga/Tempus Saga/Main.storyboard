@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oZz-mH-OVW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oZz-mH-OVW">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -346,15 +346,16 @@
             </objects>
             <point key="canvasLocation" x="1129" y="585"/>
         </scene>
-        <!--View Controller-->
+        <!--Scene Place View Controller-->
         <scene sceneID="ulQ-vv-h3U">
             <objects>
-                <viewController id="aoo-vI-XDu" sceneMemberID="viewController">
+                <viewController id="aoo-vI-XDu" customClass="ScenePlaceViewController" customModule="Tempus_Saga" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="we0-GY-rPe"/>
                         <viewControllerLayoutGuide type="bottom" id="oSn-Uk-JIp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eZs-62-soa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bXm-cI-gTb">
@@ -386,6 +387,9 @@
                                 <variation key="heightClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="529" y="28" width="36" height="30"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="Wuv-e7-lgE" kind="presentation" identifier="selecionarEra" modalTransitionStyle="crossDissolve" id="xfp-87-evT"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hdo-XR-Y1W">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -422,10 +426,18 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="buttonNext" destination="FST-ha-qjm" id="pgC-cZ-RZM"/>
+                        <outlet property="imageBackground" destination="bXm-cI-gTb" id="xBk-CI-cIp"/>
+                        <outlet property="imageCharacter" destination="Hdo-XR-Y1W" id="kf4-bb-8k8"/>
+                        <outlet property="imageCharacter2" destination="2xD-qg-8Ud" id="5oR-kI-2BF"/>
+                        <outlet property="imageSpeakBackground" destination="lWl-kN-uGF" id="QDi-Xw-0Pt"/>
+                        <outlet property="labelSpeak" destination="zoI-cm-G2n" id="joE-pt-LLe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYb-rQ-Y1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="1561.5"/>
+            <point key="canvasLocation" x="1845" y="1441.5"/>
         </scene>
         <!--Ages View Controller-->
         <scene sceneID="eKD-Oe-jzR">
@@ -560,29 +572,12 @@
                         <outlet property="buttonEgito" destination="VEd-UW-gJn" id="hce-cD-aqN"/>
                         <outlet property="buttonGrecia" destination="dXE-Vf-UCP" id="dQ1-hW-jsp"/>
                         <outlet property="buttonReinoUnido" destination="dkI-rL-j1P" id="p9R-JJ-Dn4"/>
-                        <segue destination="Wuv-e7-lgE" kind="presentation" identifier="selecionarEra" modalTransitionStyle="crossDissolve" id="59f-1j-g8h"/>
+                        <segue destination="aoo-vI-XDu" kind="presentation" modalTransitionStyle="crossDissolve" id="nBv-9F-WJX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEA-eu-FP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1845" y="585"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="rLy-8F-sgV">
-            <objects>
-                <viewController id="UHr-SN-Ecj" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nG4-R5-vpy"/>
-                        <viewControllerLayoutGuide type="bottom" id="d7H-QR-cJ8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ry3-Uu-65x">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QIN-M6-iWF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1837" y="1561.5"/>
         </scene>
         <!--Oracle View Controller-->
         <scene sceneID="rgS-N0-hly">
