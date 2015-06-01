@@ -87,18 +87,8 @@ class PlaceViewController: UIViewController {
                 self.animations.mostrarDialogoSimples(fala, img: self.imgPersonagem, label: self.labelTexto) { }
                 //Depois do diálogo
                 
-            } else {
-                
-                self.animations.mostrarDialogoSimples(fala, img: self.imgPersonagem, label: self.labelTexto) {
-                    
-                    Animations.fadeToBlack(self.view, completion: {})
-                    //Animations.bubble(self.labelSpeak, completion: {})
-                }
-                
-                // Implementar o fim da cena aqui
-                
-                // ->->->->->->->-  Trocar de cena aqui -------------------
             }
+            
             numDialogo++
         }
     }
