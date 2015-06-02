@@ -26,7 +26,7 @@ class Animations: NSObject {
         if direction == .toRight {
             el.frame.origin = CGPoint(x: -el.frame.size.width, y: el.frame.origin.y)
         } else if direction == .toLeft {
-            el.frame.origin = CGPoint(x: el.superview!.frame.width + el.frame.size.width, y: el.frame.origin.y)
+            //el.frame.origin = CGPoint(x: el.superview!.frame.width + el.frame.size.width, y: el.frame.origin.y)
         }
         
         UIView.animateWithDuration(0.7, delay: 0.3, options: UIViewAnimationOptions.CurveEaseOut, animations: {

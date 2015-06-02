@@ -387,9 +387,6 @@
                                 <variation key="heightClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="529" y="28" width="36" height="30"/>
                                 </variation>
-                                <connections>
-                                    <segue destination="Wuv-e7-lgE" kind="presentation" identifier="selecionarEra" modalTransitionStyle="crossDissolve" id="xfp-87-evT"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hdo-XR-Y1W">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -451,7 +448,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAE-hD-OqP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAE-hD-OqP">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
@@ -570,7 +567,7 @@
                         <outlet property="buttonEgito" destination="VEd-UW-gJn" id="hce-cD-aqN"/>
                         <outlet property="buttonGrecia" destination="dXE-Vf-UCP" id="dQ1-hW-jsp"/>
                         <outlet property="buttonReinoUnido" destination="dkI-rL-j1P" id="p9R-JJ-Dn4"/>
-                        <segue destination="aoo-vI-XDu" kind="presentation" modalTransitionStyle="crossDissolve" id="nBv-9F-WJX"/>
+                        <segue destination="Wuv-e7-lgE" kind="presentation" identifier="selecionarEra" modalTransitionStyle="crossDissolve" id="tFe-5T-Ktw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEA-eu-FP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -903,6 +900,9 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TBM-JV-I3E">
                                 <rect key="frame" x="16" y="15" width="148" height="274"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="15" width="148" height="337"/>
+                                </variation>
                                 <variation key="widthClass=regular" ambiguous="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 </variation>
@@ -910,9 +910,12 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2m-32-9To">
                                 <rect key="frame" x="61" y="137" width="59" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Opcao 2">
+                                <state key="normal" title="Cidadao 2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="61" y="169" width="74" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="btNPC2:" destination="9YV-ZQ-b4x" eventType="touchUpInside" id="jgk-fq-hEv"/>
                                 </connections>
@@ -920,16 +923,18 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUS-df-l4s">
                                 <rect key="frame" x="61" y="213" width="59" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Opcao 3">
+                                <state key="normal" title="Cidadao 3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="61" y="245" width="74" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="btNPC3:" destination="9YV-ZQ-b4x" eventType="touchUpInside" id="iwE-7g-G6F"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FlC-5k-iHE">
                                 <rect key="frame" x="164" y="162" width="272" height="438"/>
-                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="185" id="h98-He-SiQ"/>
                                 </constraints>
@@ -938,7 +943,8 @@
                                         <exclude reference="h98-He-SiQ"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=compact">
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="253" y="52" width="185" height="277"/>
                                     <mask key="constraints">
                                         <include reference="h98-He-SiQ"/>
                                     </mask>
@@ -972,11 +978,11 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELu-Qh-Bgt">
                                 <rect key="frame" x="61" y="63" width="59" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Opcao 1">
+                                <state key="normal" title="Cidadao 1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=compact" misplaced="YES">
-                                    <rect key="frame" x="61" y="86" width="59" height="30"/>
+                                    <rect key="frame" x="61" y="86" width="74" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="btNPC1:" destination="9YV-ZQ-b4x" eventType="touchUpInside" id="ubs-S3-Oyh"/>
@@ -988,7 +994,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="532" y="28" width="46" height="30"/>
+                                    <rect key="frame" x="482" y="28" width="96" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="btResp1:" destination="9YV-ZQ-b4x" eventType="touchUpInside" id="m7u-Jm-1IW"/>
@@ -1000,7 +1006,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="532" y="92" width="46" height="30"/>
+                                    <rect key="frame" x="482" y="92" width="96" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="btResp2:" destination="9YV-ZQ-b4x" eventType="touchUpInside" id="uQR-J8-1Ig"/>
@@ -1012,7 +1018,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="532" y="154" width="46" height="30"/>
+                                    <rect key="frame" x="482" y="154" width="96" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="btResp3:" destination="9YV-ZQ-b4x" eventType="touchUpInside" id="v2b-TD-8m3"/>

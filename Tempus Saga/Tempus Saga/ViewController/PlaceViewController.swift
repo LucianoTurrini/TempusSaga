@@ -43,25 +43,25 @@ class PlaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // NPC inicial (1) (troca depois no botão)
-        let npc = place.personagens["NPC1"]!
-        falas = npc.falas
+//        // NPC inicial (1) (troca depois no botão)
+//        let npc = place.personagens["NPC1"]!
+//        falas = npc.falas
         backgroundImage = UIImage(named: place.imageBackground!)
-        ///////////////////////
-        
-        imgPersonagem.image = personagem
+//        ///////////////////////
+//        
+//        imgPersonagem.image = personagem
         background.image = backgroundImage
-        speakBackground.image = backgroundSpeak
-        
-        labelTexto.text = ""
-        
-        Animations.slide(imgPersonagem, direction: Animations.direction.toRight)
-        
-        Animations.bubble(speakBackground, viewHeight: view.frame.width){ }
-        
-        Animations.bubble(labelTexto, viewHeight: view.frame.width) {
-            self.falar()
-        }
+//        speakBackground.image = backgroundSpeak
+//        
+//        labelTexto.text = ""
+//        
+//        Animations.slide(imgPersonagem, direction: Animations.direction.toRight)
+//        
+//        Animations.bubble(speakBackground, viewHeight: view.frame.width){ }
+//        
+//        Animations.bubble(labelTexto, viewHeight: view.frame.width) {
+//            self.falar()
+//        }
     }
     
     

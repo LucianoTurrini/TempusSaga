@@ -16,13 +16,13 @@
 			  "Vocês conhecem o Partenon? Ele é o orgulho dos gregos.",
               "Ele foi construido para honrar a deusa Atena e é o simbolo da reconstrução, já que foi erguido após a cidade ser arrasada pelos persas."
 			],
-			"image": ""
+			"image": "NPC_GR1-1"
 		  },
 		  "NPC2": {
 			"falas": [
 			  "Olha essa vista! A cidade de Atenas está a 150 metros do nível do mar, e possui grande valor militar devido a sua vista privilegiada. Mas se engana se acha que ela foi construida apenas para fins de Guerra: Olhe para esses templos! Olhe para sua beleza. Não existe cidade mais bonita que Atenas."
 			],
-			"image": ""
+			"image": "NPC_GR1-2"
 		  }
 		}
 		
@@ -35,13 +35,13 @@
 				"falas": [
 					"Nossos deuses moram no olimpo. Eles costumam interagir ativamente na vida dos humanos. Apolo, por exemplo, nos garante tanto a proteção contra os males da vida quando a morte súbita com suas flechas infalíveis e Athena garante o triunfo dos justos nas batalhas."
 				],
-				"image": ""
+				"image": "NPC_GR2-1"
 			},
 			"NPC2": {
 				"falas": [
 					"Zeus é o pai de todos os deus do Olimpo. Ele tem dois irmãos: Poseidon e Hades. Poseidon habita os mares, dando proteção aos navegantes e Hades guarda os portões do submundo."
 				],
-				"image": ""
+				"image": "NPC_GR2-2"
 			}
 		},
 	  },
@@ -53,13 +53,13 @@
 				"falas": [
 					"Quando morre uma pessoa ela é enterrada com uma moeda. Essa moeda é usada para pagar Caronte, o barqueiro que cruza o rio Aqueronte. Ele leva a pessoa para ser julgada pelos três juizes, que decidem se ele vai para o Tartaro ou para os Campos Ilisios"
 				],
-				"image": ""
+				"image": "NPC_GR1-3"
 			},
 			"NPC2": {
 				"falas": [
 					"Nós, gregos, gostamos muito de roupas de linho e lã. Nossas vestimentas são iguais para homens e mulheres e são muito confortáveis."
 				],
-				"image": ""
+				"image": "NPC_GR1-1"
 			}
 		}
 	  },
