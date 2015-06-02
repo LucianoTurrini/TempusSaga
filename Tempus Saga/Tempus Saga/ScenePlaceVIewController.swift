@@ -91,7 +91,7 @@ class ScenePlaceViewController: UIViewController {
                 } else {
                     self.animations.mostrarDialogo(fala, img1: self.imageCharacter, img2: self.imageCharacter2, label: self.labelSpeak){
                         
-                        Animations.fadeToBlack(self.view)
+                        //Animations.fadeToBlack(self.view)
                         //Animations.bubble(self.labelSpeak, completion: {})
                         
                     }
