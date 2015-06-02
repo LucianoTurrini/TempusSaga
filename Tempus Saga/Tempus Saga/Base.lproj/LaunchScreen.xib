@@ -10,23 +10,44 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempus Saga" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="218" width="441" height="43"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="43" id="iau-OQ-3HS"/>
-                        <constraint firstAttribute="width" constant="441" id="lA1-Ej-MDt"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="intro" translatesAutoresizingMaskIntoConstraints="NO" id="0Ha-JX-kfv">
+                    <rect key="frame" x="-8" y="-25" width="480" height="480"/>
+                </imageView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="r4O-lX-iYK"/>
-                <constraint firstAttribute="centerY" secondItem="kId-c2-rCX" secondAttribute="centerY" id="yCv-t5-MmT"/>
+                <constraint firstAttribute="bottom" secondItem="0Ha-JX-kfv" secondAttribute="bottom" id="JBc-kO-rg9">
+                    <variation key="heightClass=compact" constant="-200"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="0Ha-JX-kfv" secondAttribute="trailing" id="LZd-Ht-L3S">
+                    <variation key="heightClass=compact" constant="-200"/>
+                </constraint>
+                <constraint firstItem="0Ha-JX-kfv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VBL-7h-xcr"/>
+                <constraint firstItem="0Ha-JX-kfv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Xnf-07-Cje">
+                    <variation key="heightClass=compact" constant="-150"/>
+                </constraint>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="477" y="460"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="JBc-kO-rg9"/>
+                    <exclude reference="LZd-Ht-L3S"/>
+                    <exclude reference="VBL-7h-xcr"/>
+                    <exclude reference="Xnf-07-Cje"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact">
+                <mask key="constraints">
+                    <include reference="JBc-kO-rg9"/>
+                    <include reference="LZd-Ht-L3S"/>
+                    <include reference="VBL-7h-xcr"/>
+                    <include reference="Xnf-07-Cje"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="625" y="336.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="intro" width="1280" height="719"/>
+    </resources>
 </document>

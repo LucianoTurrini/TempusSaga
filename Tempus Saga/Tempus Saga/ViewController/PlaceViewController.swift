@@ -87,18 +87,8 @@ class PlaceViewController: UIViewController {
                 self.animations.mostrarDialogoSimples(fala, img: self.imgPersonagem, label: self.labelTexto) { }
                 //Depois do diálogo
                 
-            } else {
-                
-                self.animations.mostrarDialogoSimples(fala, img: self.imgPersonagem, label: self.labelTexto) {
-                    
-                    Animations.fadeToBlack(self.view)
-                    //Animations.bubble(self.labelSpeak, completion: {})
-                }
-                
-                // Implementar o fim da cena aqui
-                
-                // ->->->->->->->-  Trocar de cena aqui -------------------
             }
+            
             numDialogo++
         }
     }
@@ -244,6 +234,7 @@ class PlaceViewController: UIViewController {
         //Define array de falas
         let falaTemp = Fala()
         falaTemp.fala = NPC3?.perguntas[0].respostas[2].replica
+        falaTemp.imagem = NPC3?.imagem  //Temporário
         let arrayFalaTemp = [falaTemp]
         
         //Define array para o método falar() conseguir ler

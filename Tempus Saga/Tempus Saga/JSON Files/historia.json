@@ -10,7 +10,7 @@
           },
           {
               "personagem": "1",
-              "fala": "Que bom que veio. Estava te esperando.",
+              "fala": "Que bom que você veio. Eu estava te esperando.",
               "imagem": "CHAR_3-1"
           },
           {
@@ -25,7 +25,7 @@
           },
           {
               "personagem": "2",
-              "fala": "Ela também vai? Pensei que só ia nós dois.",
+              "fala": "Ela também vai? Pensei que só íamos nós dois.",
               "imagem": "CHAR_1-2"
           },
           {
