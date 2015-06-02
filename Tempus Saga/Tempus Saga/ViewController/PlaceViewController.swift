@@ -62,6 +62,13 @@ class PlaceViewController: UIViewController {
 //        Animations.bubble(labelTexto, viewHeight: view.frame.width) {
 //            self.falar()
 //        }
+        
+        Animations.continuar = false    // Provável Skip
+        labelTexto.text = ""    // Limpar speak label
+        let npc = place.personagens["NPC1"]!
+        falas = npc.falas
+        falar()
+
     }
     
     
