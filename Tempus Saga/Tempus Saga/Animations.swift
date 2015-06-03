@@ -150,13 +150,13 @@ class Animations: NSObject {
         // Pega a thread criada para o texto e adiciona
         Animations.enfileirar(){
             
-            if let testImage = UIImage(named: imageString) {
-                //                    image = testImage
-                //                }
-                
-                // Algo extra que quiser enfileirar
-                complete ()
-            }
+//            if let testImage = UIImage(named: imageString) {
+//                image = testImage
+//            }
+//
+//                // Algo extra que quiser enfileirar
+//                complete ()
+//            }
         }
         
         self.input(texto, label: label) //Pega só o texto do Array
@@ -172,22 +172,24 @@ class Animations: NSObject {
     
     class func fadeToBlack (view: UIView, completion: () -> () ) {
         
-        let viewWidth = view.bounds.size.width
-        let viewHeight = view.bounds.size.height
+        Animations.enfileirar() {
         
-        let blackView = UIView(frame: CGRect(x: 0, y: 0, width: viewWidth, height: viewHeight))
-        blackView.backgroundColor = UIColor.blackColor()
-        blackView.alpha = 0
-        view.addSubview(blackView)
-        
-        UIView.animateWithDuration(2, delay: 1, options: UIViewAnimationOptions.CurveEaseOut, animations:
-        {
-            blackView.alpha = 1
-        
-        }, completion: { (value: Bool) in
-            completion()
-        })
-        
+            let viewWidth = view.bounds.size.width
+            let viewHeight = view.bounds.size.height
+            
+            let blackView = UIView(frame: CGRect(x: 0, y: 0, width: viewWidth, height: viewHeight))
+            blackView.backgroundColor = UIColor.blackColor()
+            blackView.alpha = 0
+            view.addSubview(blackView)
+            
+            UIView.animateWithDuration(2, delay: 1, options: UIViewAnimationOptions.CurveEaseOut, animations:
+            {
+                blackView.alpha = 1
+            
+            }, completion: { (value: Bool) in
+                completion()
+            })
+        }
     }
     
     

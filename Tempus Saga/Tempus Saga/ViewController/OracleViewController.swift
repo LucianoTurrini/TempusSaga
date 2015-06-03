@@ -33,8 +33,8 @@ class OracleViewController: UIViewController {
     var backgroundSpeak: UIImage?
     let animations = Animations()
     //var falas: Array<Fala>!
-    var perguntas: Array<Pergunta>! // Segue here
-    var oraculo = JSONReader.getPerguntasJogo("oraculo")
+    var perguntas: Array<Pergunta>!
+    var oraculo = JSONReader.getPerguntasJogo("oraculo")    //Passado pela Segue
     var perguntaAtual: Pergunta!
     var perguntaCounter = 0
     var respostasCertas = 0
@@ -48,70 +48,65 @@ class OracleViewController: UIViewController {
         Animations.continuar = false    // Provável Skip
         
         labelTexto.text = ""    // Limpar speak label
+
+        self.perguntaAtual = oraculo.perguntas[perguntaCounter]   //Pergunta inicial
         
         btResp1.hidden = false
-        btResp2.hidden = false
-        btResp3.hidden = false
-        
-
-        self.perguntaAtual = oraculo.perguntas[perguntaCounter]
-        
         btResp1.setTitle(perguntaAtual.respostas[0].resposta, forState: UIControlState.Normal)
+        
+        btResp2.hidden = false
         btResp2.setTitle(perguntaAtual.respostas[1].resposta, forState: UIControlState.Normal)
-        btResp3.setTitle(perguntaAtual.respostas[2].resposta, forState: UIControlState.Normal)
+        
+        if perguntaAtual.respostas.count > 2  {
+            btResp3.setTitle(perguntaAtual.respostas[2].resposta, forState: UIControlState.Normal)
+        } else {
+            btResp3.hidden = true
+        }
         
         
         //        for i=0 in self.falas.count {}
         
-        falar()
+        Animations.continuar = false    // Provável Skip
+        labelTexto.text = ""    // Limpar speak label
+        //let npc = place.personagens["oraculo"]!
+        perguntas = oraculo.perguntas
+        
+        falar(perguntaAtual)
         
         
     }
     
-    func falar(){
-        var numDialogo = 0
+    func falar(pergunta: Pergunta){
+        //var numDialogo = 0
         
         usleep(1000 * 1000)  // Milisegundos * 1000     -- REVER na refatoração
         Animations.continuar = true
         
-        while numDialogo < self.perguntas.count {  // Lembrar: Aqui é totalmente assíncrono!
+        //while numDialogo < self.perguntas.count {  // Lembrar: Aqui é totalmente assíncrono!
             
-            let pergunta = perguntas[numDialogo]
-            
-            if let img = oraculo.imagem {
-                imgPersonagem.image = UIImage(named: img)
-                Animations.slide(imgPersonagem, direction: Animations.direction.toRight)
-            }
-            
-            pergunta.fala = pergunta.pergunta   //Para igualar e mandar para o método seguinte
-            //Exibe o loop de diálogos
-            if numDialogo < self.perguntas.count {
-                
-                self.animations.mostrarDialogoSimples(pergunta, img: self.imgPersonagem, label: self.labelTexto) { }
-                //Depois do diálogo
-                
-            } else {
-                
-                self.animations.mostrarDialogoSimples(pergunta, img: self.imgPersonagem, label: self.labelTexto) {
-                    
-                    Animations.fadeToBlack(self.view, completion: {})
-                    //Animations.bubble(self.labelSpeak, completion: {})
-                }
-                
-                // Implementar o fim da cena aqui
-                
-                // ->->->->->->->-  Trocar de cena aqui -------------------
-            }
-            numDialogo++
+        //let pergunta = perguntas[numPergunta]   //Tirar essa linha?
+        
+        if let img = oraculo.imagem {
+            imgPersonagem.image = UIImage(named: img)
+            Animations.slide(imgPersonagem, direction: Animations.direction.toRight)
         }
+        
+        pergunta.fala = perguntaAtual.pergunta   //Para igualar e mandar para o método seguinte
+        //Exibe o loop de diálogos
+        //if numPergunta < self.perguntas.count {
+            
+        self.animations.mostrarDialogoSimples(pergunta, img: self.imgPersonagem, label: self.labelTexto) { }
+        //Depois do diálogo
+
     }
 
     func responder(numResposta: Int) {
         
+        Animations.continuar = false
         
         // Errado ou certo, vai exibir a mensagem correspondente
-        perguntaAtual.fala = perguntaAtual.respostas[numResposta].replica
-        falar()
+        perguntaAtual.pergunta = perguntaAtual.respostas[numResposta].replica
+        falar(perguntaAtual)
         
         if perguntaAtual.respostas[numResposta].correto! {  //Se responder certo
             
@@ -119,34 +114,57 @@ class OracleViewController: UIViewController {
             
             if perguntaCounter < oraculo.perguntas.count {
                 //Respondeu certo
-                perguntaCounter++
-                self.perguntaAtual = oraculo.perguntas[perguntaCounter]
                 
-                if respostasCertas >= oraculo.perguntas.count { // Respondeu todas certas
-                    perguntaAtual.fala = oraculo.msgSucesso
-                    falar()
+                if respostasCertas >= oraculo.perguntas.count+1 { // Respondeu todas certas (incluindo a primeira de continuar)
+                    perguntaAtual.pergunta = oraculo.msgSucesso
+                    falar(perguntaAtual)
+                    
+                    // SUCESSO AQUI - TROCAR DE TELA
+                    
+                } else {
+                    //Próxima pergunta
+                    perguntaCounter++
+                    self.perguntaAtual = oraculo.perguntas[perguntaCounter]
+                    btResp1.setTitle(perguntaAtual.respostas[0].resposta, forState: UIControlState.Normal)
+                    btResp2.setTitle(perguntaAtual.respostas[1].resposta, forState: UIControlState.Normal)
+                    btResp3.setTitle(perguntaAtual.respostas[2].resposta, forState: UIControlState.Normal)
+                    
+                    falar(perguntaAtual)
+                    
                 }
+                println("Resposta certa")
+                respostasCertas++
+                
             } else {
                 println("bug?") //Se n aparecer nunca, tirar
             }
             
         } else {    // Se resposta errada
             
-            Animations.enfileirar(){    //Para manter o sincronismo de conversa
+            Animations.fadeToBlack(self.view){
                 
-                // Colocar aqui o comando para voltar pra a outra view
-                
+                // Trocar aqui de tela para voltar
+                // Colocar aqui o comando para voltar pra a outra view (resp errada)
+                self.dismissViewControllerAnimated(true, completion: nil)
             }
+            
+            println("Resposta errada")
         }
-        
-        
-        
         
     }
     
     
+    @IBAction func btResp1(sender: AnyObject) {
+        responder(0)
+    }
     
+    @IBAction func btResp2(sender: AnyObject) {
+        responder(1)
+    }
     
+    @IBAction func btResp3(sender: AnyObject) {
+        responder(2)
+    }
 
     /*
     // MARK: - Navigation

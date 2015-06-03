@@ -53,15 +53,13 @@ class SceneViewController: UIViewController {
             self.falar()
             
             // Quando acabar a cena escurece tudo
-            Animations.enfileirar() {
     
-                Animations.fadeToBlack(self.view){
-                    
-                    //Fim da cena aqui
-                    
-                    Animations.continuar = false
-                    self.performSegueWithIdentifier("history", sender: self)
-                }
+            Animations.fadeToBlack(self.view){
+                
+                //Fim da cena aqui
+                
+                Animations.continuar = false
+                self.performSegueWithIdentifier("history", sender: self)
             }
         }
     }
