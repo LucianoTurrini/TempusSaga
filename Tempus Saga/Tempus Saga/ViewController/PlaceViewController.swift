@@ -23,10 +23,6 @@ class PlaceViewController: UIViewController {
     @IBOutlet weak var btResp2: UIButton!
     @IBOutlet weak var btResp3: UIButton!
     
-    @IBOutlet weak var buttonOpcao1: UIButton!
-    @IBOutlet weak var buttonOpcao2: UIButton!
-    @IBOutlet weak var buttonOpcao3: UIButton!
-    
     //MARK: Global Variables
     
     /// Teste - PEGAR AQUI O PLACE CORRESPONDENTE
@@ -62,6 +58,13 @@ class PlaceViewController: UIViewController {
 //        Animations.bubble(labelTexto, viewHeight: view.frame.width) {
 //            self.falar()
 //        }
+        
+        Animations.continuar = false    // Provável Skip
+        labelTexto.text = ""    // Limpar speak label
+        let npc = place.personagens["NPC1"]!
+        falas = npc.falas
+        falar()
+
     }
     
     

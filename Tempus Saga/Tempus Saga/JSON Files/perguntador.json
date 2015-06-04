@@ -90,7 +90,7 @@
 				"pergunta": "Vejo que deseja ver a estátua de Zeus. Só posso deixar entrar aquele que vencer o meu desafio. Você está pronto?",
 				"respostas": [
 					{
-						"resposta": "Sim.",
+						"resposta": "Sim",
 						"replica": "Todas as pessoas com quem você conversou te deram importantes dicas. Caso tenha prestado atenção, você se sairá bem...",
                         "correto": "true"
 					},
@@ -102,7 +102,7 @@
 				]
 			},
 			{
-				"pergunta": "Por que os gregos enterram os mortos com uma moeda?",
+				"pergunta": "Primeira pergunta: Por que os gregos enterram os mortos com uma moeda?",
 				"respostas": [
 					{
 						"resposta": "Para pagar o Caronte, barqueiro do Aqueronte.",
@@ -122,7 +122,7 @@
 				]
 			},
 			{
-				"pergunta": "O Paternon foi construido em homenagem a que deus?",
+				"pergunta": "Segunda pergunta: O Paternon foi construido em homenagem a que deus?",
 				"respostas": [
 					{
 						"resposta": "Atena.",
@@ -142,7 +142,7 @@
 				]
 			},
 			{
-				"pergunta": "Quem são os irmãos de Zeus?",
+				"pergunta": "Terceira pergunta: Quem são os irmãos de Zeus?",
 				"respostas": [
 					{
 						"resposta": "Hades e Poseidon.",
