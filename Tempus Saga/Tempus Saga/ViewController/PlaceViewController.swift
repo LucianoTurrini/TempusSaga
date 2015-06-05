@@ -23,6 +23,11 @@ class PlaceViewController: UIViewController {
     @IBOutlet weak var btResp2: UIButton!
     @IBOutlet weak var btResp3: UIButton!
     
+    @IBOutlet weak var btCidadao1: UIButton!
+    @IBOutlet weak var btCidadao2: UIButton!
+    @IBOutlet weak var btCidadao3: UIButton!
+    
+    @IBOutlet weak var imgResp: UIImageView!
     //MARK: Global Variables
     
     /// Teste - PEGAR AQUI O PLACE CORRESPONDENTE
@@ -59,29 +64,28 @@ class PlaceViewController: UIViewController {
 //            self.falar()
 //        }
         
-        Animations.continuar = false    // Provável Skip
-        labelTexto.text = ""    // Limpar speak label
-        let npc = place.personagens["NPC1"]!
-        falas = npc.falas
-        falar()
+//        Animations.continuar = false    // Provável Skip
+//        labelTexto.text = ""    // Limpar speak label
+//        let npc = place.personagens["NPC1"]!
+//        falas = npc.falas
+//        falar()
 
     }
     
     
     func falar(){
         var numDialogo = 0
-        
 //        let dd = self.falas.count as! useconds_t
         usleep(1000 * 1000)  // Milisegundos * 1000     -- REVER na refatoração
         Animations.continuar = true
         
         while numDialogo < self.falas.count {  // Lembrar: Aqui é totalmente assíncrono!
             
-            let fala = falas[numDialogo]
+            let fala = self.falas[numDialogo]
             
             if let img = fala.imagem {
-                imgPersonagem.image = UIImage(named: img)
-                Animations.slide(imgPersonagem, direction: Animations.direction.toRight)
+                self.imgPersonagem.image = UIImage(named: img)
+//                Animations.slide(self.imgPersonagem, direction: Animations.direction.toRight)
             }
             
             //Exibe o loop de diálogos
@@ -91,8 +95,8 @@ class PlaceViewController: UIViewController {
                 //Depois do diálogo
                 
             }
-            
             numDialogo++
+            
         }
     }
     
@@ -110,6 +114,7 @@ class PlaceViewController: UIViewController {
         btResp1.hidden = true
         btResp2.hidden = true
         btResp3.hidden = true
+        imgResp.hidden = true
         
         let npc = place.personagens["NPC1"]!
         falas = npc.falas
@@ -127,6 +132,7 @@ class PlaceViewController: UIViewController {
         btResp1.hidden = true
         btResp2.hidden = true
         btResp3.hidden = true
+        imgResp.hidden = true
         
         let npc = place.personagens["NPC2"]!
         falas = npc.falas
@@ -165,6 +171,7 @@ class PlaceViewController: UIViewController {
         btResp1.hidden = false
         btResp2.hidden = false
         btResp3.hidden = false
+        imgResp.hidden = false
         
         NPC3 = JSONReader.getPerguntasJogo("personagem3")   // Teste; Vai vir pela segue - tirar depois
         

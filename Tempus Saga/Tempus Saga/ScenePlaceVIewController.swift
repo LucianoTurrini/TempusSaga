@@ -44,23 +44,23 @@ class ScenePlaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        falas = historia.falas
-//        
-//        imageCharacter.image = personagem1
-//        imageCharacter2.image = personagem2
-//        imageBackground.image = background
-//        imageSpeakBackground.image = backgroundSpeak
-//        
-//        labelSpeak.text = ""
-//        
-//        Animations.slide(imageCharacter, direction: Animations.direction.toRight)
-//        Animations.slide(imageCharacter2, direction: Animations.direction.toLeft)
-//        
-//        Animations.bubble(imageSpeakBackground, viewHeight: view.frame.width) { }
-//        
-//        Animations.bubble(labelSpeak, viewHeight: view.frame.width){
-//            self.falar()
-//        }
+        falas = historia.falas
+        
+        imageCharacter.image = personagem1
+        imageCharacter2.image = personagem2
+        imageBackground.image = background
+        imageSpeakBackground.image = backgroundSpeak
+        
+        labelSpeak.text = ""
+        
+        Animations.slide(imageCharacter, direction: Animations.direction.toRight)
+        Animations.slide(imageCharacter2, direction: Animations.direction.toLeft)
+        
+        Animations.bubble(imageSpeakBackground, viewHeight: view.frame.width) { }
+        
+        Animations.bubble(labelSpeak, viewHeight: view.frame.width){
+            self.falar()
+        }
     }
     
     

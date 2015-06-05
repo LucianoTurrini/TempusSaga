@@ -36,7 +36,6 @@ class StageViewController: UIViewController {
         super.viewDidLoad()
         
         selectStage()
-
         
     }
     

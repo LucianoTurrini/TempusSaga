@@ -3,8 +3,8 @@
 	"nome": "Grécia",
     "imageBackground": "greciaBackground",
     "botao1": "botaoAtenas",
-    "botao2": "botaoOlympia",
-    "botao3": "botaoTemploDeApolo",
+    "botao2": "botaoTemploDeApolo",
+    "botao3": "botaoOlympia",
     "botao4": "botaoTemploDeZeus",
 	"places": [
 	  {
@@ -35,7 +35,7 @@
 				"falas": [
 					"Nossos deuses moram no olimpo. Eles costumam interagir ativamente na vida dos humanos. Apolo, por exemplo, nos garante tanto a proteção contra os males da vida quando a morte súbita com suas flechas infalíveis e Athena garante o triunfo dos justos nas batalhas."
 				],
-				"image": "NPC_GR2-1"
+				"image": "NPC_GR1-3"
 			},
 			"NPC2": {
 				"falas": [
@@ -51,9 +51,9 @@
 		"personagens": {
 			"NPC1": {
 				"falas": [
-					"Quando morre uma pessoa ela é enterrada com uma moeda. Essa moeda é usada para pagar Caronte, o barqueiro que cruza o rio Aqueronte. Ele leva a pessoa para ser julgada pelos três juizes, que decidem se ele vai para o Tartaro ou para os Campos Ilisios"
+					"Quando morre uma pessoa, ela é enterrada com uma moeda. Essa moeda é usada para pagar Caronte, o barqueiro que cruza o rio Aqueronte. Ele leva a pessoa para ser julgada pelos três juizes, que decidem se ele vai para o Tartaro ou para os Campos Ilisios"
 				],
-				"image": "NPC_GR1-3"
+				"image": "NPC_GR2-1"
 			},
 			"NPC2": {
 				"falas": [
