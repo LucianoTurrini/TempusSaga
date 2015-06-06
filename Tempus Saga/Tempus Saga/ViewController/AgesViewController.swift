@@ -46,6 +46,8 @@ class AgesViewController: UIViewController {
     
         performSegueWithIdentifier("selecionarEra", sender: self)
         
+        
+        
     }
     
     @IBAction func buttonReinoUnido(sender: AnyObject) {

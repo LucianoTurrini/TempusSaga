@@ -49,7 +49,8 @@ class OracleViewController: UIViewController {
         super.viewDidLoad()
 
         Animations.continuar = false    // Provável Skip
-        
+        music = sound.setupAudioPlayerWithFile("DarkShrineLoop", type: "mp3")
+        music.play()
         labelTexto.text = ""    // Limpar speak label
 
         self.perguntaAtual = oraculo.perguntas[perguntaCounter]   //Pergunta inicial
@@ -77,6 +78,10 @@ class OracleViewController: UIViewController {
         falar(perguntaAtual)
         
         
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        music.stop()
     }
     
     func falar(pergunta: Pergunta){

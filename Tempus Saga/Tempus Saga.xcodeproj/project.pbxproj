@@ -23,6 +23,7 @@
 		841448511B04E81800BBC829 /* StageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841448501B04E81800BBC829 /* StageViewController.swift */; };
 		841448531B04E82D00BBC829 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841448521B04E82D00BBC829 /* SceneViewController.swift */; };
 		841448591B04E8FD00BBC829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841448581B04E8FD00BBC829 /* Main.storyboard */; };
+		8472562A1B236B110042A6A5 /* DarkShrineLoop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 847256291B236B110042A6A5 /* DarkShrineLoop.mp3 */; };
 		84C0EE2B1B1BE42F006DDA33 /* ScenePlaceVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0EE2A1B1BE42F006DDA33 /* ScenePlaceVIewController.swift */; };
 		84D471641B22579B005089F7 /* RiseOfSpirit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84D471631B22579B005089F7 /* RiseOfSpirit.mp3 */; };
 		84D471671B225CF7005089F7 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D471661B225CF7005089F7 /* Sound.swift */; };
@@ -68,6 +69,7 @@
 		841448501B04E81800BBC829 /* StageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StageViewController.swift; path = ViewController/StageViewController.swift; sourceTree = "<group>"; };
 		841448521B04E82D00BBC829 /* SceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		841448581B04E8FD00BBC829 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		847256291B236B110042A6A5 /* DarkShrineLoop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DarkShrineLoop.mp3; sourceTree = "<group>"; };
 		84C0EE2A1B1BE42F006DDA33 /* ScenePlaceVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenePlaceVIewController.swift; sourceTree = "<group>"; };
 		84D471631B22579B005089F7 /* RiseOfSpirit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = RiseOfSpirit.mp3; sourceTree = "<group>"; };
 		84D471661B225CF7005089F7 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			children = (
 				84D471681B226266005089F7 /* calmBmg.mp3 */,
 				84D471631B22579B005089F7 /* RiseOfSpirit.mp3 */,
+				847256291B236B110042A6A5 /* DarkShrineLoop.mp3 */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				D67FDE111B0F5D1A00264B53 /* perguntador.json in Resources */,
 				21E23B731B04DA820050F93B /* LaunchScreen.xib in Resources */,
 				21E23B701B04DA820050F93B /* Images.xcassets in Resources */,
+				8472562A1B236B110042A6A5 /* DarkShrineLoop.mp3 in Resources */,
 				84D471691B226266005089F7 /* calmBmg.mp3 in Resources */,
 				84D471641B22579B005089F7 /* RiseOfSpirit.mp3 in Resources */,
 				D67557F31B0E00EB00695097 /* historia.json in Resources */,
