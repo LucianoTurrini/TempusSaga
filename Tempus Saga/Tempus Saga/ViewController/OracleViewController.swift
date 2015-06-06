@@ -34,7 +34,8 @@ class OracleViewController: UIViewController {
     let animations = Animations()
     //var falas: Array<Fala>!
     var perguntas: Array<Pergunta>!
-    var oraculo = JSONReader.getPerguntasJogo("oraculo")    //Passado pela Segue
+//    var oraculo = JSONReader.getPerguntasJogo("oraculo")    //Passado pela Segue
+    var oraculo: Perguntador!    //Passado pela Segue
     var perguntaAtual: Pergunta!
     var perguntaCounter = 0
     var respostasCertas = 0

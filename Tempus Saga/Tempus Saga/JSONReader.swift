@@ -93,6 +93,8 @@ class JSONReader: NSObject {
             place.nome = p.objectForKey("nome") as! String
             place.imageBackground = p.objectForKey("imageBackground") as? String
             
+            
+            /// Personagens
             var personagens = Dictionary<String, NPC>()
             
             let npcDic = p.objectForKey("personagens") as! NSDictionary
@@ -120,6 +122,20 @@ class JSONReader: NSObject {
                 personagens [npc.nome!] = npc
             }
             place.personagens = personagens     //Adiciona os personagens
+            
+            
+            /// Perguntador
+//            var pergArray = [Perguntador]()
+            let pergDic = getJsonDic("perguntador")
+            for (key2, value2) in pergDic {    // value: dentro do perguntador
+                
+                if (value2.objectForKey("place") as! String) == place.nome {
+                    
+                    let perg: Perguntador = getPerguntasJogo(key2 as! String)
+                    
+                    place.perguntador = perg   //Só pega o ultimo (se houver mais)
+                }
+            }
             arrayPlaces.append(place)
         }
         era.places = arrayPlaces   //Adiciona os places

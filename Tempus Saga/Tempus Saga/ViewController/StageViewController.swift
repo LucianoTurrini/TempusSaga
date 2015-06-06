@@ -80,7 +80,7 @@ class StageViewController: UIViewController {
     }
     
     @IBAction func buttonStage4(sender: UIButton) {
-        
+        place = era.places[3]
         performSegueWithIdentifier("irOracle", sender: self)
         
     }
@@ -98,8 +98,14 @@ class StageViewController: UIViewController {
         if segue.identifier == "selecionarPlace" {
             
             let destination = segue.destinationViewController as! PlaceViewController
-            
             destination.place = place
+            
+        } else if segue.identifier == "irOracle" {
+            
+            let destination = segue.destinationViewController as! OracleViewController
+            destination.oraculo = place.perguntador! //Testar
+            
+            
             
         }
         

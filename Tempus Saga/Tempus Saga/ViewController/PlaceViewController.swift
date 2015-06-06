@@ -53,7 +53,7 @@ class PlaceViewController: UIViewController {
 //        
 //        Animations.slide(imgPersonagem, direction: Animations.direction.toRight)
 //        
-//        Animations.bubble(speakBackground, viewHeight: view.frame.width){ }
+//        Animations.bubble(speakBackground, viewHeight: view.frame.width) { }
 //        
 //        Animations.bubble(labelTexto, viewHeight: view.frame.width) {
 //            self.falar()
