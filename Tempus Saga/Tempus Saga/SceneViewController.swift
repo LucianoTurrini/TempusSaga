@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SceneViewController: UIViewController {
 
-    
+    let sound = Sound()
+    var bgMusic = AVAudioPlayer()
     // MARK - Outlets in StoryBoard
     
     @IBOutlet weak var buttonNext: UIButton!
@@ -41,6 +43,9 @@ class SceneViewController: UIViewController {
         imageCharacter2.image = personagem2
         imageBackground.image = background
         imageSpeakBackground.image = backgroundSpeak
+        
+        bgMusic = sound.setupAudioPlayerWithFile("calmBmg", type: "mp3")
+        bgMusic.play()
         
         labelSpeak.text = ""
         
@@ -93,6 +98,10 @@ class SceneViewController: UIViewController {
         
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        bgMusic.stop()
+    }
+    
     
     
 //    func removerPersonagens(p1: UIImageView, p2: UIImageView) {
@@ -109,12 +118,8 @@ class SceneViewController: UIViewController {
     
     
     @IBAction func butttonPular(sender: UIButton) {
-        
-        
         Animations.continuar = false
         performSegueWithIdentifier("history", sender: self)
-        
-        
     }
     
     

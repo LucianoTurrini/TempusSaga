@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class OracleViewController: UIViewController {
 
@@ -23,6 +24,9 @@ class OracleViewController: UIViewController {
     @IBOutlet weak var btResp1: UIButton!
     @IBOutlet weak var btResp2: UIButton!
     @IBOutlet weak var btResp3: UIButton!
+    
+    var music = AVAudioPlayer()
+    let sound = Sound()
     
     /// Teste - PEGAR AQUI O PLACE CORRESPONDENTE
     var place = Place()
@@ -45,7 +49,6 @@ class OracleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         Animations.continuar = false    // Provável Skip
         
         labelTexto.text = ""    // Limpar speak label

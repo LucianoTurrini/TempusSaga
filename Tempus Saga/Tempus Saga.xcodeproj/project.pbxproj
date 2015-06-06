@@ -24,6 +24,9 @@
 		841448531B04E82D00BBC829 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841448521B04E82D00BBC829 /* SceneViewController.swift */; };
 		841448591B04E8FD00BBC829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841448581B04E8FD00BBC829 /* Main.storyboard */; };
 		84C0EE2B1B1BE42F006DDA33 /* ScenePlaceVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0EE2A1B1BE42F006DDA33 /* ScenePlaceVIewController.swift */; };
+		84D471641B22579B005089F7 /* RiseOfSpirit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84D471631B22579B005089F7 /* RiseOfSpirit.mp3 */; };
+		84D471671B225CF7005089F7 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D471661B225CF7005089F7 /* Sound.swift */; };
+		84D471691B226266005089F7 /* calmBmg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84D471681B226266005089F7 /* calmBmg.mp3 */; };
 		D667615F1B0BB67F002C06A2 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */; };
 		D67557F31B0E00EB00695097 /* historia.json in Resources */ = {isa = PBXBuildFile; fileRef = D67557F21B0E00EB00695097 /* historia.json */; };
 		D67557F51B0E082E00695097 /* Historia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67557F41B0E082E00695097 /* Historia.swift */; };
@@ -66,6 +69,9 @@
 		841448521B04E82D00BBC829 /* SceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		841448581B04E8FD00BBC829 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		84C0EE2A1B1BE42F006DDA33 /* ScenePlaceVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenePlaceVIewController.swift; sourceTree = "<group>"; };
+		84D471631B22579B005089F7 /* RiseOfSpirit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = RiseOfSpirit.mp3; sourceTree = "<group>"; };
+		84D471661B225CF7005089F7 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		84D471681B226266005089F7 /* calmBmg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = calmBmg.mp3; sourceTree = "<group>"; };
 		D667615E1B0BB67F002C06A2 /* PlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceViewController.swift; path = ViewController/PlaceViewController.swift; sourceTree = "<group>"; };
 		D67557F21B0E00EB00695097 /* historia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = historia.json; sourceTree = "<group>"; };
 		D67557F41B0E082E00695097 /* Historia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Historia.swift; path = "Tempus Saga/Model/Historia.swift"; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 		21E23B621B04DA820050F93B /* Tempus Saga */ = {
 			isa = PBXGroup;
 			children = (
+				84D471621B225786005089F7 /* Sounds */,
 				21E23B8F1B04ED6C0050F93B /* CoreData Manager */,
 				21E23B8C1B04E62D0050F93B /* AppDelegate */,
 				21E23B8B1B04E61E0050F93B /* ViewController */,
@@ -164,6 +171,7 @@
 				212F8BA21B0A1D71006A6C5A /* Place.swift */,
 				D67557F41B0E082E00695097 /* Historia.swift */,
 				D67B8A1B1B14902400158450 /* Fala.swift */,
+				84D471661B225CF7005089F7 /* Sound.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -207,6 +215,15 @@
 				D67FDE101B0F5D1A00264B53 /* perguntador.json */,
 			);
 			path = "JSON Files";
+			sourceTree = "<group>";
+		};
+		84D471621B225786005089F7 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				84D471681B226266005089F7 /* calmBmg.mp3 */,
+				84D471631B22579B005089F7 /* RiseOfSpirit.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +310,8 @@
 				D67FDE111B0F5D1A00264B53 /* perguntador.json in Resources */,
 				21E23B731B04DA820050F93B /* LaunchScreen.xib in Resources */,
 				21E23B701B04DA820050F93B /* Images.xcassets in Resources */,
+				84D471691B226266005089F7 /* calmBmg.mp3 in Resources */,
+				84D471641B22579B005089F7 /* RiseOfSpirit.mp3 in Resources */,
 				D67557F31B0E00EB00695097 /* historia.json in Resources */,
 				21F7D70E1B0DFF7F00FF4FEA /* game.json in Resources */,
 			);
@@ -319,6 +338,7 @@
 				212F8B9E1B0A09E5006A6C5A /* AgesViewController.swift in Sources */,
 				212F8BA11B0A1C36006A6C5A /* Era.swift in Sources */,
 				D67B8A1C1B14902400158450 /* Fala.swift in Sources */,
+				84D471671B225CF7005089F7 /* Sound.swift in Sources */,
 				21E23B8E1B04EC7D0050F93B /* PersonagemManager.swift in Sources */,
 				841448511B04E81800BBC829 /* StageViewController.swift in Sources */,
 				21E23B661B04DA820050F93B /* AppDelegate.swift in Sources */,
