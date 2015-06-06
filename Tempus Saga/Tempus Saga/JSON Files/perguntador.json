@@ -65,15 +65,15 @@
 				"respostas": [
 					{
 						"resposta": "A estátua de Zeus.",
-						"replica": "A estátua está no templo de Zeus. Para entrar lá, pore, você terá que passar pelo desafio do oráculo e provar seu conhecimento. Somente pessoas aprovadas pelo oráculo podem ver a estátua."
+						"replica": "A estátua está no templo de Zeus. Para entrar lá, porém, você terá que passar pelo desafio do oráculo e provar seu conhecimento. Somente pessoas aprovadas pelo oráculo podem ver a estátua."
 					},
 					{
-						"resposta": "Um bom lugar pra comer",
+						"resposta": "Um bom lugar para comer",
 						"replica": "Comida boa é o que não falta aqui. Já experimentou uma sopa de lentilhas, uma skordalia ou um delicioso pasteli?"
 					},
 					{
 						"resposta": "Um bom lugar pra dormir",
-						"replica": "Já procurou alguma estalagem? Eu não posso te ajudar nisso."
+						"replica": "Já procurou alguma estalagem? Estou ocupado, não posso te ajudar agora com isso."
 					}
 				]
 			}
