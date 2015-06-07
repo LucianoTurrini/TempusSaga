@@ -53,6 +53,9 @@ class PlaceViewController: UIViewController {
 //        falas = npc.falas
         backgroundImage = UIImage(named: place.imageBackground!)
 //        ///////////////////////
+        
+        NPC3 = place.perguntador
+        
 //        
 //        imgPersonagem.image = personagem
         background.image = backgroundImage
@@ -177,7 +180,7 @@ class PlaceViewController: UIViewController {
         btResp3.hidden = false
         imgResp.hidden = false
         
-        NPC3 = JSONReader.getPerguntasJogo("personagem3")   // Teste; Vai vir pela segue - tirar depois
+//        NPC3 = JSONReader.getPerguntasJogo("personagem3")   // Teste; Vai vir pela segue - tirar depois
         
         btResp1.setTitle(NPC3?.perguntas[0].respostas[0].resposta, forState: UIControlState.Normal)
         btResp2.setTitle(NPC3?.perguntas[0].respostas[1].resposta, forState: UIControlState.Normal)
