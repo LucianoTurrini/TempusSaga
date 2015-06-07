@@ -6,7 +6,7 @@
 		"era": "Grécia",
 		"place": "Atenas",
 		"desafio": "false",
-        "imagem": "",
+        "imagem": "NPC_GR2-1",
 		"perguntas": [
 			{
 				"pergunta": "O que você quer aqui?",
@@ -32,7 +32,7 @@
 		"era": "Grécia",
 		"place": "Templo de Apolo",
         "desafio": "false",
-        "imagem": "",
+        "imagem": "NPC_GR1-2",
 		"perguntas": [
 			{
 				"pergunta": "O que você faz aqui?",
@@ -58,7 +58,7 @@
 		"era": "Grécia",
 		"place": "Olimpia",
         "desafio": "false",
-        "imagem": "",
+        "imagem": "NPC_GR2-2",
 		"perguntas": [
 			{
 				"pergunta": "O que você está procurando?",

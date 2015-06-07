@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlaceViewController: UIViewController {
     
+    var music = AVAudioPlayer()
+    let sound = Sound()
     
     // MARK: Outlets in StoryBoard
     
@@ -43,7 +46,8 @@ class PlaceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        music = sound.setupAudioPlayerWithFile("TheInnerSanctum", type: "mp3")
+        music.play()
 //        // NPC inicial (1) (troca depois no botão)
 //        let npc = place.personagens["NPC1"]!
 //        falas = npc.falas
@@ -140,7 +144,7 @@ class PlaceViewController: UIViewController {
     }
 
     @IBAction func buttonCancelar(sender: AnyObject) {
-        
+        music.stop()
         dismissViewControllerAnimated(true, completion: nil)
         
     }

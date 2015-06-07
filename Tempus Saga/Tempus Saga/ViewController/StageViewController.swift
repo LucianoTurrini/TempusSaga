@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class StageViewController: UIViewController {
 
@@ -25,7 +26,8 @@ class StageViewController: UIViewController {
     
     
     // MARK: - Global Variables
-    
+    var music = AVAudioPlayer()
+    let sound = Sound()
     var era: Era!
     
     var place = Place()
@@ -34,9 +36,12 @@ class StageViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
         selectStage()
         
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        music.stop()
     }
     
     /// Função que define os titulos dos botões e a imagem de fundo
@@ -51,6 +56,8 @@ class StageViewController: UIViewController {
         buttonStage4.setImage(UIImage(named: era.botao4!), forState: .Normal)
         
         imageBackground.image = UIImage(named: era.imageBackground!)
+        music = sound.setupAudioPlayerWithFile("overworldSketch", type: "mp3")
+        music.play()
         
     }
     
@@ -87,6 +94,7 @@ class StageViewController: UIViewController {
     @IBAction func buttonVoltar(sender: AnyObject) {
         
         dismissViewControllerAnimated(true, completion: nil)
+        
         
     }
   
