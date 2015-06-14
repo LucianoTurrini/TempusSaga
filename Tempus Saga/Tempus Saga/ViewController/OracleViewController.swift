@@ -54,6 +54,12 @@ class OracleViewController: UIViewController {
         super.viewDidLoad()
 
         Animations.continuar = false    // Provável Skip
+        
+        if let img = oraculo.imagem {   //Animacao oraculo entrando
+            imgPersonagem.image = UIImage(named: img)
+            Animations.slide(imgPersonagem, direction: Animations.direction.toRight)
+        }
+        
         music = sound.setupAudioPlayerWithFile("DarkShrineLoop", type: "mp3")
         music.play()
         labelTexto.text = ""    // Limpar speak label
@@ -72,17 +78,12 @@ class OracleViewController: UIViewController {
             btResp3.hidden = true
         }
         
-        
-        //        for i=0 in self.falas.count {}
-        
         Animations.continuar = false    // Provável Skip
         labelTexto.text = ""    // Limpar speak label
         //let npc = place.personagens["oraculo"]!
         perguntas = oraculo.perguntas
         
         falar(perguntaAtual)
-        
-        
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -92,30 +93,21 @@ class OracleViewController: UIViewController {
     func falar(pergunta: Pergunta){
         //var numDialogo = 0
         
-        usleep(1000 * 1000)  // Milisegundos * 1000     -- REVER na refatoração
+        usleep(1100 * 1000)  // Milisegundos * 1000     -- REVER na refatoração
+        // 100ms a mais para n dar conflito de dar crash dps da 2a pergunta
+        
         Animations.continuar = true
         
-        //while numDialogo < self.perguntas.count {  // Lembrar: Aqui é totalmente assíncrono!
-            
-        //let pergunta = perguntas[numPergunta]   //Tirar essa linha?
-        
-        if let img = oraculo.imagem {
-            imgPersonagem.image = UIImage(named: img)
-            Animations.slide(imgPersonagem, direction: Animations.direction.toRight)
-        }
-        
         pergunta.fala = perguntaAtual.pergunta   //Para igualar e mandar para o método seguinte
-        //Exibe o loop de diálogos
-        //if numPergunta < self.perguntas.count {
             
         self.animations.mostrarDialogoSimples(pergunta, img: self.imgPersonagem, label: self.labelTexto) { }
-        //Depois do diálogo
 
     }
 
     func responder(numResposta: Int) {
         
         Animations.continuar = false
+        labelTexto.text = ""    // Limpar speak label
         
         // Errado ou certo, vai exibir a mensagem correspondente
         perguntaAtual.pergunta = perguntaAtual.respostas[numResposta].replica
@@ -128,12 +120,18 @@ class OracleViewController: UIViewController {
             if perguntaCounter < oraculo.perguntas.count {
                 //Respondeu certo
                 
-                if respostasCertas >= oraculo.perguntas.count+1 { // Respondeu todas certas (incluindo a primeira de continuar)
+                if respostasCertas > oraculo.perguntas.count+1 { // Respondeu todas certas (incluindo a primeira de continuar)
                     perguntaAtual.pergunta = oraculo.msgSucesso
                     falar(perguntaAtual)
                     
-                    // SUCESSO AQUI - TROCAR DE TELA
-                    
+                    // TROCA DE TELA
+                    Animations.enfileirar() {
+                        Animations.fadeToBlack(self.view) {
+                            Animations.continuar = false
+                            self.dismissViewControllerAnimated(true, completion: nil)
+                        }
+                    }
+                
                 } else {
                     //Próxima pergunta
                     perguntaCounter++
@@ -154,10 +152,9 @@ class OracleViewController: UIViewController {
             
         } else {    // Se resposta errada
             
-            Animations.fadeToBlack(self.view){
-                
-                // Trocar aqui de tela para voltar
-                // Colocar aqui o comando para voltar pra a outra view (resp errada)
+            Animations.fadeToBlack(self.view)
+            {
+                Animations.continuar = false
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
             

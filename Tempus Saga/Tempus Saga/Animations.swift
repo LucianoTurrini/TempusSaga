@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class Animations: NSObject {
+class Animations {
     
     enum direction {
         case toRight
@@ -205,6 +205,8 @@ class Animations: NSObject {
             })
         })
     }
+    
+    
 
     
 //    /// Funcao não usada, por enquanto,
@@ -245,6 +247,7 @@ class Animations: NSObject {
 //            numDialogo++
 //        }
 //    }
+    
     
     
     

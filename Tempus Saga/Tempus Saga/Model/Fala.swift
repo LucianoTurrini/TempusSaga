@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Fala: NSObject {
+class Fala {
     
     var personagem = ""
     var fala: String!
@@ -23,7 +23,7 @@ class Pergunta: Fala {
     
 }
 
-class Resposta: NSObject {
+class Resposta {
     
     var resposta: String!
     var replica: String?

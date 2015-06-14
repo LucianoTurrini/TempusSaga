@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class Sound: NSObject {
+class Sound {
     func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
         var path = NSBundle.mainBundle().pathForResource(file as String, ofType:type as String)
         var url = NSURL.fileURLWithPath(path!)

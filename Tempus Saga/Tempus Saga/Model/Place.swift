@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Place: NSObject {
+class Place {
     
     var nome: String!
     var imageBackground: String?
