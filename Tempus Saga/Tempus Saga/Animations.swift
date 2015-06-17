@@ -148,16 +148,11 @@ class Animations {
         //let nDialogo = self.numDialogo
         
         // Pega a thread criada para o texto e adiciona
-        Animations.enfileirar(){
-            
+//        Animations.enfileirar(){
 //            if let testImage = UIImage(named: imageString) {
 //                image = testImage
 //            }
-//
-//                // Algo extra que quiser enfileirar
-//                complete ()
-//            }
-        }
+//        }
         
         self.input(texto, label: label) //Pega só o texto do Array
         
@@ -167,6 +162,11 @@ class Animations {
 //            dispatch_suspend(Animations.queue)
         })
         
+        Animations.enfileirar(){
+            // Algo extra que quiser enfileirar
+            complete ()
+        }
+    
     }
     
     
