@@ -52,6 +52,14 @@ class OracleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btResp1.layer.borderColor = UIColor.whiteColor().CGColor
+        btResp1.layer.borderWidth = 1.5
+        btResp1.layer.cornerRadius = 6
+        
+        btResp2.layer.borderColor = UIColor.whiteColor().CGColor
+        btResp2.layer.borderWidth = 1.5
+        btResp2.layer.cornerRadius = 6
 
         Animations.continuar = false    // Provável Skip
         
@@ -134,6 +142,7 @@ class OracleViewController: UIViewController {
                 
                 } else {
                     //Próxima pergunta
+                    
                     perguntaCounter++
                     self.perguntaAtual = oraculo.perguntas[perguntaCounter]
                     btResp1.setTitle(perguntaAtual.respostas[0].resposta, forState: UIControlState.Normal)
