@@ -866,6 +866,7 @@
                         <outlet property="btResp3" destination="gmz-X3-7Bj" id="tlr-IU-MlD"/>
                         <outlet property="imgPersonagem" destination="aRi-nc-piI" id="NgK-BH-ha2"/>
                         <outlet property="labelTexto" destination="LY0-d0-o7i" id="gkA-Gd-3qJ"/>
+                        <outlet property="respBackground" destination="FNY-BH-uwb" id="C5v-YY-nQS"/>
                         <outlet property="speakBackground" destination="2T5-z1-0sZ" id="6rn-5C-vg8"/>
                     </connections>
                 </viewController>

@@ -20,6 +20,7 @@ class OracleViewController: UIViewController {
     @IBOutlet weak var imgPersonagem: UIImageView!
     @IBOutlet weak var background: UIImageView!
     @IBOutlet weak var speakBackground: UIImageView!
+    @IBOutlet weak var respBackground: UIImageView!
     
     @IBOutlet weak var btResp1: UIButton!
     @IBOutlet weak var btResp2: UIButton!
@@ -47,6 +48,7 @@ class OracleViewController: UIViewController {
     // Mark: Methods
     
     @IBAction func btVoltar(sender: AnyObject) {
+        Animations.continuar = false
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -60,6 +62,10 @@ class OracleViewController: UIViewController {
         btResp2.layer.borderColor = UIColor.whiteColor().CGColor
         btResp2.layer.borderWidth = 1.5
         btResp2.layer.cornerRadius = 6
+        
+        btResp3.layer.borderColor = UIColor.whiteColor().CGColor
+        btResp3.layer.borderWidth = 1.5
+        btResp3.layer.cornerRadius = 6
 
         Animations.continuar = false    // Provável Skip
         
@@ -74,17 +80,7 @@ class OracleViewController: UIViewController {
 
         self.perguntaAtual = oraculo.perguntas[perguntaCounter]   //Pergunta inicial
         
-        btResp1.hidden = false
-        btResp1.setTitle(perguntaAtual.respostas[0].resposta, forState: UIControlState.Normal)
-        
-        btResp2.hidden = false
-        btResp2.setTitle(perguntaAtual.respostas[1].resposta, forState: UIControlState.Normal)
-        
-        if perguntaAtual.respostas.count > 2  {
-            btResp3.setTitle(perguntaAtual.respostas[2].resposta, forState: UIControlState.Normal)
-        } else {
-            btResp3.hidden = true
-        }
+        respBackground.hidden = true
         
         Animations.continuar = false    // Provável Skip
         labelTexto.text = ""    // Limpar speak label
@@ -108,7 +104,10 @@ class OracleViewController: UIViewController {
         
         pergunta.fala = perguntaAtual.pergunta   //Para igualar e mandar para o método seguinte
             
-        self.animations.mostrarDialogoSimples(pergunta, img: self.imgPersonagem, label: self.labelTexto) { }
+        self.animations.mostrarDialogoSimples(pergunta, img: self.imgPersonagem, label: self.labelTexto) {
+        
+            self.mostrarRespostas()
+        }
 
     }
 
@@ -145,9 +144,7 @@ class OracleViewController: UIViewController {
                     
                     perguntaCounter++
                     self.perguntaAtual = oraculo.perguntas[perguntaCounter]
-                    btResp1.setTitle(perguntaAtual.respostas[0].resposta, forState: UIControlState.Normal)
-                    btResp2.setTitle(perguntaAtual.respostas[1].resposta, forState: UIControlState.Normal)
-                    btResp3.setTitle(perguntaAtual.respostas[2].resposta, forState: UIControlState.Normal)
+                    self.mostrarRespostas()
                     
                     falar(perguntaAtual)
                     
@@ -185,6 +182,24 @@ class OracleViewController: UIViewController {
         responder(2)
     }
 
+    func mostrarRespostas() {
+        
+        // Controla visibilidade dos botoes de resposta
+        self.btResp1.hidden = false
+        self.btResp1.setTitle(self.perguntaAtual.respostas[0].resposta, forState: UIControlState.Normal)
+        self.btResp2.hidden = false
+        self.btResp2.setTitle(self.perguntaAtual.respostas[1].resposta, forState: UIControlState.Normal)
+        
+        if self.perguntaAtual.respostas.count > 2  {
+            self.btResp3.setTitle(self.perguntaAtual.respostas[2].resposta, forState: UIControlState.Normal)
+            self.btResp3.hidden = false
+        } else {
+            self.btResp3.hidden = true
+        }
+        respBackground.hidden = false
+
+    }
+    
     /*
     // MARK: - Navigation
 
