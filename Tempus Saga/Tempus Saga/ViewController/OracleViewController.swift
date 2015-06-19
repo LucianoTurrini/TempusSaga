@@ -128,6 +128,11 @@ class OracleViewController: UIViewController {
                 //Respondeu certo
                 
                 if respostasCertas > oraculo.perguntas.count+1 { // Respondeu todas certas (incluindo a primeira de continuar)
+                    respBackground.hidden = true
+                    btResp1.hidden = true
+                    btResp2.hidden = true
+                    btResp3.hidden = true
+                    
                     perguntaAtual.pergunta = oraculo.msgSucesso
                     falar(perguntaAtual)
                     
