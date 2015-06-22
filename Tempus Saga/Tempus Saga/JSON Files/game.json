@@ -29,7 +29,7 @@
 	  },
 	  {
 		"nome": "Templo de Apolo",
-        "imageBackground": "TemploDeApolo",
+        "imageBackground": "temploDeApolo",
 		"personagens": {
 			"NPC1": {
 				"falas": [
@@ -47,7 +47,7 @@
 	  },
 	  {
 		"nome": "Olimpia",
-        "imageBackground": "Olympia",
+        "imageBackground": "olympia",
 		"personagens": {
 			"NPC1": {
 				"falas": [
