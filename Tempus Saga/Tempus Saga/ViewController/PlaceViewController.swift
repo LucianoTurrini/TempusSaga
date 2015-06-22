@@ -46,6 +46,32 @@ class PlaceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btCidadao1.layer.borderColor = UIColor.whiteColor().CGColor
+        btCidadao1.layer.borderWidth = 1.5
+        btCidadao1.layer.cornerRadius = 6
+        
+        btCidadao2.layer.borderColor = UIColor.whiteColor().CGColor
+        btCidadao2.layer.borderWidth = 1.5
+        btCidadao2.layer.cornerRadius = 6
+        
+        btCidadao3.layer.borderColor = UIColor.whiteColor().CGColor
+        btCidadao3.layer.borderWidth = 1.5
+        btCidadao3.layer.cornerRadius = 6
+        
+        btResp1.layer.borderColor = UIColor.whiteColor().CGColor
+        btResp1.layer.borderWidth = 1.5
+        btResp1.layer.cornerRadius = 6
+        
+        btResp2.layer.borderColor = UIColor.whiteColor().CGColor
+        btResp2.layer.borderWidth = 1.5
+        btResp2.layer.cornerRadius = 6
+        
+        btResp3.layer.borderColor = UIColor.whiteColor().CGColor
+        btResp3.layer.borderWidth = 1.5
+        btResp3.layer.cornerRadius = 6
+    
+        
         music = sound.setupAudioPlayerWithFile("TheInnerSanctum", type: "mp3")
         music.play()
 //        // NPC inicial (1) (troca depois no botão)

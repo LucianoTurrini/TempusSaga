@@ -20,7 +20,7 @@ import UIKit
 //}
 
 
-class NPC: NSObject {
+class NPC {
 
     var nome: String?
     var era: String?

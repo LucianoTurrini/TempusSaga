@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Era: NSObject {
+class Era {
     
     var nome: String!
     var places: Array<Place>!

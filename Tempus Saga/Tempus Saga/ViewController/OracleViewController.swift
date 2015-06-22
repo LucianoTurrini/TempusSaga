@@ -20,6 +20,7 @@ class OracleViewController: UIViewController {
     @IBOutlet weak var imgPersonagem: UIImageView!
     @IBOutlet weak var background: UIImageView!
     @IBOutlet weak var speakBackground: UIImageView!
+    @IBOutlet weak var respBackground: UIImageView!
     
     @IBOutlet weak var btResp1: UIButton!
     @IBOutlet weak var btResp2: UIButton!
@@ -47,33 +48,39 @@ class OracleViewController: UIViewController {
     // Mark: Methods
     
     @IBAction func btVoltar(sender: AnyObject) {
+        Animations.continuar = false
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btResp1.layer.borderColor = UIColor.whiteColor().CGColor
+        btResp1.layer.borderWidth = 1.5
+        btResp1.layer.cornerRadius = 6
+        
+        btResp2.layer.borderColor = UIColor.whiteColor().CGColor
+        btResp2.layer.borderWidth = 1.5
+        btResp2.layer.cornerRadius = 6
+        
+        btResp3.layer.borderColor = UIColor.whiteColor().CGColor
+        btResp3.layer.borderWidth = 1.5
+        btResp3.layer.cornerRadius = 6
 
         Animations.continuar = false    // Provável Skip
+        
+        if let img = oraculo.imagem {   //Animacao oraculo entrando
+            imgPersonagem.image = UIImage(named: img)
+            Animations.slide(imgPersonagem, direction: Animations.direction.toRight)
+        }
+        
         music = sound.setupAudioPlayerWithFile("DarkShrineLoop", type: "mp3")
         music.play()
         labelTexto.text = ""    // Limpar speak label
 
         self.perguntaAtual = oraculo.perguntas[perguntaCounter]   //Pergunta inicial
         
-        btResp1.hidden = false
-        btResp1.setTitle(perguntaAtual.respostas[0].resposta, forState: UIControlState.Normal)
-        
-        btResp2.hidden = false
-        btResp2.setTitle(perguntaAtual.respostas[1].resposta, forState: UIControlState.Normal)
-        
-        if perguntaAtual.respostas.count > 2  {
-            btResp3.setTitle(perguntaAtual.respostas[2].resposta, forState: UIControlState.Normal)
-        } else {
-            btResp3.hidden = true
-        }
-        
-        
-        //        for i=0 in self.falas.count {}
+        respBackground.hidden = true
         
         Animations.continuar = false    // Provável Skip
         labelTexto.text = ""    // Limpar speak label
@@ -81,8 +88,6 @@ class OracleViewController: UIViewController {
         perguntas = oraculo.perguntas
         
         falar(perguntaAtual)
-        
-        
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -92,30 +97,24 @@ class OracleViewController: UIViewController {
     func falar(pergunta: Pergunta){
         //var numDialogo = 0
         
-        usleep(1000 * 1000)  // Milisegundos * 1000     -- REVER na refatoração
+        usleep(1100 * 1000)  // Milisegundos * 1000     -- REVER na refatoração
+        // 100ms a mais para n dar conflito de dar crash dps da 2a pergunta
+        
         Animations.continuar = true
         
-        //while numDialogo < self.perguntas.count {  // Lembrar: Aqui é totalmente assíncrono!
-            
-        //let pergunta = perguntas[numPergunta]   //Tirar essa linha?
-        
-        if let img = oraculo.imagem {
-            imgPersonagem.image = UIImage(named: img)
-            Animations.slide(imgPersonagem, direction: Animations.direction.toRight)
-        }
-        
         pergunta.fala = perguntaAtual.pergunta   //Para igualar e mandar para o método seguinte
-        //Exibe o loop de diálogos
-        //if numPergunta < self.perguntas.count {
             
-        self.animations.mostrarDialogoSimples(pergunta, img: self.imgPersonagem, label: self.labelTexto) { }
-        //Depois do diálogo
+        self.animations.mostrarDialogoSimples(pergunta, img: self.imgPersonagem, label: self.labelTexto) {
+        
+            self.mostrarRespostas()
+        }
 
     }
 
     func responder(numResposta: Int) {
         
         Animations.continuar = false
+        labelTexto.text = ""    // Limpar speak label
         
         // Errado ou certo, vai exibir a mensagem correspondente
         perguntaAtual.pergunta = perguntaAtual.respostas[numResposta].replica
@@ -128,19 +127,29 @@ class OracleViewController: UIViewController {
             if perguntaCounter < oraculo.perguntas.count {
                 //Respondeu certo
                 
-                if respostasCertas >= oraculo.perguntas.count+1 { // Respondeu todas certas (incluindo a primeira de continuar)
+                if respostasCertas > oraculo.perguntas.count+1 { // Respondeu todas certas (incluindo a primeira de continuar)
+                    respBackground.hidden = true
+                    btResp1.hidden = true
+                    btResp2.hidden = true
+                    btResp3.hidden = true
+                    
                     perguntaAtual.pergunta = oraculo.msgSucesso
                     falar(perguntaAtual)
                     
-                    // SUCESSO AQUI - TROCAR DE TELA
-                    
+                    // TROCA DE TELA
+                    Animations.enfileirar() {
+                        Animations.fadeToBlack(self.view) {
+                            Animations.continuar = false
+                            self.dismissViewControllerAnimated(true, completion: nil)
+                        }
+                    }
+                
                 } else {
                     //Próxima pergunta
+                    
                     perguntaCounter++
                     self.perguntaAtual = oraculo.perguntas[perguntaCounter]
-                    btResp1.setTitle(perguntaAtual.respostas[0].resposta, forState: UIControlState.Normal)
-                    btResp2.setTitle(perguntaAtual.respostas[1].resposta, forState: UIControlState.Normal)
-                    btResp3.setTitle(perguntaAtual.respostas[2].resposta, forState: UIControlState.Normal)
+                    self.mostrarRespostas()
                     
                     falar(perguntaAtual)
                     
@@ -154,10 +163,9 @@ class OracleViewController: UIViewController {
             
         } else {    // Se resposta errada
             
-            Animations.fadeToBlack(self.view){
-                
-                // Trocar aqui de tela para voltar
-                // Colocar aqui o comando para voltar pra a outra view (resp errada)
+            Animations.fadeToBlack(self.view)
+            {
+                Animations.continuar = false
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
             
@@ -179,6 +187,24 @@ class OracleViewController: UIViewController {
         responder(2)
     }
 
+    func mostrarRespostas() {
+        
+        // Controla visibilidade dos botoes de resposta
+        self.btResp1.hidden = false
+        self.btResp1.setTitle(self.perguntaAtual.respostas[0].resposta, forState: UIControlState.Normal)
+        self.btResp2.hidden = false
+        self.btResp2.setTitle(self.perguntaAtual.respostas[1].resposta, forState: UIControlState.Normal)
+        
+        if self.perguntaAtual.respostas.count > 2  {
+            self.btResp3.setTitle(self.perguntaAtual.respostas[2].resposta, forState: UIControlState.Normal)
+            self.btResp3.hidden = false
+        } else {
+            self.btResp3.hidden = true
+        }
+        respBackground.hidden = false
+
+    }
+    
     /*
     // MARK: - Navigation
 

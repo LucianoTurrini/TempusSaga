@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Historia: NSObject {
+class Historia {
    
     var era: String!
     var place: String!
