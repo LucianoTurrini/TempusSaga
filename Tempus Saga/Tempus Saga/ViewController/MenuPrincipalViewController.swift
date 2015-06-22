@@ -25,6 +25,7 @@ class MenuPrincipalViewController: UIViewController {
         super.viewDidLoad()
         intro = sound.setupAudioPlayerWithFile("RiseOfSpirit", type: "mp3")
         intro.play()
+        
     }
     
     override func viewDidDisappear(animated: Bool) {

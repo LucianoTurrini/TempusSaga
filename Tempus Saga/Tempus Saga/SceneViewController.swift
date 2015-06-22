@@ -41,7 +41,7 @@ class SceneViewController: UIViewController {
         
         imageCharacter.image = personagem1
         imageCharacter2.image = personagem2
-        imageBackground.image = background
+        imageBackground.image = UIImage(named: "imageHistoria")
         imageSpeakBackground.image = backgroundSpeak
         
         bgMusic = sound.setupAudioPlayerWithFile("calmBmg", type: "mp3")

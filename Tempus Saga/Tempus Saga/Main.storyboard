@@ -183,7 +183,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kys-Nu-jVg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Homes-Desktop-Backgrounds" translatesAutoresizingMaskIntoConstraints="NO" id="Kys-Nu-jVg">
                                 <variation key="widthClass=regular" ambiguous="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 </variation>
@@ -1542,6 +1542,7 @@
     <resources>
         <image name="CHAR_1-2" width="380" height="512"/>
         <image name="CHAR_3-1" width="380" height="512"/>
+        <image name="Homes-Desktop-Backgrounds" width="1920" height="1200"/>
         <image name="botaoAtenas" width="361" height="361"/>
         <image name="botaoAvanca" width="156" height="156"/>
         <image name="botaoEgito" width="450" height="450"/>
