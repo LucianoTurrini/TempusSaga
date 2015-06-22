@@ -40,6 +40,11 @@ class StageViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        music = sound.setupAudioPlayerWithFile("overworldSketch", type: "mp3")
+        music.play()
+    }
+    
     override func viewWillDisappear(animated: Bool) {
         music.stop()
     }
